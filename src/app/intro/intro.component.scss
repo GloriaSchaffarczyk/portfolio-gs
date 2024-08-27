@@ -1,0 +1,57 @@
+.intro {
+display: flex;
+background-image: url(../../assets/hero\ character\ photo.png);
+background-repeat: no-repeat;
+}
+
+.intro-img {
+    height: 50%;
+}
+
+p {
+    transform: rotate(270deg) translateY(-180px) translateX(40px); /* Um die Textausrichtung korrekt zu machen */
+}
+
+.scroll-indicator span {
+    position: absolute;
+    right: 10px;
+    bottom: 80px;
+    writing-mode: vertical-rl; /* Text vertikal schreiben */
+    text-align: center; /* Zentriert den Text */
+    transform: rotate(360deg); /* Um die Textausrichtung korrekt zu machen */
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    cursor: pointer; /* Der Benutzer erkennt, dass dies ein interaktives Element ist */
+}
+
+.scroll-indicator .arrow {
+    display: block;
+    position: absolute;
+    right: 15px;
+    bottom: 40px;
+    margin-top: 10px; /* Abstand zwischen Text und Pfeil */
+    font-size: 1.5rem;
+    animation: bounce 2s infinite; /* Animation für den Pfeil */
+    transform: rotate(180deg); 
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.intro-graphic {
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    padding: -100px !important;
+    z-index: -10;
+}
