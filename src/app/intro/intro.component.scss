@@ -27,9 +27,9 @@
   width: 100vw;
   height: auto;
   position: absolute;
-  top: 850px; /* Beispielwert, kann durch Media Queries angepasst werden */
+  top: 0px;
   left: 0;
-  z-index: 1; /* Sicherstellen, dass es sich unter anderen Elementen befindet */
+  z-index: 1;
 }
 
 .image-container img {
@@ -37,7 +37,7 @@
   max-width: 100%;
   height: auto;
   filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
-  z-index: 2;
+  z-index: 1;
 }
 
 .name-plus-cta,
@@ -46,7 +46,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .intro-svg {
@@ -55,7 +55,7 @@
   font-size: 2rem;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 1;
 }
 
 h1 {
