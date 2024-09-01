@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/utils.scss";
+@import "./styles/variables.scss";
 
 /* poppins-regular - latin */
 @font-face {
@@ -11,10 +12,14 @@
 
 html {
     background-color: #141D2F;
-    font-family: 'Poppins', sans-serif; /* Schriftenname sollte korrekt sein */
+    font-family: 'Poppins', sans-serif; 
     color: white;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    min-height: 100%;
 }
 
 body {
@@ -29,7 +34,7 @@ body {
 
 .content-wrapper {
     flex: 1; /* Flexbox sorgt dafür, dass dieser Bereich den verfügbaren Platz füllt */
-    padding: 0px 100px 0px 100px; /* Optional, je nach Design */
+    padding: 0px 100px 0px 100px; 
   }
 
 /* In jeder spezifischen Komponente */
