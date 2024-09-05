@@ -17,34 +17,9 @@ html {
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: hidden;
     min-height: 100%;
 }
 
 body {
     margin: 0;
-    overflow-x: hidden;
-}
-
-/* styles.scss */
-:root {
-    --global-padding: 100px;
-}
-
-.content-wrapper {
-    flex: 1; /* Flexbox sorgt dafür, dass dieser Bereich den verfügbaren Platz füllt */
-    padding: 0px 100px 0px 100px; 
-  }
-
-/* In jeder spezifischen Komponente */
-.component {
-    padding-left: var(--global-padding);
-    padding-right: var(--global-padding);
-}
-
-/* Falls eine Komponente einen anderen Abstand benötigt */
-.special-component {
-    padding-left: 0px; /* Spezifische Anpassung */
-    padding-right: 0px;
 }
