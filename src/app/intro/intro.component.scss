@@ -4,7 +4,7 @@
     "element4 element1"
     "element2 element2";
   grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 70% 30%;
+  grid-template-rows: 55% 45%;
   height: 100vh;
   width: calc(100% - 200px);
   margin-left: 100px;
@@ -13,36 +13,53 @@
 
 .custom-element1 {
   grid-area: element1;
+  display: flex;
   z-index: 3;
-  background-color: lightgreen;
+  // background-color: lightgreen;
   padding: 20px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .custom-element2 {
   grid-area: element2;
-  background-color: lightblue;
+  z-index: 2; /* Legt es leicht über andere Elemente, außer Scroll-Indikator */
+  // background-color: lightblue;
   width: 100vw;
   margin-left: -100px;
   margin-right: -100px;
+  margin-top: -220px; /* Leichtes Überlappen über die obere Kante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Erlaubt das Überlappen */
 }
 
-.custom-element3 {
-  grid-area: element4;
-  z-index: 2;
-  background-color: lightcoral;
+.custom-element2 img {
   width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+  height: auto;
+  object-fit: cover;
 }
 
-.custom-element4 {
+.custom-element3, .custom-element3 img {
   grid-area: element4;
   z-index: 1;
-  background-color: violet;
-  width: 100%;
+  // background-color: lightcoral;
+  width: auto;
   height: 100%;
   box-sizing: border-box;
-  opacity: 0.5; /* Sichtbar machen, um die Überlappung zu testen */
+}
+
+.custom-element4, .custom-element4 img {
+  grid-area: element4;
+  z-index: 0;
+  // background-color: violet;
+  width: auto;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -72,7 +89,6 @@
     width: 100%; /* Sicherstellen, dass es dieselbe Breite wie Element 3 hat */
     height: 100%; /* Übernimmt die Höhe von Element 3 */
     position: relative; /* Stellt sicher, dass es sich direkt hinter Element 3 befindet */
-    opacity: 0.5; /* Sichtbar machen, um die Überlappung zu testen */
   }
 
   .custom-element1 {
@@ -100,7 +116,7 @@
   align-items: center;
   position: absolute;
   bottom: 2rem;
-  right: 2rem; /* Auf die rechte Seite verschoben */
+  right: 100px;
   z-index: 4;
   animation: jump 2s ease infinite;
 }
@@ -129,4 +145,3 @@
     transform: translateY(-7px);
   }
 }
-
