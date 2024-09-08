@@ -90,10 +90,27 @@
   padding: 0;
 }
 
-.custom-element1 svg {
+.full-name svg {
   width: 100%;
   max-width: 742px;
   height: auto;
+}
+
+.social-media-and-contact {
+  z-index: 4;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+}
+
+.intro-line {
+  position: absolute;
+  left: 0;
+  border: 0;
+  border-top: 4px solid #ff3f79;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 150px;
 }
 
 @media (max-width: 768px) {
@@ -151,7 +168,7 @@ button {
   align-items: center;
   border-radius: 10px;
   border: none;
-  background: #00BF89;
+  background: #00bf89;
   color: #fff;
   font-family: Poppins;
   font-size: 23px;
