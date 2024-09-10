@@ -1,0 +1,42 @@
+.about-me-container {
+  z-index: 4;
+  height: 80vh;
+  position: relative;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-me-left {
+  height: 80vh;
+  width: 100%;
+  border: 1px solid blue;
+  padding-left: 100px;
+}
+
+.about-me-right {
+  height: 80vh;
+  width: 100%;
+  border: 1px solid greenyellow;
+}
+
+.about-me-bullet-points {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    > .about-me-bullet-point {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        > p {
+            padding-left: 16px;
+            display: flex;
+        }
+    }
+}
