@@ -40,3 +40,14 @@
         }
     }
 }
+
+.circle-picture-line {
+  position: absolute;
+  right: 0;
+  top: 200px;
+  border: 0;
+  border-top: 4px solid #00BF89;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 350px;
+}
