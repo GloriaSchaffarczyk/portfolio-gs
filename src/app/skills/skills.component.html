@@ -1,1 +1,20 @@
-<p>skills works!</p>
+<div class="skills-container">
+    <div class="skills-symbols">
+      @for (skill of skills; track skill.name) {
+        <div class="skills-icon-and-name">
+          <img [src]="skill.imgSrc" alt="{{skill.name}}">
+          <p>{{ skill.name }}</p>
+        </div>
+      }
+    </div>
+    <div class="skills-line"></div>
+    <div class="skills-text-and-button">
+      <h1>My skills</h1>
+      <span>I have gained experience in building projects with different frontend technologies and concepts.</span>
+      <h2>Looking for another skill?</h2>
+      <span>Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
+      <button>Get in touch</button>
+    </div>
+  </div>
+  
+  
