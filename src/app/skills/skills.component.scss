@@ -1,133 +1,151 @@
 .skills-container {
-  height: 50vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row; /* Standard: nebeneinander auf größeren Bildschirmen */
-  position: relative;
-}
-
-.skills-symbols {
-  height: 50vh;
-  width: 50%;
-  border: 1px solid blue;
-  padding-left: 50px;
-  padding-right: 50px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 12px;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-}
-
-/* Symbol-Container mit vertikaler und horizontaler Zentrierung */
-.skills-icon-and-name {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Horizontal zentrieren */
-  justify-content: center; /* Vertikal zentrieren */
-  height: 100%; /* Sicherstellen, dass der Inhalt den gesamten Platz nutzt */
-}
-
-/* Symbole */
-.skills-symbols img {
-  max-width: 70px; 
-  max-height: 70px;
-  object-fit: contain; 
-}
-
-.skills-text-and-button {
-  height: 50vh;
-  width: 50%;
-  border: 1px solid red;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-right: 150px;
-  padding-left: 50px;
-}
-
-.skills-line {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Standard: nebeneinander auf größeren Bildschirmen */
+    position: relative;
+  }
+  
+  .skills-symbols, .skills-text-and-button {
+    height: 50vh;
+    width: 50%;
+    box-sizing: border-box; /* Padding wird zur Gesamtbreite gezählt */
+  }
+  
+  .skills-symbols {
+    border: 1px solid blue;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 12px;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* Symbol-Container mit vertikaler und horizontaler Zentrierung */
+  .skills-icon-and-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontal zentrieren */
+    justify-content: center; /* Vertikal zentrieren */
+    height: 100%; /* Sicherstellen, dass der Inhalt den gesamten Platz nutzt */
+  }
+  
+  /* Symbole */
+  .skills-symbols img {
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: contain; /* Passt die Größe an und verhindert Überlappen */
+  }
+  
+  .skills-text-and-button {
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-right: 150px;
+    padding-left: 50px;
+    box-sizing: border-box; /* Padding wird zur Gesamtbreite gezählt */
+  }
+  
+  .skills-line {
     position: absolute;
     right: 0;
     top: 50px;
     border: 0;
-    border-top: 4px solid #00BF89;
+    border-top: 4px solid #00bf89;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     width: 100px;
   }
-
-/* Größere Bildschirme (Desktop) */
-@media (min-width: 1024px) {
-  .skills-symbols {
-    grid-template-columns: repeat(3, 1fr);
+  
+  button {
+    margin-top: 30px;
+    display: flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    background: #00bf89;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 23px;
   }
-
-  .skills-symbols img {
-    max-width: 90px; /* Etwas größere Symbole auf großen Bildschirmen */
-    max-height: 90px;
+  
+  /* Größere Bildschirme (Desktop) */
+  @media (min-width: 1024px) {
+    .skills-symbols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .skills-symbols img {
+      max-width: 90px; /* Etwas größere Symbole auf großen Bildschirmen */
+      max-height: 90px;
+    }
   }
-}
-
-/* Mittlere Bildschirme (Tablets) */
-@media (max-width: 1024px) {
-  .skills-symbols {
-    grid-template-columns: repeat(2, 1fr);
+  
+  /* Mittlere Bildschirme (Tablets) */
+  @media (max-width: 1024px) {
+    .skills-symbols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .skills-symbols img {
+      max-width: 70px; /* Kleinere Symbole bei mittleren Bildschirmen */
+      max-height: 70px;
+    }
   }
-
-  .skills-symbols img {
-    max-width: 70px; /* Kleinere Symbole bei mittleren Bildschirmen */
-    max-height: 70px;
+  
+  /* Kleinere Bildschirme (Smartphones) */
+  @media (max-width: 768px) {
+    .skills-container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .skills-symbols {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .skills-text-and-button {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .skills-symbols img {
+      max-width: 60px; /* Noch kleinere Symbole bei Smartphones */
+      max-height: 60px;
+    }
   }
-}
-
-/* Kleinere Bildschirme (Smartphones) */
-@media (max-width: 768px) {
-  .skills-container {
-    flex-direction: column;
-    height: auto;
+  
+  /* Sehr kleine Bildschirme (kleinere Smartphones) */
+  @media (max-width: 480px) {
+    .skills-symbols {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .skills-symbols img {
+      max-width: 50px;
+      max-height: 50px;
+    }
   }
-
-  .skills-symbols {
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
+  
+  /* Minimale Bildschirme (320px) */
+  @media (max-width: 320px) {
+    .skills-symbols {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .skills-symbols img {
+      max-width: 40px; /* Minimalste Symbolgröße für sehr kleine Bildschirme */
+      max-height: 40px;
+    }
   }
-
-  .skills-text-and-button {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .skills-symbols img {
-    max-width: 60px; /* Noch kleinere Symbole bei Smartphones */
-    max-height: 60px;
-  }
-}
-
-/* Sehr kleine Bildschirme (kleinere Smartphones) */
-@media (max-width: 480px) {
-  .skills-symbols {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .skills-symbols img {
-    max-width: 50px;
-    max-height: 50px;
-  }
-}
-
-/* Minimale Bildschirme (320px) */
-@media (max-width: 320px) {
-  .skills-symbols {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .skills-symbols img {
-    max-width: 40px; /* Minimalste Symbolgröße für sehr kleine Bildschirme */
-    max-height: 40px;
-  }
-}
+  
