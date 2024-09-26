@@ -1,28 +1,34 @@
 .about-me-container {
   z-index: 4;
-  height: 80vh;
+  height: 60vh;
   position: relative;
-  // border: 1px solid red;
+  border: 1px solid red;
   display: flex;
   flex-direction: row;
 }
 
 .about-me-left {
-  height: 80vh;
-  width: 40%;
-  // border: 1px solid blue;
+  height: 60vh;
+  width: 45%;
+  border: 1px solid rgb(162, 0, 255);
   padding-left: 100px;
+  padding-right: 50px;
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .about-me-right {
-  height: 80vh;
-  width: 60%;
-  // border: 1px solid greenyellow;
+  height: 60vh;
+  width: 55%;
+  border: 1px solid greenyellow;
+  display: flex;
+  justify-content: flex-end; /* Zentriert das Bild horizontal */
+  align-items: center; /* Zentriert das Bild vertikal */
+  position: relative; /* Macht das Bild relativ zum Container positionierbar */
 }
 
 .about-me-bullet-points {
@@ -58,7 +64,8 @@
 // }
 
 .about-me-group {
-  position: absolute;
+  max-width: 100%; /* Passt die Bildgröße an den Container an */
+  height: auto;
+  position: relative; /* Du kannst es anpassen, wenn du absolute Positionierung brauchst */
   right: 0;
-  top: 200px;
 }

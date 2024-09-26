@@ -2,44 +2,44 @@
     height: 50vh;
     width: 100%;
     display: flex;
-    flex-direction: row; /* Standard: nebeneinander auf größeren Bildschirmen */
+    flex-direction: row; 
     position: relative;
-  }
-  
-  .skills-symbols, .skills-text-and-button {
+    margin-top: 100px;
+}
+
+.skills-symbols, .skills-text-and-button {
     height: 50vh;
     width: 50%;
-    box-sizing: border-box; /* Padding wird zur Gesamtbreite gezählt */
-  }
-  
-  .skills-symbols {
+    box-sizing: border-box; 
+}
+
+.skills-symbols {
     border: 1px solid blue;
-    padding-left: 50px;
+    padding-left: 100px;
     padding-right: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 12px;
     align-content: center;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  /* Symbol-Container mit vertikaler und horizontaler Zentrierung */
-  .skills-icon-and-name {
+    justify-items: center; 
+    align-items: center; 
+}
+
+.skills-icon-and-name {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Horizontal zentrieren */
-    justify-content: center; /* Vertikal zentrieren */
-    height: 100%; /* Sicherstellen, dass der Inhalt den gesamten Platz nutzt */
-  }
-  
-  /* Symbole */
-  .skills-symbols img {
+    align-items: center; 
+    justify-content: center; 
+    height: 100%;
+}
+
+/* Symbole */
+.skills-symbols img {
     max-width: 70px;
     max-height: 70px;
-    object-fit: contain; /* Passt die Größe an und verhindert Überlappen */
-  }
+    object-fit: contain; 
+}
   
   .skills-text-and-button {
     border: 1px solid red;
@@ -50,7 +50,7 @@
     flex-wrap: wrap;
     padding-right: 150px;
     padding-left: 50px;
-    box-sizing: border-box; /* Padding wird zur Gesamtbreite gezählt */
+    box-sizing: border-box; 
   }
   
   .skills-line {
@@ -85,7 +85,7 @@
     }
   
     .skills-symbols img {
-      max-width: 90px; /* Etwas größere Symbole auf großen Bildschirmen */
+      max-width: 90px; 
       max-height: 90px;
     }
   }
@@ -97,7 +97,7 @@
     }
   
     .skills-symbols img {
-      max-width: 70px; /* Kleinere Symbole bei mittleren Bildschirmen */
+      max-width: 70px; 
       max-height: 70px;
     }
   }
@@ -120,7 +120,7 @@
     }
   
     .skills-symbols img {
-      max-width: 60px; /* Noch kleinere Symbole bei Smartphones */
+      max-width: 60px; 
       max-height: 60px;
     }
   }

@@ -15,11 +15,11 @@ export class SkillsComponent {
     { imgSrc: 'assets/skills-icon-firebase.png', name: 'Firebase' },
     { imgSrc: 'assets/skills-icon-git.png', name: 'Git' },
     { imgSrc: 'assets/skills-icon-javascript.png', name: 'JavaScript' },
-    { imgSrc: 'assets/skills-icon-material-design.png', name: 'Material Design' },
-    { imgSrc: 'assets/skills-icon-scrum.png', name: 'Scrum' },
-    { imgSrc: 'assets/skills-icon-wordpress.png', name: 'WordPress' },
-    { imgSrc: 'assets/skills-icon-html.png', name: 'HTML' },
     { imgSrc: 'assets/skills-icon-css.png', name: 'CSS' },
+    { imgSrc: 'assets/skills-icon-scrum.png', name: 'Scrum' },
+    { imgSrc: 'assets/skills-icon-material-design.png', name: 'Material Design' },
+    { imgSrc: 'assets/skills-icon-html.png', name: 'HTML' },
+    { imgSrc: 'assets/skills-icon-wordpress.png', name: 'WordPress' },
     { imgSrc: 'assets/skills-icon-continually-learning-red.png', name: '' }
   ];
 }
