@@ -1,1 +1,17 @@
-<p>testimonials works!</p>
+<div class="testimonial-container">
+    @for (testimonial of testimonials; track $index) {
+        <div class="single-testimonial">
+            <div class="quote-container">
+                <img src="../../assets/testimonial-quotation-mark.png" alt="quotation-mark-image" class="quotation-mark-image">
+                <p class="quote">{{ testimonial.quote }}</p>
+                <div class="line-and-author">
+                    <div class="testimonial-line"></div>
+                    <p class="quote-author">{{ testimonial.author }}</p>
+                </div>
+            </div>
+            <div class="testimonial-img">
+                <img [src]="testimonial.imageSrc" [alt]="testimonial.author">
+            </div>
+        </div>
+    }
+  </div>
