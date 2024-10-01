@@ -17,19 +17,19 @@ export class TestimonialsComponent {
   currentTestimonial = 0;
 
   slideLeft() {
-    if (this.currentTestimonial === 0) {
-      this.currentTestimonial = this.testimonials.length - 1; // Zurück zum letzten Testimonial
-    } else {
+    if (this.currentTestimonial !== 0) {
       this.currentTestimonial--;
+    } else {
+      this.currentTestimonial = this.testimonials.length - 1; 
     }
     this.updateSlidePosition();
   }
 
   slideRight() {
-    if (this.currentTestimonial === this.testimonials.length - 1) {
-      this.currentTestimonial = 0; // Zurück zum ersten Testimonial
-    } else {
+    if (this.currentTestimonial < this.testimonials.length - 1) {
       this.currentTestimonial++;
+    } else {
+      this.currentTestimonial = 0;
     }
     this.updateSlidePosition();
   }
