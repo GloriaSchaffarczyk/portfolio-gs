@@ -38,4 +38,5 @@ export class TestimonialsComponent {
     const testimonialWrapper = document.querySelector('.testimonial-wrapper') as HTMLElement;
     testimonialWrapper.style.transform = `translateX(-${this.currentTestimonial * 100}%)`;
   }
+// richtig?
 }
