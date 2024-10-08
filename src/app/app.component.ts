@@ -9,6 +9,7 @@ import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { TestimonialsComponent } from "./testimonials/testimonials.component";
 import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { FooterComponent } from "./footer/footer.component";
+// was muss noch importiert werden?
 
 @Component({
   selector: 'app-root',
