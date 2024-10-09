@@ -1,0 +1,43 @@
+.footer-section {
+    height: 20vh;
+    position: relative;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.footer-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 0;
+    border-top: 4px solid #00bf89;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+}
+
+.footer-logo-and-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-imprint {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-media-links img {
+    padding-right: 24px;
+}
