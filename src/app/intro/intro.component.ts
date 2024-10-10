@@ -9,6 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './intro.component.scss'
 })
 export class IntroComponent {
-// comment
 
 }
