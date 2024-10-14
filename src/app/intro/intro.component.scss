@@ -1,4 +1,4 @@
-.custom-container {
+.intro-section {
   display: grid;
   grid-template-areas:
     "element4 element1"
@@ -14,7 +14,7 @@
   justify-items: stretch;
 }
 
-.custom-element1 {
+.intro-element1 {
   grid-area: element1;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
   box-sizing: border-box;
 }
 
-.custom-element2 {
+.intro-element2 {
   grid-area: element2;
   z-index: 2;
   width: 100%;
@@ -37,7 +37,7 @@
   overflow: visible;
 }
 
-.custom-element2 img {
+.intro-element2 img {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -45,7 +45,7 @@
   object-fit: cover;
 }
 
-.custom-element3 {
+.intro-element3 {
   grid-area: element4;
   z-index: 1;
   width: auto;
@@ -61,7 +61,7 @@
   align-items: center;
 }
 
-.custom-element3 img {
+.intro-element3 img {
   grid-area: element4;
   z-index: 1;
   width: auto;
@@ -69,7 +69,7 @@
   padding: 0;
 }
 
-.custom-element4 {
+.intro-element4 {
   grid-area: element4;
   z-index: 0;
   width: auto;
@@ -85,7 +85,7 @@
   align-items: center;
 }
 
-.custom-element4 img {
+.intro-element4 img {
   grid-area: element4;
   z-index: 1;
   width: auto;
@@ -137,7 +137,7 @@
 }
 
 @media (max-width: 768px) {
-  .custom-container {
+  .intro-container {
     grid-template-areas:
       "element4"
       "element1"
@@ -148,7 +148,7 @@
     max-width: 100vw;
   }
 
-  .custom-element3 {
+  .intro-element3 {
     grid-area: element4;
     z-index: 2;
     width: 100%;
@@ -157,7 +157,7 @@
     position: relative; /* Sicherstellen, dass es über Element 4 liegt */
   }
 
-  .custom-element4 {
+  .intro-element4 {
     grid-area: element4;
     z-index: 1;
     width: 100%; /* Sicherstellen, dass es dieselbe Breite wie Element 3 hat */
@@ -166,7 +166,7 @@
     position: relative; /* Stellt sicher, dass es sich direkt hinter Element 3 befindet */
   }
 
-  .custom-element1 {
+  .intro-element1 {
     grid-area: element1;
     width: 100%; /* Gleiche Breite wie Elemente 3 und 4 */
     max-width: 100%; /* Stellt sicher, dass es nicht breiter als 100% wird */
@@ -176,7 +176,7 @@
     margin: 0;
   }
 
-  .custom-element2 {
+  .intro-element2 {
     grid-area: element2;
     width: 100vw;
     margin-left: -100px;

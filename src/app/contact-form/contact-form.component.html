@@ -10,14 +10,12 @@
             <div class="contact-form-wrapper">
                 <form [formGroup]="contactForm" (submit)="onSubmit()" novalidate>
 
-                    <!-- Verstecktes Label -->
                     <label for="name" class="visually-hidden">Your name</label>
                     <input type="text" id="name" formControlName="name" placeholder="Your name">
                     @if (contactForm.controls.name.invalid && contactForm.controls.name.touched) {
                       <small class="error">Name is required</small>
                     }
                 
-                    <!-- Verstecktes Label -->
                     <label for="email" class="visually-hidden">Your email</label>
                     <input type="email" id="email" formControlName="email" placeholder="Your email">
                     @if (contactForm.controls.email.invalid && contactForm.controls.email.touched) {
@@ -29,7 +27,6 @@
                       }
                     }
                 
-                    <!-- Verstecktes Label -->
                     <label for="message" class="visually-hidden">Your message</label>
                     <textarea id="message" formControlName="message" placeholder="Your message"></textarea>
                     @if (contactForm.controls.message.invalid && contactForm.controls.message.touched) {
