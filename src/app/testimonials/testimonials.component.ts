@@ -18,25 +18,38 @@ export class TestimonialsComponent {
   currentTestimonial = 0;
 
   slideLeft() {
+    this.resetAnimation();
     if (this.currentTestimonial !== 0) {
       this.currentTestimonial--;
     } else {
-      this.currentTestimonial = this.testimonials.length - 1; 
+      this.currentTestimonial = this.testimonials.length - 1;
     }
-    this.updateSlidePosition();
   }
-
+  
   slideRight() {
+    this.resetAnimation();
     if (this.currentTestimonial < this.testimonials.length - 1) {
       this.currentTestimonial++;
     } else {
       this.currentTestimonial = 0;
     }
-    this.updateSlidePosition();
   }
-
-  updateSlidePosition() {
-    const testimonialWrapper = document.querySelector('.testimonial-wrapper') as HTMLElement;
-    testimonialWrapper.style.transform = `translateX(-${this.currentTestimonial * 100}%)`;
-  }
+  
+  resetAnimation() {
+    const quoteElement = document.querySelector('.quote') as HTMLElement;
+    const imageElement = document.querySelector('.testimonial-img img') as HTMLElement;
+    
+    if (quoteElement && imageElement) {
+      // Reset animation for the quote
+      quoteElement.style.animation = 'none';
+      // Reset animation for the image
+      imageElement.style.animation = 'none';
+  
+      // Use setTimeout to re-trigger the animations
+      setTimeout(() => {
+        quoteElement.style.animation = '';
+        imageElement.style.animation = '';
+      }, 10);
+    }
+  }  
 }

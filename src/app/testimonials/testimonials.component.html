@@ -1,21 +1,18 @@
 <div class="testimonial-container">
-    <div class="testimonial-wrapper">
-        @for (testimonial of testimonials; track $index) {
-            <div class="single-testimonial">
-                <div class="quote-container">
-                    <img src="../../assets/testimonial-quotation-mark.png" alt="quotation-mark-image" class="quotation-mark-image">
-                    <p class="quote">{{ testimonial.quote }}</p>
-                    <div class="line-and-author">
-                        <div class="testimonial-line"></div>
-                        <p class="quote-author">{{ testimonial.author }}</p>
-                    </div>
-                </div>
-                <div class="testimonial-img">
-                    <img [src]="testimonial.imageSrc" [alt]="testimonial.author">
-                </div>
+    <div class="single-testimonial">
+        <div class="quote-container">
+            <img src="../../assets/testimonial-quotation-mark.png" alt="quotation-mark-image" class="quotation-mark-image">
+            <p class="quote">{{ testimonials[currentTestimonial].quote }}</p>
+            <div class="line-and-author">
+                <div class="testimonial-line"></div>
+                <p class="quote-author">{{ testimonials[currentTestimonial].author }}</p>
             </div>
-        }
+        </div>
+        <div class="testimonial-img">
+            <img [src]="testimonials[currentTestimonial].imageSrc" [alt]="testimonials[currentTestimonial].author">
+        </div>
     </div>
+
     <div class="testimonial-navigation">
         <button class="arrowLeft" (click)="slideLeft()">←</button>
         
