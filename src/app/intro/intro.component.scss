@@ -5,26 +5,32 @@
     "element2 element2";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 70% 30%;
-  height: 100vh;
+  height: 80vh;
   max-width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
   justify-items: stretch;
+  position: relative;
 }
 
 .intro-element1 {
   grid-area: element1;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   align-items: center;
   z-index: 3;
-  padding: 0 100px 0 0;
+  padding: 0 5vw; /* Verwende relative Padding-Werte */
   box-sizing: border-box;
+}
+
+.intro-element1 svg {
+  width: 90%;
+  max-width: 742px;
+  height: auto;
 }
 
 .intro-element2 {
@@ -34,13 +40,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: calc(-40vh); /* Nutze relative Einheiten für die Höhe */
+  left: 50%;
+  transform: translateX(-50%);
   overflow: visible;
 }
 
 .intro-element2 img {
   width: 100%;
-  margin: 0;
-  padding: 0;
   height: auto;
   object-fit: cover;
 }
@@ -50,23 +58,16 @@
   z-index: 1;
   width: auto;
   height: 100%;
-  padding: 0 0 0 100px;
-  margin-top: 65px;
-  box-sizing: border-box;
+  padding: 0 0 0 5vw;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
   justify-content: center;
   align-items: center;
 }
 
 .intro-element3 img {
-  grid-area: element4;
-  z-index: 1;
-  width: auto;
-  height: 100%;
-  padding: 0;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 }
 
 .intro-element4 {
@@ -74,23 +75,17 @@
   z-index: 0;
   width: auto;
   height: 100%;
-  padding: 0 0 0 100px;
-  margin-top: 65px;
-  box-sizing: border-box;
+  padding: 0 0 0 5vw;
+  margin-top: 5vh; /* Verwende relative Margins */
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
   justify-content: center;
   align-items: center;
 }
 
 .intro-element4 img {
-  grid-area: element4;
-  z-index: 1;
-  width: auto;
-  height: 100%;
-  padding: 0;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
 }
 
 .full-name svg {
@@ -136,54 +131,6 @@
   width: 150px;
 }
 
-@media (max-width: 768px) {
-  .intro-container {
-    grid-template-areas:
-      "element4"
-      "element1"
-      "element2";
-    grid-template-columns: 1fr; /* Einspaltiges Layout */
-    grid-template-rows: auto;
-    height: 100vh;
-    max-width: 100vw;
-  }
-
-  .intro-element3 {
-    grid-area: element4;
-    z-index: 2;
-    width: 100%;
-    padding: 0 0 0 50px;
-    height: auto;
-    position: relative; /* Sicherstellen, dass es über Element 4 liegt */
-  }
-
-  .intro-element4 {
-    grid-area: element4;
-    z-index: 1;
-    width: 100%; /* Sicherstellen, dass es dieselbe Breite wie Element 3 hat */
-    padding: 0 0 0 50px;
-    height: 100%; /* Übernimmt die Höhe von Element 3 */
-    position: relative; /* Stellt sicher, dass es sich direkt hinter Element 3 befindet */
-  }
-
-  .intro-element1 {
-    grid-area: element1;
-    width: 100%; /* Gleiche Breite wie Elemente 3 und 4 */
-    max-width: 100%; /* Stellt sicher, dass es nicht breiter als 100% wird */
-    box-sizing: border-box; /* Verhindert, dass Padding die Breite beeinflusst */
-    height: auto;
-    padding: 0 50px 0 0;
-    margin: 0;
-  }
-
-  .intro-element2 {
-    grid-area: element2;
-    width: 100vw;
-    margin-left: -100px;
-    margin-right: -100px;
-  }
-}
-
 button {
   margin-top: 30px;
   display: flex;
@@ -222,7 +169,7 @@ button {
   color: #fff;
 }
 
-/* Animation */
+/* Scroll-Indikator Animation */
 @keyframes jump {
   0%,
   20%,
@@ -236,5 +183,117 @@ button {
   }
   60% {
     transform: translateY(-10px);
+  }
+}
+
+/* Breakpoints für größere Bildschirme */
+@media (min-width: 1400px) {
+  .intro-element2 {
+    top: calc(-35vh); /* Passe die Position an, um die Bilder zu überlappen */
+  }
+}
+
+/* Breakpoints für mittlere Bildschirmgrößen */
+@media (max-width: 1200px) {
+  .intro-element1 svg {
+    width: 85%;
+    max-width: 650px;
+  }
+
+  .intro-element3 img,
+  .intro-element4 img {
+    width: 85%;
+    max-width: 650px;
+  }
+
+  .intro-element2 {
+    top: calc(-30vh);
+  }
+}
+
+/* Breakpoints für kleinere Bildschirme */
+@media (max-width: 768px) {
+  .intro-section {
+    grid-template-areas:
+      "element4"
+      "element1"
+      "element2";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .intro-element1 {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 50px 0 50px;
+    margin: 0;
+  }
+
+  .intro-element1 svg {
+    width: 80%;
+    max-width: 550px;
+  }
+
+  .intro-element3 img,
+  .intro-element4 img {
+    width: 80%;
+    max-width: 550px;
+    height: auto;
+  }
+
+  .intro-element2 {
+    top: calc(-20vh); /* Passe den Wert für mobile Bildschirme an */
+    width: 80%;
+    max-width: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Skalierung für sehr kleine Bildschirme */
+@media (max-width: 480px) {
+  .intro-element1 svg {
+    width: 75%;
+    max-width: 450px;
+  }
+
+  .intro-element3 img,
+  .intro-element4 img,
+  .intro-element2 img {
+    width: 75%;
+    max-width: 450px;
+    height: auto;
+  }
+
+  .intro-element2 {
+    top: calc(-15vh); /* Reduziere die Höhe für sehr kleine Bildschirme */
+    width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Breakpoints für sehr kleine mobile Geräte */
+@media (max-width: 360px) {
+  .intro-element1 svg {
+    width: 70%;
+    max-width: 400px;
+  }
+
+  .intro-element3 img,
+  .intro-element4 img,
+  .intro-element2 img {
+    width: 70%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .intro-element2 {
+    top: calc(-10vh);
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
