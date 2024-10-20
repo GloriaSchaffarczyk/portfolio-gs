@@ -41,7 +41,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: calc(-40vh); /* Nutze relative Einheiten für die Höhe */
+  top: calc(-52vh); /* Nutze relative Einheiten für die Höhe */
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
@@ -58,7 +58,7 @@
   z-index: 1;
   width: auto;
   height: 100%;
-  padding: 0 0 0 5vw;
+  padding: 0 100px 0 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,8 +75,7 @@
   z-index: 0;
   width: auto;
   height: 100%;
-  padding: 0 0 0 5vw;
-  margin-top: 5vh; /* Verwende relative Margins */
+  padding: 0 0 0 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,33 +185,44 @@ button {
   }
 }
 
-/* Breakpoints für größere Bildschirme */
-@media (min-width: 1400px) {
+@media (max-width: 1669px) {
   .intro-element2 {
-    top: calc(-35vh); /* Passe die Position an, um die Bilder zu überlappen */
+    top: calc(-44vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
-/* Breakpoints für mittlere Bildschirmgrößen */
-@media (max-width: 1200px) {
-  .intro-element1 svg {
-    width: 85%;
-    max-width: 650px;
-  }
-
-  .intro-element3 img,
-  .intro-element4 img {
-    width: 85%;
-    max-width: 650px;
-  }
-
+@media (max-width: 1584px) {
   .intro-element2 {
-    top: calc(-30vh);
+    top: calc(-42vh); /* Nutze relative Einheiten für die Höhe */
+  }
+}
+
+@media (max-width: 1559px) {
+  .intro-element2 {
+    top: calc(-41vh); /* Nutze relative Einheiten für die Höhe */
+  }
+}
+
+@media (max-width: 1489px) {
+  .intro-element2 {
+    top: calc(-39vh); /* Nutze relative Einheiten für die Höhe */
+  }
+}
+
+@media (max-width: 1444px) {
+  .intro-element2 {
+    top: calc(-38vh); /* Nutze relative Einheiten für die Höhe */
+  }
+}
+
+@media (max-width: 1370px) {
+  .intro-element2 {
+    top: calc(-35vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
 /* Breakpoints für kleinere Bildschirme */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .intro-section {
     grid-template-areas:
       "element4"
@@ -227,7 +237,6 @@ button {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: 0 50px 0 50px;
     margin: 0;
   }
 
@@ -238,62 +247,105 @@ button {
 
   .intro-element3 img,
   .intro-element4 img {
-    width: 80%;
-    max-width: 550px;
+    width: 100%;
     height: auto;
   }
 
   .intro-element2 {
-    top: calc(-20vh); /* Passe den Wert für mobile Bildschirme an */
-    width: 80%;
-    max-width: 550px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: calc(-55vh); /* Passe den Wert für mobile Bildschirme an */
   }
 }
 
-/* Skalierung für sehr kleine Bildschirme */
-@media (max-width: 480px) {
-  .intro-element1 svg {
-    width: 75%;
-    max-width: 450px;
-  }
+// /* Breakpoints für mittlere Bildschirmgrößen */
+// @media (max-width: 1200px) {
+//   .intro-element1 svg {
+//     width: 85%;
+//     max-width: 650px;
+//   }
 
-  .intro-element3 img,
-  .intro-element4 img,
-  .intro-element2 img {
-    width: 75%;
-    max-width: 450px;
-    height: auto;
-  }
+//   .intro-element3 img,
+//   .intro-element4 img {
+//     width: 85%;
+//     max-width: 650px;
+//   }
 
+//   .intro-element2 {
+//     top: calc(-39vh); /* Nutze relative Einheiten für die Höhe */
+//   }
+// }
+
+@media (max-width: 1100px) {
   .intro-element2 {
-    top: calc(-15vh); /* Reduziere die Höhe für sehr kleine Bildschirme */
-    width: 75%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: calc(-38vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
-/* Breakpoints für sehr kleine mobile Geräte */
-@media (max-width: 360px) {
-  .intro-element1 svg {
-    width: 70%;
-    max-width: 400px;
-  }
-
-  .intro-element3 img,
-  .intro-element4 img,
-  .intro-element2 img {
-    width: 70%;
-    max-width: 400px;
-    height: auto;
-  }
-
+@media (max-width: 990px) {
   .intro-element2 {
-    top: calc(-10vh);
-    width: 70%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: calc(-37vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
+
+@media (max-width: 890px) {
+  .intro-element2 {
+    top: calc(-36vh); /* Nutze relative Einheiten für die Höhe */
+  }
+}
+
+@media (max-width: 790px) {
+  .intro-element2 {
+    top: calc(-35vh); /* Nutze relative Einheiten für die Höhe */
+  }
+}
+
+@media (max-width: 660px) {
+  .intro-element2 {
+    top: calc(-31vh); /* Nutze relative Einheiten für die Höhe */
+  }
+}
+
+// /* Skalierung für sehr kleine Bildschirme */
+// @media (max-width: 480px) {
+//   .intro-element1 svg {
+//     width: 75%;
+//     max-width: 450px;
+//   }
+
+//   .intro-element3 img,
+//   .intro-element4 img,
+//   .intro-element2 img {
+//     width: 75%;
+//     max-width: 450px;
+//     height: auto;
+//   }
+
+//   .intro-element2 {
+//     top: calc(-15vh); /* Reduziere die Höhe für sehr kleine Bildschirme */
+//     width: 75%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+// }
+
+// /* Breakpoints für sehr kleine mobile Geräte */
+// @media (max-width: 360px) {
+//   .intro-element1 svg {
+//     width: 70%;
+//     max-width: 400px;
+//   }
+
+//   .intro-element3 img,
+//   .intro-element4 img,
+//   .intro-element2 img {
+//     width: 70%;
+//     max-width: 400px;
+//     height: auto;
+//   }
+
+//   .intro-element2 {
+//     top: calc(-10vh);
+//     width: 70%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+// }
