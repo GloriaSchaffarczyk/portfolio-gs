@@ -13,6 +13,7 @@
   align-items: center;
   justify-items: stretch;
   position: relative;
+  border: 1px solid white;
 }
 
 .intro-element1 {
@@ -23,8 +24,9 @@
   justify-content: center;
   align-items: center;
   z-index: 3;
-  padding: 0 5vw; /* Verwende relative Padding-Werte */
+  padding: 0 100px;
   box-sizing: border-box;
+  border: 1px solid white;
 }
 
 .intro-element1 svg {
@@ -45,6 +47,7 @@
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
+  border: 1px solid #fff700;
 }
 
 .intro-element2 img {
@@ -62,6 +65,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #ffa600;
 }
 
 .intro-element3 img {
@@ -79,6 +83,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #ff0000;
 }
 
 .intro-element4 img {
@@ -103,6 +108,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  border: 1px solid #ff00a2;
 }
 
 .intro-contact-symbols {
@@ -113,6 +119,7 @@
   justify-content: center;
   gap: 40px;
   padding-left: 200px;
+  border: 1px solid #a200ff;
 }
 
 .intro-contact-symbols a {
@@ -154,6 +161,7 @@ button {
   right: 100px;
   z-index: 4;
   animation: jump 2s ease infinite;
+  border: 1px solid #3c00ff;
 }
 
 .scroll-indicator span {
@@ -187,37 +195,37 @@ button {
 
 @media (max-width: 1669px) {
   .intro-element2 {
-    top: calc(-44vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-45vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
 @media (max-width: 1584px) {
   .intro-element2 {
-    top: calc(-42vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-44vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
 @media (max-width: 1559px) {
   .intro-element2 {
-    top: calc(-41vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-43vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
 @media (max-width: 1489px) {
   .intro-element2 {
-    top: calc(-39vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-43vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
 @media (max-width: 1444px) {
   .intro-element2 {
-    top: calc(-38vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-43vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
 @media (max-width: 1370px) {
   .intro-element2 {
-    top: calc(-35vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-42vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
@@ -236,6 +244,7 @@ button {
   .intro-element1 {
     width: 100%;
     max-width: 100%;
+    padding-top: 40px;
     box-sizing: border-box;
     margin: 0;
   }
@@ -252,55 +261,97 @@ button {
   }
 
   .intro-element2 {
-    top: calc(-55vh); /* Passe den Wert für mobile Bildschirme an */
+    top: calc(-56vh); /* Passe den Wert für mobile Bildschirme an */
+  }
+
+  .social-media-and-contact {
+    bottom: -140px;
   }
 }
 
-// /* Breakpoints für mittlere Bildschirmgrößen */
-// @media (max-width: 1200px) {
-//   .intro-element1 svg {
-//     width: 85%;
-//     max-width: 650px;
-//   }
-
-//   .intro-element3 img,
-//   .intro-element4 img {
-//     width: 85%;
-//     max-width: 650px;
-//   }
-
-//   .intro-element2 {
-//     top: calc(-39vh); /* Nutze relative Einheiten für die Höhe */
-//   }
-// }
-
 @media (max-width: 1100px) {
   .intro-element2 {
-    top: calc(-38vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-55vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
 @media (max-width: 990px) {
   .intro-element2 {
-    top: calc(-37vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-52vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
 @media (max-width: 890px) {
   .intro-element2 {
-    top: calc(-36vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-51vh); /* Nutze relative Einheiten für die Höhe */
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .intro-element2 {
+    top: calc(-48vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
 @media (max-width: 790px) {
   .intro-element2 {
-    top: calc(-35vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-47vh); /* Nutze relative Einheiten für die Höhe */
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-element1 {
+    padding: 0 50px;
+  }
+
+  .intro-element2 {
+    top: calc(-45vh); /* Nutze relative Einheiten für die Höhe */
+  }
+  
+  .intro-element3 {
+    padding: 0 50px;
+  }
+
+  .intro-element4 {
+    padding: 0 0 0 50px;
+  }
+
+  .mailto-long {
+    display: none;
   }
 }
 
 @media (max-width: 660px) {
   .intro-element2 {
-    top: calc(-31vh); /* Nutze relative Einheiten für die Höhe */
+    top: calc(-38vh); /* Nutze relative Einheiten für die Höhe */
+  }
+}
+
+@media (max-width: 560px) {
+  .intro-element1 {
+    padding: 0 25px;
+  }
+
+  .intro-element2 {
+    top: calc(-32vh); /* Nutze relative Einheiten für die Höhe */
+  }
+  
+  .intro-element3 {
+    padding: 0 25px;
+  }
+
+  .intro-element4 {
+    padding: 0 0 0 25px;
+  }
+}
+
+@media (max-width: 460px) {
+  .intro-element2 {
+    top: calc(-28vh); /* Nutze relative Einheiten für die Höhe */
   }
 }
 
