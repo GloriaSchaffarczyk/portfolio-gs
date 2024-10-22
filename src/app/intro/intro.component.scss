@@ -43,7 +43,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: calc(-52vh); /* Nutze relative Einheiten für die Höhe */
+  top: -535px; /* Fester Pixelwert */
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
@@ -84,6 +84,7 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #ff0000;
+  transform: translateX(-8%) translateY(14%);
 }
 
 .intro-element4 img {
@@ -193,43 +194,20 @@ button {
   }
 }
 
-@media (max-width: 1669px) {
+/* Media Queries */
+
+@media (max-width: 1700px) {
   .intro-element2 {
-    top: calc(-45vh); /* Nutze relative Einheiten für die Höhe */
+    top: -460px; /* Fester Pixelwert */
   }
 }
 
-@media (max-width: 1584px) {
+@media (max-width: 1500px) {
   .intro-element2 {
-    top: calc(-44vh); /* Nutze relative Einheiten für die Höhe */
+    top: -444px; /* Fester Pixelwert */
   }
 }
 
-@media (max-width: 1559px) {
-  .intro-element2 {
-    top: calc(-43vh); /* Nutze relative Einheiten für die Höhe */
-  }
-}
-
-@media (max-width: 1489px) {
-  .intro-element2 {
-    top: calc(-43vh); /* Nutze relative Einheiten für die Höhe */
-  }
-}
-
-@media (max-width: 1444px) {
-  .intro-element2 {
-    top: calc(-43vh); /* Nutze relative Einheiten für die Höhe */
-  }
-}
-
-@media (max-width: 1370px) {
-  .intro-element2 {
-    top: calc(-42vh); /* Nutze relative Einheiten für die Höhe */
-  }
-}
-
-/* Breakpoints für kleinere Bildschirme */
 @media (max-width: 1200px) {
   .intro-section {
     grid-template-areas:
@@ -260,8 +238,12 @@ button {
     height: auto;
   }
 
+  .intro-element4 {
+    transform: translateX(-7%) translateY(12%);
+  }
+
   .intro-element2 {
-    top: calc(-56vh); /* Passe den Wert für mobile Bildschirme an */
+    top: -595px;
   }
 
   .social-media-and-contact {
@@ -271,19 +253,25 @@ button {
 
 @media (max-width: 1100px) {
   .intro-element2 {
-    top: calc(-55vh); /* Nutze relative Einheiten für die Höhe */
+    top: -570px; /* Fester Pixelwert */
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1000px) {
   .intro-element2 {
-    top: calc(-52vh); /* Nutze relative Einheiten für die Höhe */
+    top: -550px; /* Fester Pixelwert */
+  }
+}
+
+@media (max-width: 940px) {
+  .intro-element2 {
+    top: -530px; /* Fester Pixelwert */
   }
 }
 
 @media (max-width: 890px) {
   .intro-element2 {
-    top: calc(-51vh); /* Nutze relative Einheiten für die Höhe */
+    top: -515px; /* Fester Pixelwert */
   }
 
   .scroll-indicator {
@@ -293,13 +281,13 @@ button {
 
 @media (max-width: 840px) {
   .intro-element2 {
-    top: calc(-48vh); /* Nutze relative Einheiten für die Höhe */
+    top: -485px; /* Fester Pixelwert */
   }
 }
 
 @media (max-width: 790px) {
   .intro-element2 {
-    top: calc(-47vh); /* Nutze relative Einheiten für die Höhe */
+    top: -470px; /* Fester Pixelwert */
   }
 }
 
@@ -309,9 +297,9 @@ button {
   }
 
   .intro-element2 {
-    top: calc(-45vh); /* Nutze relative Einheiten für die Höhe */
+    top: -440px; /* Fester Pixelwert */
   }
-  
+
   .intro-element3 {
     padding: 0 50px;
   }
@@ -325,9 +313,21 @@ button {
   }
 }
 
+@media (max-width: 710px) {
+  .intro-element2 {
+    top: -410px; /* Fester Pixelwert */
+  }
+}
+
 @media (max-width: 660px) {
   .intro-element2 {
-    top: calc(-38vh); /* Nutze relative Einheiten für die Höhe */
+    top: -380px; /* Fester Pixelwert */
+  }
+}
+
+@media (max-width: 610px) {
+  .intro-element2 {
+    top: -355px; /* Fester Pixelwert */
   }
 }
 
@@ -337,66 +337,63 @@ button {
   }
 
   .intro-element2 {
-    top: calc(-32vh); /* Nutze relative Einheiten für die Höhe */
+    top: -345px; /* Fester Pixelwert */
   }
-  
+
   .intro-element3 {
     padding: 0 25px;
   }
 
   .intro-element4 {
     padding: 0 0 0 25px;
+    transform: translateX(-4%) translateY(9%);
+  }
+}
+
+@media (max-width: 500px) {
+  .intro-element2 {
+    top: -320px; /* Fester Pixelwert */
   }
 }
 
 @media (max-width: 460px) {
   .intro-element2 {
-    top: calc(-28vh); /* Nutze relative Einheiten für die Höhe */
+    top: -290px; /* Fester Pixelwert */
   }
 }
 
-// /* Skalierung für sehr kleine Bildschirme */
-// @media (max-width: 480px) {
-//   .intro-element1 svg {
-//     width: 75%;
-//     max-width: 450px;
-//   }
+@media (max-width: 400px) {
+  .intro-element2 {
+    top: -270px; /* Fester Pixelwert */
+  }
+}
 
-//   .intro-element3 img,
-//   .intro-element4 img,
-//   .intro-element2 img {
-//     width: 75%;
-//     max-width: 450px;
-//     height: auto;
-//   }
+@media (max-width: 360px) {
+  .intro-element1 {
+    padding: 0 10px;
+  }
 
-//   .intro-element2 {
-//     top: calc(-15vh); /* Reduziere die Höhe für sehr kleine Bildschirme */
-//     width: 75%;
-//     left: 50%;
-//     transform: translateX(-50%);
-//   }
-// }
+  .intro-element2 {
+    top: -255px; /* Fester Pixelwert */
+  }
 
-// /* Breakpoints für sehr kleine mobile Geräte */
-// @media (max-width: 360px) {
-//   .intro-element1 svg {
-//     width: 70%;
-//     max-width: 400px;
-//   }
+  .intro-element3 {
+    padding: 0 10px;
+  }
 
-//   .intro-element3 img,
-//   .intro-element4 img,
-//   .intro-element2 img {
-//     width: 70%;
-//     max-width: 400px;
-//     height: auto;
-//   }
+  .intro-element4 {
+    padding: 0 0 0 0px;
+  }
+}
 
-//   .intro-element2 {
-//     top: calc(-10vh);
-//     width: 70%;
-//     left: 50%;
-//     transform: translateX(-50%);
-//   }
-// }
+@media (max-width: 310px) {
+  .intro-element2 {
+    top: -235px; /* Fester Pixelwert */
+  }
+}
+
+@media (max-width: 270px) {
+  .intro-element2 {
+    top: -215px; /* Fester Pixelwert */
+  }
+}
