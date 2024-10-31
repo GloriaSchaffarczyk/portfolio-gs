@@ -43,7 +43,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -580px; /* Fester Pixelwert */
+  top: -580px;
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
@@ -100,16 +100,15 @@
 }
 
 .social-media-and-contact {
+  position: relative;
   z-index: 4;
-  position: absolute;
-  left: 0;
-  bottom: 100px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: center; 
+  justify-content: flex-start;
   gap: 20px;
   border: 1px solid #ff00a2;
+  margin-top: -120px;
 }
 
 .intro-contact-symbols {
@@ -131,6 +130,8 @@
 .intro-line {
   position: absolute;
   left: 0;
+  top: 50%; 
+  transform: translateY(-50%); 
   border: 0;
   border-top: 4px solid #ff3f79;
   border-top-right-radius: 20px;
@@ -195,25 +196,42 @@ button {
 }
 
 /* Media Queries */
+@media (max-width: 1900px) {
+  .social-media-and-contact {
+    margin-top: -60px;
+  }
+}
+
+@media (max-width: 1800px) {
+  .social-media-and-contact {
+    margin-top: -100px;
+  }
+}
 
 @media (max-width: 1700px) {
   .intro-element2 {
-    top: -460px; /* Fester Pixelwert */
+    top: -460px; 
+  }
+}
+
+@media (max-width: 1600px) {
+  .social-media-and-contact {
+    margin-top: -140px;
   }
 }
 
 @media (max-width: 1500px) {
   .intro-element2 {
-    top: -444px; /* Fester Pixelwert */
+    top: -444px; 
   }
 
   .scroll-indicator {
     bottom: 130px;
   }
 
-  // .social-media-and-contact {
-  //   bottom: 130px;
-  // }
+  .social-media-and-contact {
+    margin-top: -160px;
+  }
 }
 
 @media (max-width: 1420px) {
@@ -221,9 +239,9 @@ button {
     bottom: 170px;
   }
 
-  // .social-media-and-contact {
-  //   bottom: 170px;
-  // }
+  .social-media-and-contact {
+    margin-top: -180px;
+  }
 }
 
 @media (max-width: 1350px) {
@@ -231,9 +249,10 @@ button {
     bottom: 200px;
   }
 
-  // .social-media-and-contact {
-  //   bottom: 200px;
-  // }
+  .social-media-and-contact {
+    margin-top: -220px;
+  }
+
 }
 
 @media (max-width: 1200px) {
@@ -274,9 +293,9 @@ button {
     top: -595px;
   }
 
-  // .social-media-and-contact {
-  //   bottom: -160px;
-  // }
+  .social-media-and-contact {
+    margin-top: 50px;
+  }
 
   .scroll-indicator {
     bottom: -160px;
@@ -285,25 +304,25 @@ button {
 
 @media (max-width: 1100px) {
   .intro-element2 {
-    top: -570px; /* Fester Pixelwert */
+    top: -570px; 
   }
 }
 
 @media (max-width: 1000px) {
   .intro-element2 {
-    top: -550px; /* Fester Pixelwert */
+    top: -550px; 
   }
 }
 
 @media (max-width: 940px) {
   .intro-element2 {
-    top: -530px; /* Fester Pixelwert */
+    top: -530px; 
   }
 }
 
 @media (max-width: 890px) {
   .intro-element2 {
-    top: -515px; /* Fester Pixelwert */
+    top: -515px; 
   }
 
   .scroll-indicator {
@@ -313,18 +332,14 @@ button {
 
 @media (max-width: 840px) {
   .intro-element2 {
-    top: -485px; /* Fester Pixelwert */
+    top: -485px; 
   }
 }
 
 @media (max-width: 790px) {
   .intro-element2 {
-    top: -470px; /* Fester Pixelwert */
+    top: -470px; 
   }
-
-  // .social-media-and-contact {
-  //   bottom: -130px;
-  // }
 }
 
 @media (max-width: 768px) {
@@ -333,7 +348,7 @@ button {
   }
 
   .intro-element2 {
-    top: -440px; /* Fester Pixelwert */
+    top: -440px;
   }
 
   .intro-element3 {
@@ -347,40 +362,24 @@ button {
   .mailto-long {
     display: none;
   }
-
-  // .social-media-and-contact {
-  //   bottom: -110px;
-  // }
 }
 
 @media (max-width: 710px) {
   .intro-element2 {
-    top: -410px; /* Fester Pixelwert */
+    top: -410px; 
   }
-
-  // .social-media-and-contact {
-  //   bottom: -50px;
-  // }
 }
 
 @media (max-width: 660px) {
   .intro-element2 {
-    top: -380px; /* Fester Pixelwert */
+    top: -380px; 
   }
-
-  // .social-media-and-contact {
-  //   bottom: 0px;
-  // }
 }
 
 @media (max-width: 610px) {
   .intro-element2 {
-    top: -355px; /* Fester Pixelwert */
+    top: -355px;
   }
-
-  // .social-media-and-contact {
-  //   bottom: 70px;
-  // }
 }
 
 @media (max-width: 560px) {
@@ -389,7 +388,7 @@ button {
   }
 
   .intro-element2 {
-    top: -345px; /* Fester Pixelwert */
+    top: -345px;
   }
 
   .intro-element3 {
@@ -400,46 +399,24 @@ button {
     padding: 0 0 0 25px;
     transform: translateX(-4%) translateY(9%);
   }
-
-  // .social-media-and-contact {
-  //   bottom: 60px;
-  // }
-}
-
-@media (max-width: 520px) {
-  // .social-media-and-contact {
-  //   bottom: 110px;
-  // }
 }
 
 @media (max-width: 500px) {
   .intro-element2 {
-    top: -320px; /* Fester Pixelwert */
+    top: -320px; 
   }
-
-  // .social-media-and-contact {
-  //   bottom: 160px;
-  // }
 }
 
 @media (max-width: 460px) {
   .intro-element2 {
-    top: -290px; /* Fester Pixelwert */
+    top: -290px;
   }
-
-  // .social-media-and-contact {
-  //   bottom: 200px;
-  // }
 }
 
 @media (max-width: 400px) {
   .intro-element2 {
-    top: -270px; /* Fester Pixelwert */
+    top: -270px; 
   }
-
-  // .social-media-and-contact {
-  //   bottom: 300px;
-  // }
 
   .intro-line {
     width: 68px;
@@ -456,7 +433,7 @@ button {
   }
 
   .intro-element2 {
-    top: -255px; /* Fester Pixelwert */
+    top: -255px;
   }
 
   .intro-element3 {
@@ -466,10 +443,6 @@ button {
   .intro-element4 {
     padding: 0 0 0 0px;
   }
-
-  // .social-media-and-contact {
-  //   bottom: 300px;
-  // }
 
   .intro-line {
     width: 39px;
@@ -482,12 +455,12 @@ button {
 
 @media (max-width: 310px) {
   .intro-element2 {
-    top: -235px; /* Fester Pixelwert */
+    top: -235px;
   }
 }
 
 @media (max-width: 270px) {
   .intro-element2 {
-    top: -215px; /* Fester Pixelwert */
+    top: -215px;
   }
 }
