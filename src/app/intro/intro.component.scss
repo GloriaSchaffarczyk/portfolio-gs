@@ -1,3 +1,4 @@
+// Layout und Grid-Struktur
 .intro-section {
   display: grid;
   grid-template-areas:
@@ -13,9 +14,9 @@
   align-items: center;
   justify-items: stretch;
   position: relative;
-  // border: 1px solid white;
 }
 
+// Hauptkomponenten und Layout-Details
 .intro-element1 {
   grid-area: element1;
   display: flex;
@@ -26,13 +27,12 @@
   z-index: 3;
   padding: 0 100px;
   box-sizing: border-box;
-  // border: 1px solid white;
-}
 
-.intro-element1 svg {
-  width: 90%;
-  max-width: 742px;
-  height: auto;
+  svg {
+    width: 90%;
+    max-width: 742px;
+    height: auto;
+  }
 }
 
 .intro-element2 {
@@ -47,13 +47,12 @@
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
-  // border: 1px solid #fff700;
-}
 
-.intro-element2 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 .intro-element3 {
@@ -61,17 +60,16 @@
   z-index: 1;
   width: auto;
   height: 100%;
-  padding: 0 100px 0 100px;
+  padding: 0 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  // border: 1px solid #ffa600;
-}
 
-.intro-element3 img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
+  img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
 }
 
 .intro-element4 {
@@ -83,16 +81,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // border: 1px solid #ff0000;
   transform: translateX(-8%) translateY(14%);
+
+  img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+  }
 }
 
-.intro-element4 img {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-}
-
+// Weitere Elemente
 .full-name svg {
   width: 100%;
   max-width: 742px;
@@ -107,7 +105,6 @@
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  // border: 1px solid #ff00a2;
   margin-top: -120px;
 }
 
@@ -119,12 +116,11 @@
   justify-content: center;
   gap: 40px;
   padding-left: 200px;
-  // border: 1px solid #a200ff;
-}
 
-.intro-contact-symbols a {
-  text-decoration: none;
-  color: white;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .intro-line {
@@ -153,7 +149,7 @@ button {
   font-size: 23px;
 }
 
-/* Scroll-Indikator */
+// Scroll-Indikator und Animation
 .scroll-indicator {
   display: flex;
   flex-direction: column;
@@ -163,22 +159,20 @@ button {
   right: 100px;
   z-index: 4;
   animation: jump 2s ease infinite;
-  // border: 1px solid #3c00ff;
+
+  span {
+    writing-mode: vertical-lr;
+    transform: rotate(0deg);
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .arrow {
+    font-size: 2rem;
+    color: #fff;
+  }
 }
 
-.scroll-indicator span {
-  writing-mode: vertical-lr;
-  transform: rotate(0deg);
-  font-size: 1rem;
-  color: #fff;
-}
-
-.scroll-indicator .arrow {
-  font-size: 2rem;
-  color: #fff;
-}
-
-/* Scroll-Indikator Animation */
 @keyframes jump {
   0%,
   20%,
@@ -195,7 +189,7 @@ button {
   }
 }
 
-/* Media Queries */
+// Media Queries
 @media (max-width: 1900px) {
   .social-media-and-contact {
     margin-top: -60px;
@@ -271,11 +265,11 @@ button {
     padding-top: 40px;
     box-sizing: border-box;
     margin: 0;
-  }
 
-  .intro-element1 svg {
-    width: 80%;
-    max-width: 550px;
+    svg {
+      width: 80%;
+      max-width: 550px;
+    }
   }
 
   .intro-element3 img,
@@ -297,7 +291,7 @@ button {
   }
 
   .scroll-indicator {
-    bottom: -230px;
+    bottom: -150px;
   }
 }
 
@@ -407,12 +401,12 @@ button {
 }
 
 @media (max-width: 460px) {
-.intro-contact-symbols {
-  width: 100%;
-  padding: 0 25px 0 25px;
-  justify-content: space-evenly;
-  gap: 15px;
-}
+  .intro-contact-symbols {
+    width: 100%;
+    padding: 0 25px;
+    justify-content: space-evenly;
+    gap: 15px;
+  }
 
   .intro-element2 {
     top: -290px;
@@ -452,7 +446,7 @@ button {
   }
 
   .intro-element4 {
-    padding: 0 0 0 0px;
+    padding: 0;
   }
 
   .intro-line {
