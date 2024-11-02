@@ -1,131 +1,131 @@
-/* xs */
-/* @media (min-width: 475px) {} */
+// /* xs */
+// /* @media (min-width: 475px) {} */
 
-/* sm */
-/* @media (min-width: 640px) {} */
+// /* sm */
+// /* @media (min-width: 640px) {} */
 
-/* md */
-/* @media (min-width: 768px) {} */
+// /* md */
+// /* @media (min-width: 768px) {} */
 
-/* lg */
-/* @media (min-width: 1024px) {} */
+// /* lg */
+// /* @media (min-width: 1024px) {} */
 
-/* xl */
-/* @media (min-width: 1280px) {} */
+// /* xl */
+// /* @media (min-width: 1280px) {} */
 
-/* 2xl */
-/* @media (min-width: 1536px) {} */
+// /* 2xl */
+// /* @media (min-width: 1536px) {} */
 
-@import "./variables.scss";
+// // @import "./variables.scss";
 
-.container {
-  width: 100%;
-  margin-inline: auto;
-  padding: 0 1.5rem;
-}
+// .container {
+//   width: 100%;
+//   margin-inline: auto;
+//   padding: 0 1.5rem;
+// }
 
-.section--margin-bottom {
-  margin-bottom: 5rem;
-}
+// .section--margin-bottom {
+//   margin-bottom: 5rem;
+// }
 
-.btn {
-  display: inline-block;
-  padding: 0.9em 1.875em;
-  border-radius: 10px;
-  transition: all ease-out 0.3s;
-  transform-origin: top center;
-  background-color: $clr-light-blue;
-  cursor: pointer;
+// .btn {
+//   display: inline-block;
+//   padding: 0.9em 1.875em;
+//   border-radius: 10px;
+//   transition: all ease-out 0.3s;
+//   transform-origin: top center;
+//   background-color: $clr-light-blue;
+//   cursor: pointer;
 
-  &:hover {
-    background-color: $clr-dark-blue;
-    transform: scale(1.25);
-  }
+//   &:hover {
+//     background-color: $clr-dark-blue;
+//     transform: scale(1.25);
+//   }
 
-  &:active {
-    background-color: #fff;
-    color: #000;
-    transform: scale(1);
-  }
-}
+//   &:active {
+//     background-color: #fff;
+//     color: #000;
+//     transform: scale(1);
+//   }
+// }
 
-.title {
-  font-size: $size-4xl;
-  font-weight: 700;
-  color: $clr-light;
-  line-height: 1;
-}
+// .title {
+//   font-size: $size-4xl;
+//   font-weight: 700;
+//   color: $clr-light;
+//   line-height: 1;
+// }
 
-/* xs */
-@media (min-width: 475px) {
-  .container {
-    max-width: 475px;
-  }
-  .title {
-    font-size: $size-5xl;
-  }
-}
+// /* xs */
+// @media (min-width: 475px) {
+//   .container {
+//     max-width: 475px;
+//   }
+//   .title {
+//     font-size: $size-5xl;
+//   }
+// }
 
-/* sm */
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
+// /* sm */
+// @media (min-width: 640px) {
+//   .container {
+//     max-width: 640px;
+//   }
 
-  .section--margin-bottom {
-    margin-bottom: 7rem;
-  }
+//   .section--margin-bottom {
+//     margin-bottom: 7rem;
+//   }
 
-  .title {
-    font-size: $size-6xl;
-  }
-}
+//   .title {
+//     font-size: $size-6xl;
+//   }
+// }
 
-/* md */
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
+// /* md */
+// @media (min-width: 768px) {
+//   .container {
+//     max-width: 768px;
+//   }
 
-  .section--margin-bottom {
-    margin-bottom: 8rem;
-  }
-}
+//   .section--margin-bottom {
+//     margin-bottom: 8rem;
+//   }
+// }
 
-/* lg */
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-    padding: 0 2rem;
-  }
+// /* lg */
+// @media (min-width: 1024px) {
+//   .container {
+//     max-width: 1024px;
+//     padding: 0 2rem;
+//   }
 
-  .section--margin-bottom {
-    margin-bottom: 10rem;
-  }
-}
+//   .section--margin-bottom {
+//     margin-bottom: 10rem;
+//   }
+// }
 
-/* xl */
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
+// /* xl */
+// @media (min-width: 1280px) {
+//   .container {
+//     max-width: 1280px;
+//   }
 
-  .section--margin-bottom {
-    margin-bottom: 12rem;
-  }
+//   .section--margin-bottom {
+//     margin-bottom: 12rem;
+//   }
 
-  .title {
-    font-size: $size-8xl;
-  }
-}
+//   .title {
+//     font-size: $size-8xl;
+//   }
+// }
 
-/* 2xl */
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
+// /* 2xl */
+// @media (min-width: 1536px) {
+//   .container {
+//     max-width: 1536px;
+//   }
 
-  .section--margin-bottom {
-    margin-bottom: 23rem;
-  }
-}
+//   .section--margin-bottom {
+//     margin-bottom: 23rem;
+//   }
+// }

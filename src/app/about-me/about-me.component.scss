@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .about-me-section {
   z-index: 4;
   height: 60vh;
@@ -5,7 +7,7 @@
   border: 1px solid red;
   display: flex;
   flex-direction: row;
-  margin-top: 300px;
+  margin-top: 150px;
 }
 
 .about-me-left {

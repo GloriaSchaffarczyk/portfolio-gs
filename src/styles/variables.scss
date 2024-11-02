@@ -1,11 +1,13 @@
 // Fonts
 $font-primary: 'poppins', 'sans-serif';
+$text-color: #fff;
+$font-size: 1.4rem;
 
 //  Colors
-$clr-dark: #141D2F;
-$clr-light: #FFFFFF;
-$clr-light-blue: #00BEE8;
-$clr-dark-blue: #4B47FF;
+$color-dark: #141D2F;
+$color-light: #FFFFFF;
+$primary-color: #00bf89;
+$secondary-color: #ff3f79;
 
 // Sizes
 $size-xxs: 0.5rem;
@@ -23,3 +25,8 @@ $size-7xl: 4.5rem;
 $size-8xl: 6rem;
 $size-9xl: 8rem;
 $size-10xl: 10rem;
+
+// Paddings
+$padding-large: 100px;
+$padding-medium: 50px;
+$padding-small: 25px;

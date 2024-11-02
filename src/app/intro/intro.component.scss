@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 // Layout und Grid-Struktur
 .intro-section {
   display: grid;
@@ -25,11 +27,11 @@
   justify-content: center;
   align-items: center;
   z-index: 3;
-  padding: 0 100px;
+  padding: 0 $padding-large 0 0;
   box-sizing: border-box;
 
   svg {
-    width: 90%;
+    width: 100%;
     max-width: 742px;
     height: auto;
   }
@@ -60,7 +62,7 @@
   z-index: 1;
   width: auto;
   height: 100%;
-  padding: 0 100px;
+  padding: 0 $padding-large;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +79,7 @@
   z-index: 0;
   width: auto;
   height: 100%;
-  padding: 0 0 0 100px;
+  padding: 0 0 0 $padding-large;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,7 +121,8 @@
 
   a {
     text-decoration: none;
-    color: white;
+    color: $text-color;
+    font-size: $font-size;
   }
 }
 
@@ -129,7 +132,7 @@
   top: 50%;
   transform: translateY(-50%);
   border: 0;
-  border-top: 4px solid #ff3f79;
+  border-top: 4px solid $secondary-color;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   width: 150px;
@@ -143,10 +146,10 @@ button {
   align-items: center;
   border-radius: 10px;
   border: none;
-  background: #00bf89;
-  color: #fff;
+  background: $primary-color;
+  color: $text-color;
   font-family: Poppins;
-  font-size: 23px;
+  font-size: $font-size;
 }
 
 // Scroll-Indikator und Animation
@@ -163,13 +166,13 @@ button {
   span {
     writing-mode: vertical-lr;
     transform: rotate(0deg);
-    font-size: 1rem;
-    color: #fff;
+    font-size: $font-size;
+    color: $text-color;
   }
 
   .arrow {
     font-size: 2rem;
-    color: #fff;
+    color: $text-color;
   }
 }
 
@@ -337,7 +340,7 @@ button {
 
 @media (max-width: 768px) {
   .intro-element1 {
-    padding: 0 50px;
+    padding: 0 $padding-medium;
   }
 
   .intro-element2 {
@@ -345,11 +348,11 @@ button {
   }
 
   .intro-element3 {
-    padding: 0 50px;
+    padding: 0 $padding-medium;
   }
 
   .intro-element4 {
-    padding: 0 0 0 50px;
+    padding: 0 0 0 $padding-medium;
   }
 
   .mailto-long {
@@ -377,7 +380,7 @@ button {
 
 @media (max-width: 560px) {
   .intro-element1 {
-    padding: 0 25px;
+    padding: 0 $padding-small;
   }
 
   .intro-element2 {
@@ -385,11 +388,11 @@ button {
   }
 
   .intro-element3 {
-    padding: 0 25px;
+    padding: 0 $padding-small;
   }
 
   .intro-element4 {
-    padding: 0 0 0 25px;
+    padding: 0 0 0 $padding-small;
     transform: translateX(-4%) translateY(9%);
   }
 }
@@ -403,7 +406,7 @@ button {
 @media (max-width: 460px) {
   .intro-contact-symbols {
     width: 100%;
-    padding: 0 25px;
+    padding: 0 $padding-small;
     justify-content: space-evenly;
     gap: 15px;
   }
