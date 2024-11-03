@@ -22,6 +22,11 @@
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
+  >h1 {
+    font-size: 5.6rem;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+  }
 }
 
 .about-me-right {
