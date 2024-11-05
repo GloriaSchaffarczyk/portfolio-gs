@@ -1,42 +1,32 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .about-me-section {
   z-index: 4;
-  height: 60vh;
   position: relative;
   border: 1px solid red;
   display: flex;
   flex-direction: row;
-  margin-top: 150px;
+  margin-top: 100px;
+  font-size: 1rem;
 }
 
 .about-me-left {
-  height: 60vh;
-  width: 45%;
+  width: 50%;
   border: 1px solid rgb(162, 0, 255);
-  padding-left: 100px;
+  padding-left: $padding-large;
   padding-right: 50px;
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   box-sizing: border-box;
-  >h1 {
-    font-size: 5.6rem;
+
+  > h1 {
+    font-size: clamp(2.5rem, 4vw + 1rem, 5.6rem);
     margin-block-start: 0.1em;
     margin-block-end: 0.1em;
   }
-}
-
-.about-me-right {
-  height: 60vh;
-  width: 55%;
-  border: 1px solid greenyellow;
-  display: flex;
-  justify-content: flex-end; /* Zentriert das Bild horizontal */
-  align-items: center; /* Zentriert das Bild vertikal */
-  position: relative; /* Macht das Bild relativ zum Container positionierbar */
 }
 
 .about-me-bullet-points {
@@ -53,6 +43,7 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
+
     > p {
       padding-left: 16px;
       display: flex;
@@ -60,20 +51,95 @@
   }
 }
 
-// .circle-picture-line {
-//   position: absolute;
-//   right: 0;
-//   top: 200px;
-//   border: 0;
-//   border-top: 4px solid #00bf89;
-//   border-top-left-radius: 20px;
-//   border-bottom-left-radius: 20px;
-//   width: 350px;
-// }
+.about-me-right {
+  width: 50%;
+  border: 1px solid greenyellow;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
 
 .about-me-group {
-  max-width: 100%; /* Passt die Bildgröße an den Container an */
+  max-width: 100%;
   height: auto;
-  position: relative; /* Du kannst es anpassen, wenn du absolute Positionierung brauchst */
+  position: relative;
   right: 0;
+}
+
+// Media Queries
+@media (max-width: 1300px) {
+  .about-me-left h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-me-right {
+    display: none;
+    width: 0;
+  }
+
+  .about-me-left {
+    width: 100%;
+    padding: 0 100px 0 100px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me-section {
+    padding: 0 50px 0 50px;
+    margin-top: 100px;
+    > .about-me-left {
+      padding: 0;
+    }
+  }
+  .about-me-left h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-me-section {
+    padding: 0 25px 0 25px;
+    margin-top: 70px;
+    > .about-me-left {
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  .about-me-bullet-points {
+    > .about-me-bullet-point {
+      gap: 12px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about-me-left p {
+    margin-block-start: 0.9em;
+    margin-block-end: 0.9em;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-me-section {
+    padding: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .about-me-left h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-me-section {
+    padding: 0 10px;
+    font-size: 0.8rem;
+  }
 }
