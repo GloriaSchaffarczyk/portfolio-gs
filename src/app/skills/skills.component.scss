@@ -1,71 +1,92 @@
 @import '../../styles/variables.scss';
 
+.d-none {
+  display: none;
+}
+
 .skills-section {
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row; 
-    position: relative;
-    margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 100px;
 }
 
-.skills-symbols, .skills-text-and-button {
-    height: 50vh;
-    width: 50%;
-    box-sizing: border-box; 
+.skills-left {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 50px;
+  border: 1px solid rgb(105, 225, 13);
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
 }
 
-.skills-symbols {
+.skills-right {
+  width: 50%;
+  border: 1px solid rgb(130, 13, 225);
+}
+
+.skills-left {
+  .skills-symbols {
     border: 1px solid blue;
-    padding-left: 100px;
-    padding-right: 50px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     gap: 12px;
     align-content: center;
-    justify-items: center; 
-    align-items: center; 
-}
+    justify-items: center;
+    align-items: center;
+  }
 
-.skills-icon-and-name {
+  .skills-icon-and-name {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    height: 100%;
-}
+    align-items: center;
+    justify-content: center;
+  }
 
-/* Symbole */
-.skills-symbols img {
+  .skills-symbols img {
     max-width: 70px;
     max-height: 70px;
-    object-fit: contain; 
-}
-  
-  .skills-text-and-button {
-    border: 1px solid red;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-right: 150px;
-    padding-left: 50px;
-    box-sizing: border-box; 
+    object-fit: contain;
   }
-  
+}
+
+/* skills-right */
+.skills-right {
+  .skills-text-and-button {
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 248, 47);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 120px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    > h1 {
+      font-size: 5.6rem;
+      margin-block-start: 0.1em;
+      margin-block-end: 0.1em;
+    }
+    > span {
+      text-align: right;
+    }
+  }
+
   .skills-line {
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 75px;
     border: 0;
     border-top: 4px solid #00bf89;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     width: 100px;
   }
-  
+
   button {
     margin-top: 30px;
     display: flex;
@@ -79,75 +100,93 @@
     font-family: Poppins;
     font-size: 23px;
   }
-  
-  /* Größere Bildschirme (Desktop) */
-  @media (min-width: 1024px) {
-    .skills-symbols {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  
-    .skills-symbols img {
-      max-width: 90px; 
-      max-height: 90px;
-    }
-  }
-  
-  /* Mittlere Bildschirme (Tablets) */
-  @media (max-width: 1024px) {
-    .skills-symbols {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .skills-symbols img {
-      max-width: 70px; 
-      max-height: 70px;
-    }
-  }
-  
-  /* Kleinere Bildschirme (Smartphones) */
-  @media (max-width: 768px) {
-    .skills-container {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .skills-symbols {
-      width: 100%;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
+}
+
+/* Layout wird ab 1200px einspaltig */
+@media (max-width: 1300px) {
+  .skills-right {
     .skills-text-and-button {
-      width: 100%;
-      margin-top: 20px;
-    }
-  
-    .skills-symbols img {
-      max-width: 60px; 
-      max-height: 60px;
+      > h1 {
+        font-size: 5rem;
+      }
     }
   }
-  
-  /* Sehr kleine Bildschirme (kleinere Smartphones) */
-  @media (max-width: 480px) {
-    .skills-symbols {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .skills-symbols img {
-      max-width: 50px;
-      max-height: 50px;
-    }
+}
+
+@media (max-width: 1200px) {
+  .skills-section {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* Minimale Bildschirme (320px) */
-  @media (max-width: 320px) {
-    .skills-symbols {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .skills-symbols img {
-      max-width: 40px;
-      max-height: 40px;
-    }
+
+  /* skills-right wird ausgeblendet */
+  .skills-right {
+    display: none;
   }
-  
+
+  /* skills-left übernimmt die volle Breite */
+  .skills-left {
+    width: 100%;
+    padding: 0 50px;
+  }
+}
+
+/* Responsivität für Symbolgröße und Grid */
+@media (min-width: 1200px) {
+  .skills-symbols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills-symbols img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-symbols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-symbols img {
+    max-width: 70px;
+    max-height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 0 25px;
+  }
+
+  .skills-symbols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-symbols img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-symbols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .skills-symbols img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .skills-symbols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .skills-symbols img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
