@@ -21,25 +21,4 @@ export class SkillsComponent {
     { imgSrc: 'assets/skills-icon-wordpress.png', name: 'WordPress' },
     { imgSrc: 'assets/skills-icon-continually-learning-red.png', name: '' }
   ];
-
-  // ngAfterViewInit() {
-  //   // Nur fortfahren, wenn 'window' definiert ist
-  //   if (typeof window !== 'undefined') {
-  //     this.toggleDNoneClass();
-  //     window.addEventListener('resize', () => this.toggleDNoneClass());
-  //   }
-  // }
-
-  // private toggleDNoneClass() {
-  //   const isSmallScreen = window.innerWidth <= 1200;
-  //   const elements = document.querySelectorAll('.d-none');
-
-  //   elements.forEach(element => {
-  //     if (isSmallScreen) {
-  //       element.classList.remove('d-none');
-  //     } else {
-  //       element.classList.add('d-none');
-  //     }
-  //   });
-  // }
 }
