@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -6,7 +6,7 @@ import { Component, AfterViewInit } from '@angular/core';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements AfterViewInit {
+export class SkillsComponent {
   skills = [
     { imgSrc: 'assets/skills-icon-angular.png', name: 'Angular' },
     { imgSrc: 'assets/skills-icon-typescript.png', name: 'TypeScript' },
@@ -22,24 +22,24 @@ export class SkillsComponent implements AfterViewInit {
     { imgSrc: 'assets/skills-icon-continually-learning-red.png', name: '' }
   ];
 
-  ngAfterViewInit() {
-    // Nur fortfahren, wenn 'window' definiert ist
-    if (typeof window !== 'undefined') {
-      this.toggleDNoneClass();
-      window.addEventListener('resize', () => this.toggleDNoneClass());
-    }
-  }
+  // ngAfterViewInit() {
+  //   // Nur fortfahren, wenn 'window' definiert ist
+  //   if (typeof window !== 'undefined') {
+  //     this.toggleDNoneClass();
+  //     window.addEventListener('resize', () => this.toggleDNoneClass());
+  //   }
+  // }
 
-  private toggleDNoneClass() {
-    const isSmallScreen = window.innerWidth <= 1200;
-    const elements = document.querySelectorAll('.d-none');
+  // private toggleDNoneClass() {
+  //   const isSmallScreen = window.innerWidth <= 1200;
+  //   const elements = document.querySelectorAll('.d-none');
 
-    elements.forEach(element => {
-      if (isSmallScreen) {
-        element.classList.remove('d-none');
-      } else {
-        element.classList.add('d-none');
-      }
-    });
-  }
+  //   elements.forEach(element => {
+  //     if (isSmallScreen) {
+  //       element.classList.remove('d-none');
+  //     } else {
+  //       element.classList.add('d-none');
+  //     }
+  //   });
+  // }
 }

@@ -1,5 +1,6 @@
 @import '../../styles/variables.scss';
 
+/* Standardmäßig .d-none verstecken */
 .d-none {
   display: none;
 }
@@ -17,9 +18,6 @@
   box-sizing: border-box;
   padding: 0 50px;
   border: 1px solid rgb(105, 225, 13);
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start;
 }
 
 .skills-right {
@@ -27,92 +25,80 @@
   border: 1px solid rgb(130, 13, 225);
 }
 
-.skills-left {
-  .skills-symbols {
-    border: 1px solid blue;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-  }
+.skills-left .skills-symbols {
+  border: 1px solid blue;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
 
-  .skills-icon-and-name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.skills-icon-and-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .skills-symbols img {
-    max-width: 70px;
-    max-height: 70px;
-    object-fit: contain;
-  }
+.skills-symbols img {
+  max-width: 70px;
+  max-height: 70px;
+  object-fit: contain;
 }
 
 /* skills-right */
-.skills-right {
-  .skills-text-and-button {
-    height: 100%;
-    box-sizing: border-box;
-    border: 1px solid rgb(255, 248, 47);
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 0 120px;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: flex-start;
-    > h1 {
-      font-size: 5.6rem;
-      margin-block-start: 0.1em;
-      margin-block-end: 0.1em;
-    }
-    > span {
-      text-align: right;
-    }
-  }
-
-  .skills-line {
-    position: absolute;
-    right: 0;
-    top: 75px;
-    border: 0;
-    border-top: 4px solid #00bf89;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    width: 100px;
-  }
-
-  button {
-    margin-top: 30px;
-    display: flex;
-    padding: 15px 30px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: none;
-    background: #00bf89;
-    color: #fff;
-    font-family: Poppins;
-    font-size: 23px;
-  }
+.skills-right .skills-text-and-button {
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 248, 47);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 120px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
 }
 
-/* Layout wird ab 1200px einspaltig */
-@media (max-width: 1300px) {
-  .skills-right {
-    .skills-text-and-button {
-      > h1 {
-        font-size: 5rem;
-      }
-    }
-  }
+.skills-right .skills-text-and-button > h1 {
+  font-size: 5.6rem;
+  margin-block-start: 0.1em;
+  margin-block-end: 0.1em;
 }
 
+.skills-right .skills-text-and-button > span {
+  text-align: right;
+}
+
+.skills-right .skills-line {
+  position: absolute;
+  right: 0;
+  top: 75px;
+  border: 0;
+  border-top: 4px solid #00bf89;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 100px;
+}
+
+.skills-right button {
+  margin-top: 30px;
+  display: flex;
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  background: #00bf89;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 23px;
+}
+
+/* Ab 1200px wird das Layout einspaltig und die d-none-Elemente angezeigt */
 @media (max-width: 1200px) {
   .skills-section {
     flex-direction: column;
@@ -129,9 +115,20 @@
     width: 100%;
     padding: 0 50px;
   }
+
+  /* .d-none-Elemente anzeigen */
+  .d-none {
+    display: block;
+  }
 }
 
 /* Responsivität für Symbolgröße und Grid */
+@media (max-width: 1300px) {
+  .skills-right .skills-text-and-button > h1 {
+    font-size: 5rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .skills-symbols {
     grid-template-columns: repeat(3, 1fr);
