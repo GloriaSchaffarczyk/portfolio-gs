@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
@@ -19,6 +21,22 @@ export class SkillsComponent {
     { imgSrc: 'assets/skills-icon-material-design.png', name: 'Material Design' },
     { imgSrc: 'assets/skills-icon-html.png', name: 'HTML' },
     { imgSrc: 'assets/skills-icon-wordpress.png', name: 'WordPress' },
-    { imgSrc: 'assets/skills-icon-continually-learning-red.png', name: '' }
+    { imgSrc: 'assets/skills-icon-continually-learning-red.png', name: 'Continually learning', isHighlight: true }
   ];
+  
+  showTooltip = false; // Steuerung für die Anzeige des Tooltip-Bilds
+  
+  onHover(skill: any, index: number) {
+    if (index === 11) { // nur das 11. Element
+      skill.imgSrc = 'assets/skills-icon-continually-learning-white.png';
+      this.showTooltip = true; // Tooltip anzeigen
+    }
+  }
+
+  onLeave(skill: any, index: number) {
+    if (index === 11) { // nur das 11. Element
+      skill.imgSrc = 'assets/skills-icon-continually-learning-red.png';
+      this.showTooltip = false; // Tooltip ausblenden
+    }
+  }
 }

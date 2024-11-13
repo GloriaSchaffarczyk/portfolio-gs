@@ -41,11 +41,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .skills-symbols img {
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 80px;
+  max-height: 80px;
   object-fit: contain;
 }
 
@@ -67,6 +68,28 @@
   font-size: 5.6rem;
   margin-block-start: 0.1em;
   margin-block-end: 0.1em;
+}
+
+.skills-left > h1 {
+  font-size: 5rem;
+  margin-block-start: 0.1em;
+  margin-block-end: 0.1em;
+}
+
+.skills-left > span, h2 {
+  text-align: right;
+  padding: 12px 0;
+}
+
+.skills-left button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  background: #00bf89;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 23px;
 }
 
 .skills-right .skills-text-and-button > span {
@@ -120,15 +143,15 @@
   .d-none {
     display: block;
   }
-}
 
-/* Responsivität für Symbolgröße und Grid */
-@media (max-width: 1300px) {
-  .skills-right .skills-text-and-button > h1 {
-    font-size: 5rem;
+  /* Button zentrieren in der mobilen Ansicht */
+  .skills-left button {
+    display: block;
+    margin: 30px auto 0 auto; /* Zentrierung durch auto-Margins */
   }
 }
 
+/* Desktop-Ansicht über 1200px */
 @media (min-width: 1200px) {
   .skills-symbols {
     grid-template-columns: repeat(3, 1fr);
@@ -137,6 +160,18 @@
   .skills-symbols img {
     max-width: 90px;
     max-height: 90px;
+  }
+
+  /* Button ausblenden in der Desktop-Ansicht */
+  .skills-left button {
+    display: none;
+  }
+}
+
+/* Responsivität für Symbolgröße und Grid */
+@media (max-width: 1300px) {
+  .skills-right .skills-text-and-button > h1 {
+    font-size: 5rem;
   }
 }
 
@@ -187,3 +222,34 @@
     max-height: 40px;
   }
 }
+
+.skills-icon-and-name img:hover {
+  transform: translateY(-5px);
+}
+
+.tooltip-image {
+  position: absolute;
+  top: 0; /* Platziert das Bild über dem Symbol */
+  left: 0; /* Zentriert das Tooltip-Bild relativ zum Symbol */
+  transform: translateX(12px); /* Verschiebt das Bild leicht nach rechts */
+  z-index: 10;
+  width: 208px !important;
+  height: auto;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.skills-icon-and-name.highlight:hover .tooltip-image {
+  display: block;
+}
+
+.skills-icon-and-name.highlight p {
+  color: #ff3f79; 
+  transition: color 0.1s ease;
+}
+
+.skills-icon-and-name.highlight p:hover {
+  color: #ffffff;
+}
+
+

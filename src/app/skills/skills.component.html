@@ -3,28 +3,36 @@
     <div class="skills-line d-none"></div>
     <h1 class="d-none">My skills</h1>
     <span class="d-none">I have gained experience in building projects with different frontend technologies and concepts.</span>
-      <div class="skills-symbols">
-        @for (skill of skills; track skill.name) {
-          <div class="skills-icon-and-name">
-            <img [src]="skill.imgSrc" alt="{{skill.name}}">
-            <p>{{ skill.name }}</p>
-          </div>
-        }
-      </div>
-      <h2 class="d-none">Looking for <strong style="color: #ff3f79">another skill</strong>?</h2>
-      <span class="d-none">Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
-      <button class="d-none">Get in touch</button>
+    <div class="skills-symbols">
+      <!-- Loop durch die skills Liste mit der @for-Direktive -->
+      @for (skill of skills; track skill.name) {
+        <div class="skills-icon-and-name" [ngClass]="{'highlight': skill.isHighlight || false}">
+          <img 
+            [src]="skill.imgSrc" 
+            alt="{{skill.name}}" 
+            (mouseenter)="onHover(skill, $index)" 
+            (mouseleave)="onLeave(skill, $index)">
+          <p>{{ skill.name }}</p>
+          
+          <!-- Tooltip nur für das 11. Element "Continually learning" -->
+          @if (skill.isHighlight) {
+            <img src="assets/skills-icon-learning-interest.png" alt="React and Vue Tooltip" class="tooltip-image">
+          }
+        </div>
+      }
+    </div>
+    <h2 class="d-none">Looking for <strong style="color: #ff3f79">another skill</strong>?</h2>
+    <span class="d-none">Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
+    <button class="d-none">Get in touch</button>
   </div>
-    <div class="skills-right">
-      <div class="skills-line"></div>
-      <div class="skills-text-and-button">
-        <h1>My skills</h1>
-        <span>I have gained experience in building projects with different frontend technologies and concepts.</span>
-        <h2>Looking for <strong style="color: #ff3f79">another skill</strong>?</h2>
-        <span>Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
-        <button>Get in touch</button>
-      </div>
+  <div class="skills-right">
+    <div class="skills-line"></div>
+    <div class="skills-text-and-button">
+      <h1>My skills</h1>
+      <span>I have gained experience in building projects with different frontend technologies and concepts.</span>
+      <h2>Looking for <strong style="color: #ff3f79">another skill</strong>?</h2>
+      <span>Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
+      <button>Get in touch</button>
     </div>
   </div>
-  
-  
+</div>
