@@ -24,19 +24,19 @@ export class SkillsComponent {
     { imgSrc: 'assets/skills-icon-continually-learning-red.png', name: 'Continually learning', isHighlight: true }
   ];
   
-  showTooltip = false; // Steuerung für die Anzeige des Tooltip-Bilds
+  showTooltip = false;
   
   onHover(skill: any, index: number) {
-    if (index === 11) { // nur das 11. Element
+    if (index === 11) {
       skill.imgSrc = 'assets/skills-icon-continually-learning-white.png';
-      this.showTooltip = true; // Tooltip anzeigen
+      this.showTooltip = true;
     }
   }
 
   onLeave(skill: any, index: number) {
-    if (index === 11) { // nur das 11. Element
+    if (index === 11) {
       skill.imgSrc = 'assets/skills-icon-continually-learning-red.png';
-      this.showTooltip = false; // Tooltip ausblenden
+      this.showTooltip = false;
     }
   }
 }
