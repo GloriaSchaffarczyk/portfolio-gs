@@ -121,6 +121,38 @@
   font-size: 23px;
 }
 
+/* Tooltip Image */
+.tooltip-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(25px) translateY(-150px);
+  z-index: 10;
+  width: 208px !important;
+  height: auto;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.skills-icon-and-name.highlight p {
+  color: #ff3f79; /* Grundfarbe */
+  transition: color 0.3s ease; /* Sanfter Übergang */
+}
+
+.skills-icon-and-name.highlight:hover p {
+  color: #ffffff; /* Farbe beim Hover */
+}
+
+.hide-on-hover {
+  display: none;
+}
+
+.skills-icon-and-name.highlight:hover .hide-on-hover {
+  display: block;
+}
+
+
+
 /* Ab 1200px wird das Layout einspaltig und die d-none-Elemente angezeigt */
 @media (max-width: 1200px) {
   .skills-section {
@@ -227,25 +259,4 @@
   transform: translateY(-5px);
 }
 
-/* Tooltip Image */
-.tooltip-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateX(25px) translateY(-150px);
-  z-index: 10;
-  width: 208px !important;
-  height: auto;
-  max-width: none !important;
-  max-height: none !important;
-}
-
-.skills-icon-and-name.highlight p {
-  color: #ff3f79; /* Grundfarbe */
-  transition: color 0.3s ease; /* Sanfter Übergang */
-}
-
-.skills-icon-and-name.highlight:hover p {
-  color: #ffffff; /* Farbe beim Hover */
-}
 

@@ -14,7 +14,7 @@
             alt="{{skill.name}}">
           <p>{{ skill.name }}</p>
           @if (skill.isHighlight) {
-            <img src="assets/skills-icon-learning-interest.png" alt="React and Vue Tooltip" class="tooltip-image" [ngClass]="{ 'd-none': !showTooltip }">
+            <img src="assets/skills-icon-learning-interest.png" alt="React and Vue Tooltip" class="tooltip-image hide-on-hover" [ngClass]="{ 'hide-on-hover': !showTooltip }">
           }
         </div>
       }
