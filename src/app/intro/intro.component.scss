@@ -305,6 +305,10 @@ button {
 }
 
 @media (max-width: 1000px) {
+  .intro-contact-symbols a {
+    font-size: 1rem;
+  }
+
   .intro-element2 {
     top: -550px;
   }

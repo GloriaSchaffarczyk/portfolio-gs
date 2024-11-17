@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .d-none {
   display: none;
@@ -18,23 +18,23 @@
   width: 50%;
   box-sizing: border-box;
   padding: 0 0 0 120px;
-border: 1px solid rgb(105, 225, 13);
+  // border: 1px solid rgb(105, 225, 13);
 }
 
 .skills-right {
   width: 50%;
-border: 1px solid rgb(130, 13, 225);
+  // border: 1px solid rgb(130, 13, 225);
 }
 
 .skills-left .skills-symbols {
-  border: 1px solid blue;
+  // border: 1px solid blue;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   align-content: center;
   justify-items: center;
-  align-items: center;  
+  align-items: center;
 }
 
 .skills-left button {
@@ -60,7 +60,7 @@ border: 1px solid rgb(130, 13, 225);
 .skills-right .skills-text-and-button {
   height: 100%;
   box-sizing: border-box;
-  border: 1px solid rgb(255, 248, 47);
+  // border: 1px solid rgb(255, 248, 47);
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -113,12 +113,23 @@ border: 1px solid rgb(130, 13, 225);
 .skills-right .skills-line {
   position: absolute;
   right: 0;
-  top: 75px;
+  top: 100px;
   border: 0;
   border-top: 4px solid #00bf89;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   width: 100px;
+}
+
+.skills-left .skills-line {
+  position: absolute;
+  right: 0;
+  top: 65px;
+  border: 0;
+  border-top: 4px solid #00bf89;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 80px;
 }
 
 .skills-right button {
@@ -140,7 +151,7 @@ border: 1px solid rgb(130, 13, 225);
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(25px) translateY(-150px);
+  transform: translateX(15px) translateY(-150px);
   z-index: 10;
   width: 208px !important;
   height: auto;
@@ -149,8 +160,8 @@ border: 1px solid rgb(130, 13, 225);
 }
 
 .skills-icon-and-name.highlight p {
-  color: #ff3f79; 
-  transition: color 0.2s ease; 
+  color: #ff3f79;
+  transition: color 0.2s ease;
   text-align: center;
 }
 
@@ -170,7 +181,45 @@ border: 1px solid rgb(130, 13, 225);
   transform: translateY(-5px);
 }
 
+@media (max-width: 1800px) {
+  .tooltip-image {
+    transform: translateX(25px) translateY(-150px);
+  }
+}
+
+@media (max-width: 1700px) {
+  .tooltip-image {
+    transform: translateX(20px) translateY(-150px);
+  }
+}
+
+@media (max-width: 1600px) {
+  .tooltip-image {
+    transform: translateX(15px) translateY(-150px);
+  }
+
+.skills-right .skills-line {
+  top: 100px;
+}
+}
+
+@media (max-width: 1500px) {
+  .tooltip-image {
+    transform: translateX(10px) translateY(-150px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .tooltip-image {
+    transform: translateX(5px) translateY(-150px);
+  }
+}
+
 @media (max-width: 1300px) {
+  .tooltip-image {
+    transform: translateX(0px) translateY(-150px);
+  }
+
   .skills-right .skills-text-and-button > h1 {
     font-size: 5rem;
   }
@@ -178,13 +227,17 @@ border: 1px solid rgb(130, 13, 225);
   .skills-left .skills-symbols {
     gap: 32px;
   }
-}
 
+  .skills-right .skills-line {
+    top: 80px;
+  }
+}
 
 @media (max-width: 1200px) {
   .skills-section {
     flex-direction: column;
     align-items: center;
+    margin-top: 80px;
   }
 
   .skills-right {
@@ -196,17 +249,25 @@ border: 1px solid rgb(130, 13, 225);
     padding: 0 100px 0 120px;
   }
 
+  .skills-left > h1 {
+    font-size: 4.5rem;
+  }
+
   .d-none {
     display: block;
   }
 
   .skills-left button {
     display: block;
-    margin: 0 auto 0 auto; 
+    margin: 0 auto 0 auto;
   }
 
   .skills-left .skills-symbols {
     gap: 24px;
+  }
+
+  .tooltip-image {
+    transform: translateX(25px) translateY(-150px);
   }
 }
 
@@ -219,11 +280,32 @@ border: 1px solid rgb(130, 13, 225);
     max-width: 70px;
     max-height: 70px;
   }
+
+  .tooltip-image {
+    transform: translateX(30px) translateY(-130px);
+    width: 180px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .tooltip-image {
+    transform: translateX(20px) translateY(-130px);
+    width: 180px !important;
+  }
 }
 
 @media (max-width: 768px) {
+
+  .skills-section {
+    margin-top: 60px;
+  }
+
   .skills-left .skills-symbols {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills-left > h1 {
+    font-size: 3rem;
   }
 
   .skills-symbols img {
@@ -233,6 +315,30 @@ border: 1px solid rgb(130, 13, 225);
 
   .skills-left {
     padding: 0 50px;
+  }
+
+  .skills-left .skills-line {
+    width: 30px;
+    top: 40px;
+  }
+
+    .tooltip-image {
+      transform: translateX(30px) translateY(-130px);
+      width: 180px !important;
+    }
+}
+
+@media (max-width: 660px) {
+  .tooltip-image {
+    transform: translateX(35px) translateY(-115px);
+    width: 155px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .tooltip-image {
+    transform: translateX(30px) translateY(-115px);
+    width: 155px !important;
   }
 }
 
@@ -244,21 +350,71 @@ border: 1px solid rgb(130, 13, 225);
   .skills-left .skills-symbols {
     gap: 24px;
   }
+
+  .skills-left .skills-line {
+    width: 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  .tooltip-image {
+    transform: translateX(35px) translateY(-90px);
+    width: 120px !important;
+  }
 }
 
 @media (max-width: 480px) {
+.skills-left {
+  font-size: 0.9rem;
+}
+
   .skills-left .skills-symbols {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+  }
+
+  .skills-left > h1 {
+    font-size: 2.2rem;
+  }
+
+  .skills-left h2 {
+    padding: 12px 0 12px 0;
+  }
+
+  .skills-left .skills-line {
+    top: 30px;
   }
 
   .skills-symbols img {
     max-width: 50px;
     max-height: 50px;
   }
+
+  .tooltip-image {
+    transform: translateX(40px) translateY(-90px);
+  }
 }
 
+@media (max-width: 400px) {
+  .tooltip-image {
+    transform: translateX(40px) translateY(-85px);
+    width: 110px !important;
+  }
+  }
+
 @media (max-width: 320px) {
+  .skills-left {
+    font-size: 0.8rem;
+  }
+
+  .skills-left > span {
+    padding: 12px 0 24px 0;
+  }
+
+  .skills-left h2 {
+    padding: 12px 0 8px 0;
+  }
+
   .skills-symbols img {
     max-width: 40px;
     max-height: 40px;
@@ -267,8 +423,9 @@ border: 1px solid rgb(130, 13, 225);
   .skills-left .skills-symbols {
     gap: 0px;
   }
+
+  .tooltip-image {
+    transform: translateX(30px) translateY(-80px);
+    width: 100px !important;
+  }
 }
-
-
-
-
