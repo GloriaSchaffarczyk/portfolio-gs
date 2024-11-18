@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
+// buttons stylen 
+
 @Component({
   selector: 'app-portfolio',
   standalone: true,
