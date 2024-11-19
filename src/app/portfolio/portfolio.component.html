@@ -1,6 +1,8 @@
 <div class="portfolio-section">
+  <div class="portfolio-head">
     <h1>Portfolio</h1>
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+  </div>
     @for (project of projects; track project.title) {
       <div class="project-container" [ngClass]="{ 'reverse-layout': project.reverseLayout }">
         <div class="project-image">
