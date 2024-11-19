@@ -1,37 +1,71 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .portfolio-section {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 100vw;
-    width: 100%; 
-    // border: 1px solid #ff00f2;
-    margin-top: 50px;
-    flex-wrap: wrap;
-    justify-content: center; 
-    align-items: center;
-    > h1 {
-        margin-block-end: 0;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 100vw;
+  width: 100%;
+  // border: 1px solid #ff00f2;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
 
-  .portfolio-head p {
-    margin-block-end: 0;
-    }
-  
-  .project-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    // border: 1px solid #ddd;
-    padding: 0 100px; 
-    border-radius: 10px;
-    max-width: 100%; 
-    width: 100%;
-    position: relative;
+.portfolio-head {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+  > h1 {
+    font-size: 5.6rem;
+    margin-block-end: 0.1em;
+    background-color: $color-dark;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 5;
     box-sizing: border-box;
   }
+
+  > p {
+    margin-block-end: 0;
+    padding: 0 100px;
+  }
+}
+
+.portfolio-line {
+  z-index: 4;
+  position: absolute;
+  right: 0;
+  top: 55%;
+  transform: translateY(-50%);
+  border: 0;
+  border-top: 4px solid $secondary-color;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 75%;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // border: 1px solid #ddd;
+  padding: 0 100px;
+  border-radius: 10px;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
 
 .project-container.reverse-layout {
   flex-direction: row-reverse;
@@ -54,14 +88,14 @@
 }
 
 .portfolio-technologies {
-    color: #00bf89;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
+  color: #00bf89;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 h2 {
   margin-block-start: 0;
-    color: #FF3F79;
+  color: #ff3f79;
 }
 
 .project-links {
@@ -78,8 +112,8 @@ h2 {
 }
 
 .btn-live-test {
-  background-color: #FF3F79;
-  border: 2px solid #FF3F79;
+  background-color: #ff3f79;
+  border: 2px solid #ff3f79;
   color: white;
 }
 
@@ -89,13 +123,20 @@ h2 {
   color: #ffffff;
 }
 
+@media (max-width: 1300px) {
+  .portfolio-head > h1 {
+    font-size: 4.5rem;
+  }
+}
+
 @media (max-width: 1200px) {
   .portfolio-section {
     text-align: center;
   }
 
-  .portfolio-head {
-    padding: 0 100px;
+  .portfolio-line {
+    top: 53%;
+    width: 80%;
   }
 
   .project-container {
@@ -107,8 +148,8 @@ h2 {
   }
 
   .project-container.reverse-layout .project-details {
-  align-items: center !important;
-  text-align: center !important;
+    align-items: center !important;
+    text-align: center !important;
   }
 
   .project-details {
@@ -118,7 +159,7 @@ h2 {
     align-content: center;
     align-items: center;
     justify-content: center;
-}
+  }
 }
 
 @media (max-width: 768px) {
@@ -126,8 +167,16 @@ h2 {
     gap: 24px;
   }
 
-  .portfolio-head {
-    padding: 0 50px;
+  .portfolio-head > h1 {
+    font-size: 3rem;
+  }
+
+  .portfolio-line {
+    top: 45%;
+  }
+
+  .portfolio-head > p {
+    padding: 0 25px;
   }
 
   .project-container {
@@ -135,12 +184,22 @@ h2 {
   }
 }
 
+@media (max-width: 683px) {
+  .portfolio-line {
+    top: 40%
+  }
+}
+
 @media (max-width: 560px) {
-  .portfolio-head {
+  .project-container {
     padding: 0 25px;
   }
 
-  .project-container {
+  .portfolio-line {
+    top: 40%;
+  }
+
+  .portfolio-head > p {
     padding: 0 25px;
   }
 }
@@ -149,14 +208,62 @@ h2 {
   .portfolio-section {
     font-size: 0.9rem;
   }
+
+  .portfolio-line {
+    top: 43%;
+  }
+}
+
+@media (max-width: 450px) {
+  .portfolio-head > h1 {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-line {
+    top: 38%;
+  }
+}
+
+@media (max-width: 390px) {
+  .portfolio-line {
+    top: 37%;
+  }
 }
 
 @media (max-width: 360px) {
-.portfolio-section {
-  font-size: 0.8rem;
-}
+  .portfolio-section {
+    font-size: 0.8rem;
+  }
+
+  .portfolio-line {
+    top: 40%;
+    width: 85%;
+  }
 
   .project-links {
     gap: 12px;
+  }
+}
+
+@media (max-width: 354px) {
+  .portfolio-line {
+    top: 35%;
+  }
+}
+
+@media (max-width: 304px) {
+  .portfolio-line {
+    top: 36%;
+  }
+}
+
+@media (max-width: 271px) {
+  .portfolio-line {
+    top: 36%;
+    width: 90%;
+  }
+
+  .portfolio-head > p {
+    margin-block-end: 0;
   }
 }
