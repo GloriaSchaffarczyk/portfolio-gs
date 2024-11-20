@@ -119,3 +119,9 @@
 .inactive-dot {
   background-color: #ff3f79;
 }
+
+@media (max-width: 1200px) {
+  .single-testimonial {
+    flex-direction: column-reverse;
+}
+}
