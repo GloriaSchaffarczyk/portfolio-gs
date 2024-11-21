@@ -86,3 +86,11 @@ a {
     color: #FF3F79;
     text-decoration: none;
 }
+
+@media (max-width: 1200px) {
+  .contact-form-section {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 150px;
+  }
+}
