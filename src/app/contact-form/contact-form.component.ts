@@ -9,6 +9,8 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angula
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
+  arrowSrc = '../../assets/home-arrow-white.png';
+
   contactForm = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -22,4 +24,11 @@ export class ContactFormComponent {
       // Hier kannst du die Daten verarbeiten (z.B. per HTTP senden)
     }
   }
+
+  swapArrow(isHovered: boolean) {
+    this.arrowSrc = isHovered
+      ? '../../assets/home-arrow-green.png'
+      : '../../assets/home-arrow-white.png';
+  }
+  
 }

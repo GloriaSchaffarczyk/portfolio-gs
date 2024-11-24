@@ -10,9 +10,9 @@ import { Component } from '@angular/core';
 export class TestimonialsComponent {
   testimonials = [
     { author: 'John', quote: 'Task manager inspired by the Kanban System.', imageSrc: 'assets/testimonial-author01.png' },
-    { author: 'Marie', quote: 'A simple Jump-and-Run game.', imageSrc: 'assets/testimonial-author01.png' },
-    { author: 'Bernd', quote: 'Based on the PokéAPI.', imageSrc: 'assets/testimonial-author01.png' },
-    { author: 'Nicole', quote: 'She is amazing.', imageSrc: 'assets/testimonial-author01.png' }
+    { author: 'Marie', quote: 'A simple Jump-and-Run game.', imageSrc: 'assets/testimonial-author03.png' },
+    { author: 'Bernd', quote: 'Based on the PokéAPI.', imageSrc: 'assets/testimonial-author02.png' },
+    { author: 'Nicole', quote: 'She is amazing.', imageSrc: 'assets/testimonial-author03.png' }
   ];
 
   currentTestimonial = 0;
@@ -52,4 +52,5 @@ export class TestimonialsComponent {
       }, 10);
     }
   }
+  
 }  

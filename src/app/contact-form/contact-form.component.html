@@ -1,60 +1,62 @@
 <div class="contact-section">
-    <h1>Contact</h1>
-    <div class="contact-form-section">
-        <div class="contact-form-left">
-            <h2>Got a problem to solve?</h2>
-            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
-            <p>Need a Frontend Developer? <b>Contact me!</b></p>
-        </div>
-        <div class="contact-form-right">
-            <div class="contact-form-wrapper">
-                <form [formGroup]="contactForm" (submit)="onSubmit()" novalidate>
-
-                    <label for="name" class="visually-hidden">Your name</label>
-                    <input type="text" id="name" formControlName="name" placeholder="Your name">
-                    @if (contactForm.controls.name.invalid && contactForm.controls.name.touched) {
-                      <small class="error">Name is required</small>
-                    }
-                
-                    <label for="email" class="visually-hidden">Your email</label>
-                    <input type="email" id="email" formControlName="email" placeholder="Your email">
-                    @if (contactForm.controls.email.invalid && contactForm.controls.email.touched) {
-                      @if (contactForm.controls.email.errors?.['required']) {
-                        <small>Email is required</small>
-                      }
-                      @if (contactForm.controls.email.errors?.['email']) {
-                        <small>Email is not valid</small>
-                      }
-                    }
-                
-                    <label for="message" class="visually-hidden">Your message</label>
-                    <textarea id="message" formControlName="message" placeholder="Your message"></textarea>
-                    @if (contactForm.controls.message.invalid && contactForm.controls.message.touched) {
-                      @if (contactForm.controls.message.errors?.['required']) {
-                        <small>Message is required</small>
-                      }
-                      @if (contactForm.controls.message.errors?.['minlength']) {
-                        <small>Message must be at least 10 characters long</small>
-                      }
-                    }
-                
-                    <label>
-                      <input type="checkbox" formControlName="privacy">
-                      I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
-                    </label>
-                    @if (contactForm.controls.privacy.invalid && contactForm.controls.privacy.touched) {
-                      <small class="error">You must accept the privacy policy</small>
-                    }
-                
-                    <button type="submit" [disabled]="contactForm.invalid">Send message :)</button>
-                
-                </form>
-                
-            </div>
-        </div>
+  <div class="contact-line"></div>
+  <h1>Contact</h1>
+  <div class="contact-form-section">
+    <div class="contact-form-left">
+      <h2>Got a problem to solve?</h2>
+      <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your
+        projects with my work.</p>
+      <p>Need a Frontend Developer? <b>Contact me!</b></p>
     </div>
+    <div class="contact-form-right">
+      <div class="contact-form-wrapper">
+        <form [formGroup]="contactForm" (submit)="onSubmit()" novalidate>
 
+          <label for="name" class="visually-hidden">Your name</label>
+          <input type="text" id="name" formControlName="name" placeholder="Your name">
+          @if (contactForm.controls.name.invalid && contactForm.controls.name.touched) {
+          <small class="error">Name is required</small>
+          }
+
+          <label for="email" class="visually-hidden">Your email</label>
+          <input type="email" id="email" formControlName="email" placeholder="Your email">
+          @if (contactForm.controls.email.invalid && contactForm.controls.email.touched) {
+          @if (contactForm.controls.email.errors?.['required']) {
+          <small>Email is required</small>
+          }
+          @if (contactForm.controls.email.errors?.['email']) {
+          <small>Email is not valid</small>
+          }
+          }
+
+          <label for="message" class="visually-hidden">Your message</label>
+          <textarea id="message" formControlName="message" placeholder="Your message"></textarea>
+          @if (contactForm.controls.message.invalid && contactForm.controls.message.touched) {
+          @if (contactForm.controls.message.errors?.['required']) {
+          <small>Message is required</small>
+          }
+          @if (contactForm.controls.message.errors?.['minlength']) {
+          <small>Message must be at least 10 characters long</small>
+          }
+          }
+
+          <label class="custom-checkbox">
+            <input type="checkbox" formControlName="privacy">
+            <span class="checkbox-icon"></span>
+            I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
+          </label>
+          @if (contactForm.controls.privacy.invalid && contactForm.controls.privacy.touched) {
+          <small class="error">Please accept the privacy policy.</small>
+          }
+
+          <button type="submit" [disabled]="contactForm.invalid">Send message :)</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
 </div>
-
-
-
+<div class="arrow-wrapper">
+  <a href="#"><img [src]="arrowSrc" alt="arrow" class="arrow" (mouseover)="swapArrow(true)" (mouseout)="swapArrow(false)"></a>
+</div>
