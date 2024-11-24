@@ -24,6 +24,7 @@ export class TestimonialsComponent {
     } else {
       this.currentTestimonial = this.testimonials.length - 1;
     }
+    this.triggerAnimation();
   }
   
   slideRight() {
@@ -33,23 +34,22 @@ export class TestimonialsComponent {
     } else {
       this.currentTestimonial = 0;
     }
+    this.triggerAnimation();
   }
   
   resetAnimation() {
-    const quoteElement = document.querySelector('.quote') as HTMLElement;
-    const imageElement = document.querySelector('.testimonial-img img') as HTMLElement;
-    
-    if (quoteElement && imageElement) {
-      // Reset animation for the quote
-      quoteElement.style.animation = 'none';
-      // Reset animation for the image
-      imageElement.style.animation = 'none';
+    const testimonialLine = document.querySelector('.testimonial-line') as HTMLElement;
+    if (testimonialLine) {
+      testimonialLine.classList.remove('animate');
+    }
+  }
   
-      // Use setTimeout to re-trigger the animations
+  triggerAnimation() {
+    const testimonialLine = document.querySelector('.testimonial-line') as HTMLElement;
+    if (testimonialLine) {
       setTimeout(() => {
-        quoteElement.style.animation = '';
-        imageElement.style.animation = '';
+        testimonialLine.classList.add('animate');
       }, 10);
     }
-  }  
-}
+  }
+}  
