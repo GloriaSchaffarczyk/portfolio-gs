@@ -10,16 +10,16 @@
     </div>
     <div class="contact-form-right">
       <div class="contact-form-wrapper">
-        <form [formGroup]="contactForm" (submit)="onSubmit()" novalidate>
+        <form [formGroup]="contactForm" (submit)="onSubmit()" novalidate> <!-- es sollte eigentlich mit (ngSubmit)="onSubmit(contactForm)" gemacht werden; außerdem fehlt der Name mit #contactForm="ngForm" -->
 
           <label for="name" class="visually-hidden">Your name</label>
-          <input type="text" id="name" formControlName="name" placeholder="Your name">
+          <input type="text" id="name" formControlName="name" placeholder="Your name"> <!-- es fehlt beispielsweise ein [(ngModel)]="contactData.name" bei den input-Feldern; außerdem fehlt das Wort "required" -->
           @if (contactForm.controls.name.invalid && contactForm.controls.name.touched) {
           <small class="error">Name is required</small>
           }
 
           <label for="email" class="visually-hidden">Your email</label>
-          <input type="email" id="email" formControlName="email" placeholder="Your email">
+          <input type="email" id="email" formControlName="email" placeholder="Your email"> <!-- ngModel und required fehlt; außerdem könnte man ein regex-Pattern hinzufügen; pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" -->
           @if (contactForm.controls.email.invalid && contactForm.controls.email.touched) {
           @if (contactForm.controls.email.errors?.['required']) {
           <small>Email is required</small>
@@ -30,7 +30,9 @@
           }
 
           <label for="message" class="visually-hidden">Your message</label>
-          <textarea id="message" formControlName="message" placeholder="Your message"></textarea>
+          <textarea id="message" formControlName="message" placeholder="Please enter your message" minlength="10"></textarea>
+          <!-- unter textarea könnten wir die Validation hinzufügen; textarea braucht auch ngModel und Namen #message -->
+          <!-- @if (!message.valid && message.touched && !message.disabled) {<p>Please enter message</p>} -->
           @if (contactForm.controls.message.invalid && contactForm.controls.message.touched) {
           @if (contactForm.controls.message.errors?.['required']) {
           <small>Message is required</small>
@@ -49,7 +51,7 @@
           <small class="error">Please accept the privacy policy.</small>
           }
 
-          <button type="submit" [disabled]="contactForm.invalid">Send message :)</button>
+          <button type="submit" [disabled]="contactForm.invalid">Send message :)</button> <!-- vielleicht input type submit? -->
 
         </form>
 
