@@ -31,6 +31,8 @@ export class ContactFormComponent {
       : '../../assets/home-arrow-white.png';
   }
 
+  // neuer Code
+
   // Die Daten sollen in einem Object gespeichert werden
   // contactData = {
   //   name: "",
