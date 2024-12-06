@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -9,6 +10,9 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angula
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
+
+  http = inject(HttpClient);
+
   arrowSrc = '../../assets/home-arrow-white.png';
 
   contactForm = new FormGroup({
