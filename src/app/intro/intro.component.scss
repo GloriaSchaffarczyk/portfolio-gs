@@ -8,7 +8,7 @@
     "element2 element2";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 70% 30%;
-  height: 80vh;
+  height: 100vh;
   max-width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
@@ -47,7 +47,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -580px;
+  top: -630px;
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
@@ -94,7 +94,6 @@
   }
 }
 
-// Weitere Elemente
 .full-name svg {
   width: 100%;
   max-width: 742px;
@@ -109,7 +108,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  margin-top: -120px;
+  margin-top: -260px;
 }
 
 .intro-contact-symbols {
@@ -195,41 +194,32 @@ button {
 }
 
 // Media Queries
-@media (max-width: 1900px) {
-  .social-media-and-contact {
-    margin-top: -60px;
-  }
-}
 
 @media (max-width: 1800px) {
-  .social-media-and-contact {
-    margin-top: -100px;
+  .intro-element2 {
+    top: -590px;
   }
 }
 
 @media (max-width: 1700px) {
   .intro-element2 {
-    top: -460px;
+    top: -560px;
   }
 }
 
 @media (max-width: 1600px) {
-  .social-media-and-contact {
-    margin-top: -140px;
+  .intro-element2 {
+    top: -530px;
   }
 }
 
 @media (max-width: 1500px) {
-  .intro-element2 {
-    top: -444px;
-  }
-
   .scroll-indicator {
     bottom: 130px;
   }
 
   .social-media-and-contact {
-    margin-top: -160px;
+    margin-top: -290px;
   }
 }
 
@@ -239,7 +229,7 @@ button {
   }
 
   .social-media-and-contact {
-    margin-top: -180px;
+    margin-top: -330px;
   }
 }
 
@@ -249,7 +239,7 @@ button {
   }
 
   .social-media-and-contact {
-    margin-top: -220px;
+    margin-top: -360px;
   }
 }
 
@@ -268,6 +258,7 @@ button {
     width: 100%;
     max-width: 100%;
     padding-top: 40px;
+    padding: 0 100px 0 100px;
     box-sizing: border-box;
     margin: 0;
 
@@ -288,11 +279,11 @@ button {
   }
 
   .intro-element2 {
-    top: -595px;
+    top: -555px;
   }
 
   .social-media-and-contact {
-    margin-top: 50px;
+    margin-top: 110px;
   }
 
   .scroll-indicator {
@@ -302,7 +293,7 @@ button {
 
 @media (max-width: 1100px) {
   .intro-element2 {
-    top: -570px;
+    top: -535px;
   }
 }
 
@@ -312,13 +303,13 @@ button {
   }
 
   .intro-element2 {
-    top: -550px;
+    top: -505px;
   }
 }
 
 @media (max-width: 940px) {
   .intro-element2 {
-    top: -530px;
+    top: -490px;
   }
 }
 
@@ -334,13 +325,13 @@ button {
 
 @media (max-width: 840px) {
   .intro-element2 {
-    top: -485px;
+    top: -470px;
   }
 }
 
 @media (max-width: 790px) {
   .intro-element2 {
-    top: -470px;
+    top: -440px;
   }
 }
 
@@ -350,7 +341,7 @@ button {
   }
 
   .intro-element2 {
-    top: -440px;
+    top: -445px;
   }
 
   .intro-element3 {
