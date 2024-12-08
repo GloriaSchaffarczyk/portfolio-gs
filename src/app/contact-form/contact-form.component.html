@@ -10,55 +10,62 @@
     </div>
     <div class="contact-form-right">
       <div class="contact-form-wrapper">
-        <form [formGroup]="contactForm" (submit)="onSubmit()" novalidate> <!-- es sollte eigentlich mit (ngSubmit)="onSubmit(contactForm)" gemacht werden; außerdem fehlt der Name mit #contactForm="ngForm" -->
-
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+          <!-- Name Field -->
           <label for="name" class="visually-hidden">Your name</label>
-          <input type="text" id="name" formControlName="name" placeholder="Your name"> <!-- es fehlt beispielsweise ein [(ngModel)]="contactData.name" bei den input-Feldern; außerdem fehlt das Wort "required" -->
-          @if (contactForm.controls.name.invalid && contactForm.controls.name.touched) {
+          <input type="text" id="name" name="name" [(ngModel)]="contactData.name" #name="ngModel"
+            placeholder="Your name" required />
+          @if (!name.valid && name.touched) {
           <small class="error">Name is required</small>
           }
 
+          <!-- Email Field -->
           <label for="email" class="visually-hidden">Your email</label>
-          <input type="email" id="email" formControlName="email" placeholder="Your email"> <!-- ngModel und required fehlt; außerdem könnte man ein regex-Pattern hinzufügen; pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" -->
-          @if (contactForm.controls.email.invalid && contactForm.controls.email.touched) {
-          @if (contactForm.controls.email.errors?.['required']) {
-          <small>Email is required</small>
+          <input type="email" id="email" name="email" [(ngModel)]="contactData.email" #email="ngModel"
+            placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+          @if (!email.valid && email.touched) {
+          @if (email.errors?.['required']) {
+          <small class="error">Email is required</small>
           }
-          @if (contactForm.controls.email.errors?.['email']) {
-          <small>Email is not valid</small>
+          @if (email.errors?.['pattern']) {
+          <small class="error">Email is not valid</small>
           }
           }
 
+          <!-- Message Field -->
           <label for="message" class="visually-hidden">Your message</label>
-          <textarea id="message" formControlName="message" placeholder="Please enter your message" minlength="10"></textarea>
-          <!-- unter textarea könnten wir die Validation hinzufügen; textarea braucht auch ngModel und Namen #message -->
-          <!-- @if (!message.valid && message.touched && !message.disabled) {<p>Please enter message</p>} -->
-          @if (contactForm.controls.message.invalid && contactForm.controls.message.touched) {
-          @if (contactForm.controls.message.errors?.['required']) {
-          <small>Message is required</small>
+          <textarea id="message" name="message" [(ngModel)]="contactData.message" #message="ngModel"
+            placeholder="Please enter your message" required minlength="10"></textarea>
+          @if (!message.valid && message.touched) {
+          @if (message.errors?.['required']) {
+          <small class="error">Message is required</small>
           }
-          @if (contactForm.controls.message.errors?.['minlength']) {
-          <small>Message must be at least 10 characters long</small>
+          @if (message.errors?.['minlength']) {
+          <small class="error">Message must be at least 10 characters long</small>
           }
           }
 
+          <!-- Privacy Checkbox -->
           <label class="custom-checkbox">
-            <input type="checkbox" formControlName="privacy">
+            <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel" required />
             <span class="checkbox-icon"></span>
             I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
           </label>
-          @if (contactForm.controls.privacy.invalid && contactForm.controls.privacy.touched) {
+          @if (!privacy.valid && privacy.touched) {
           <small class="error">Please accept the privacy policy.</small>
           }
 
-          <button type="submit" [disabled]="contactForm.invalid">Send message :)</button> <!-- vielleicht input type submit? -->
-
+          <!-- Submit Button -->
+          <button type="submit" [disabled]="contactForm.invalid" [class.valid]="contactForm.valid">
+            Send message :)
+          </button>
         </form>
-
       </div>
     </div>
   </div>
 </div>
 <div class="arrow-wrapper">
-  <a href="#intro"><img [src]="arrowSrc" alt="arrow" class="arrow" (mouseover)="swapArrow(true)" (mouseout)="swapArrow(false)"></a>
+  <a href="#intro">
+    <img [src]="arrowSrc" alt="arrow" class="arrow" (mouseover)="swapArrow(true)" (mouseout)="swapArrow(false)" />
+  </a>
 </div>
