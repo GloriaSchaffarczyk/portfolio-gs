@@ -1,8 +1,27 @@
 <header>
-    <div><img src="../../assets/logo.png" alt=""></div>
+    <img src="../../assets/logo.png" alt="Logo" />
+    <div
+      class="icon nav-icon-4"
+      (click)="toggleMenu()"
+      [class.open]="isMenuOpen"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
     <nav>
-        <a href="#link1">About me</a>
-        <a href="#link2">Skills</a>
-        <a href="#link3">Portfolio</a>
+      @if (!isMenuOpen) {
+        <a href="#about-me">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+      }
+  
+      @if (isMenuOpen) {
+        @for (link of mobileLinks; track link.href) {
+          <a [href]="link.href" (click)="closeMenu()">{{ link.text }}</a>
+        }
+      }
     </nav>
-</header>
+  </header>
+  
