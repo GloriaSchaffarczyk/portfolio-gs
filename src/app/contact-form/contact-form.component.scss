@@ -284,4 +284,13 @@ textarea::placeholder {
   .contact-line {
     width: 15%;
   }
+
+  .custom-checkbox {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
