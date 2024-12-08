@@ -23,3 +23,11 @@ html {
 body {
     margin: 0;
 }
+
+.scrollStop {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  

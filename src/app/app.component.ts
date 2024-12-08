@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
@@ -9,7 +9,6 @@ import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { TestimonialsComponent } from "./testimonials/testimonials.component";
 import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { FooterComponent } from "./footer/footer.component";
-// was muss noch importiert werden?
 
 @Component({
   selector: 'app-root',
@@ -20,4 +19,13 @@ import { FooterComponent } from "./footer/footer.component";
 })
 export class AppComponent {
   title = 'portfolio-gs';
+  constructor(private renderer: Renderer2) {}
+
+  onMenuToggle(isMenuOpen: boolean): void {
+    if (isMenuOpen) {
+      this.renderer.addClass(document.body, 'scrollStop'); // Scrollen deaktivieren
+    } else {
+      this.renderer.removeClass(document.body, 'scrollStop'); // Scrollen aktivieren
+    }
+  }
 }

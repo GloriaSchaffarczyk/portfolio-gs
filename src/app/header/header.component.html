@@ -10,18 +10,19 @@
       <span></span>
     </div>
   
-    <nav>
-      @if (!isMenuOpen) {
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-      }
+    <!-- Desktop-Links -->
+    <nav class="desktop-nav">
+      <a href="#about-me">About me</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+    </nav>
   
-      @if (isMenuOpen) {
-        @for (link of mobileLinks; track link.href) {
-          <a [href]="link.href" (click)="closeMenu()">{{ link.text }}</a>
-        }
-      }
+    <!-- Mobile-Links -->
+    <nav class="mobile-menu" [class.open]="isMenuOpen">
+      <a href="#about-me" (click)="closeMenu()">About me</a>
+      <a href="#skills" (click)="closeMenu()">Skills</a>
+      <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+      <a href="#contact" (click)="closeMenu()">Contact</a>
     </nav>
   </header>
   

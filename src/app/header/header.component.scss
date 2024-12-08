@@ -19,14 +19,16 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  padding: 37px 100px 37px 100px;
+  padding: 37px 100px;
+  position: relative; 
 
   .icon.nav-icon-4 {
     display: none;
     width: 35px;
     height: 30px;
-    position: relative;
+    position: relative; 
     cursor: pointer;
+    z-index: 2000; 
 
     span {
       background-color: white;
@@ -73,7 +75,8 @@ header {
     }
   }
 
-  nav {
+  // Desktop-Navigation
+  .desktop-nav {
     display: flex;
     gap: 12px;
 
@@ -82,15 +85,50 @@ header {
       text-decoration: none;
       font-size: 1.4rem;
     }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  // Mobile-Navigation
+  .mobile-menu {
+    display: none; 
+    position: absolute;
+    top: 124px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 127px);
+    background-color: rgba(0, 0, 0, 0.9); 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.8rem;
+      padding: 15px 0; 
+    }
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: 1201px) {
+      display: none; 
+    }
   }
 
   @media (max-width: 1200px) {
     .icon.nav-icon-4 {
       display: block;
-    }
-
-    nav {
-      display: none;
     }
   }
 }

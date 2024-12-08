@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,20 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  isMenuOpen = false;
+  @Output() menuToggle = new EventEmitter<boolean>(); // Ereignis für das Menü-Status
 
-  mobileLinks = [
-    { text: 'About me', href: '#about-me' },
-    { text: 'Skills', href: '#skills' },
-    { text: 'Portfolio', href: '#portfolio' },
-    { text: 'Contact', href: '#contact' }
-  ];
+  isMenuOpen = false;
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+    this.menuToggle.emit(this.isMenuOpen); // Menü-Status an die Elternkomponente senden
   }
 
   closeMenu(): void {
     this.isMenuOpen = false;
+    this.menuToggle.emit(false); // Menü wird geschlossen
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: UIEvent): void {
+    const windowWidth = (event.target as Window).innerWidth;
+
+    if (windowWidth > 1200 && this.isMenuOpen) {
+      this.closeMenu(); // Menü schließen und Elternkomponente informieren
+    }
   }
 }
