@@ -278,12 +278,6 @@ textarea::placeholder {
     width: 22%;
     top: 4%;
   }
-}
-
-@media (max-width: 320px) {
-  .contact-line {
-    width: 15%;
-  }
 
   .custom-checkbox {
     display: flex;
@@ -292,5 +286,11 @@ textarea::placeholder {
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-line {
+    width: 15%;
   }
 }

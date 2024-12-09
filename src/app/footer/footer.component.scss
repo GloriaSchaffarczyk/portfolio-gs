@@ -44,3 +44,15 @@
 .footer-social-media-links img {
     padding-right: 24px;
 }
+
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 50px 50px;
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-section {
+        padding: 50px 25px;
+    }
+}
