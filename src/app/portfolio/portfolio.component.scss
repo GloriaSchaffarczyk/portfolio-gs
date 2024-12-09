@@ -115,12 +115,23 @@ h2 {
   background-color: #ff3f79;
   border: 2px solid #ff3f79;
   color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: #00bf89;
+    border: 2px solid #00bf89;
+   }
 }
 
 .btn-github {
   background-color: transparent;
   border: 2px solid #00bf89;
   color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: #00bf89;
+   }
 }
 
 @media (max-width: 1300px) {
