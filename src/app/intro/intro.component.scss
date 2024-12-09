@@ -36,6 +36,7 @@
     width: 100%;
     max-width: 742px;
     height: auto;
+    padding-bottom: 12px;
   }
 }
 
@@ -139,18 +140,29 @@
   width: 150px;
 }
 
-button {
-  margin-top: 30px;
-  display: flex;
+.button-link {
+  display: inline-block;
   padding: 15px 30px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  border: none;
-  background: $primary-color;
-  color: $text-color;
-  font-family: Poppins;
+  background-color: #00bf89;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-family: Poppins, sans-serif;
   font-size: $font-size;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ff3f79;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 // Scroll-Indikator und Animation
@@ -258,7 +270,7 @@ button {
     width: 100%;
     max-width: 100%;
     padding-top: 40px;
-    padding: 0 100px 0 100px;
+    padding: 0 100px 25px 100px;
     box-sizing: border-box;
     margin: 0;
 
@@ -337,7 +349,7 @@ button {
 
 @media (max-width: 768px) {
   .intro-element1 {
-    padding: 0 $padding-medium;
+    padding: 0 $padding-medium 25px $padding-medium;
   }
 
   .intro-element2 {
@@ -377,7 +389,7 @@ button {
 
 @media (max-width: 560px) {
   .intro-element1 {
-    padding: 0 $padding-small;
+    padding: 0 $padding-small 25px $padding-small;
   }
 
   .intro-element2 {
@@ -434,7 +446,7 @@ button {
 
 @media (max-width: 360px) {
   .intro-element1 {
-    padding: 0 10px;
+    padding: 0 10px 25px 10px;
   }
 
   .intro-element2 {

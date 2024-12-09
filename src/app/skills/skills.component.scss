@@ -4,6 +4,10 @@
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .skills-section {
   width: 100%;
   display: flex;
@@ -182,6 +186,21 @@
   transform: translateY(-5px);
 }
 
+.skills-left button,
+.skills-right button {
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #ff3f79; // Hover Hintergrund
+    transform: scale(1.1); // Vergrößern
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(0.95); // Verkleinern
+  }
+}
+
 @media (max-width: 1800px) {
   .tooltip-image {
     transform: translateX(25px) translateY(-150px);
@@ -247,7 +266,7 @@
 
   .skills-left {
     width: 100%;
-    padding: 0 100px 0 120px;
+    padding: 0 100px 25px 120px;
   }
 
   .skills-left > h1 {
@@ -430,3 +449,4 @@
     width: 100px !important;
   }
 }
+

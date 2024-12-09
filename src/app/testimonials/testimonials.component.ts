@@ -9,10 +9,9 @@ import { Component } from '@angular/core';
 })
 export class TestimonialsComponent {
   testimonials = [
-    { author: 'John', quote: 'Task manager inspired by the Kanban System.', imageSrc: 'assets/testimonial-author01.png' },
-    { author: 'Marie', quote: 'A simple Jump-and-Run game.', imageSrc: 'assets/testimonial-author03.png' },
-    { author: 'Bernd', quote: 'Based on the PokéAPI.', imageSrc: 'assets/testimonial-author02.png' },
-    { author: 'Nicole', quote: 'She is amazing.', imageSrc: 'assets/testimonial-author03.png' }
+    { author: 'Johann', quote: "Gloria designed and implemented the level layout for our Jump 'n' Run game using Unity during a Game Development Workshop. Her technical skills and eagerness to learn were evident from the start, and working with her was a pleasure.", imageSrc: 'assets/testimonial-author04.png' },
+    { author: 'Nicole', quote: "Gloria and I began our training as frontend developers at the Developer Akademie (DA) at the same time. She’s incredibly persistent, and we constantly exchanged ideas to tackle challenges effectively.", imageSrc: 'assets/testimonial-author05.png' },
+    { author: 'David', quote: "I’ve worked with Gloria for nine years, during which she has handled tasks such as managing our CMS platforms WordPress and Redaxo. She is knowledgeable, dependable, and adapts her skills seamlessly to various digital environments.", imageSrc: 'assets/testimonial-author06.png' },
   ];
 
   currentTestimonial = 0;

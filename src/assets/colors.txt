@@ -1,0 +1,35 @@
+pink
+#e6336a #ff3f79
+
+#663b93
+
+#663b93
+
+grün
+#ff3f79 #00bf89
+
+#2e5e71
+
+#222a5c
+
+
+Dunkelgrün
+#006045
+
+#00BF89
+
+#80DFC4
+
+Dunkelpink
+#80203D
+
+#FF3F79
+
+#FF9FBC
+
+Hintergrund
+#1A0060
+
+
+
+
