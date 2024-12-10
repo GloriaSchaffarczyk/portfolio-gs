@@ -3,14 +3,18 @@
 .testimonial-container {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
   width: 100%;
-  height: max-content;
+  margin-top: 100px;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   padding: 12px 100px;
   box-sizing: border-box;
+  overflow: visible;
+  background-image: url('../../assets/green_shade_02.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: 115% 30%;
   // border: 1px solid yellow;
 }
 
@@ -86,7 +90,7 @@
   align-items: flex-end;
   border: 3px solid #00bf89;
   border-radius: 25px;
-  padding: 48px 96px;
+  padding: 25px 96px;
   width: 35vw;
   > p {
     text-align: start;
@@ -159,6 +163,13 @@
 }
 
 @media (max-width: 1200px) {
+
+  .testimonial-container {
+    background-size: 630px; /* Alternativ: cover, contain */
+    background-position: 180% 0%;
+    // border: 1px solid yellow;
+  }
+
   .single-testimonial {
     flex-direction: column-reverse;
     gap: 32px;
@@ -173,7 +184,7 @@
   }
 
   .testimonial-line {
-    top: 28%;
+    top: 26%;
     width: 40%;
   }
 }
@@ -189,6 +200,10 @@
 
   .testimonial-img img {
     height: 200px;
+  }
+
+  .testimonial-line {
+    top: 20%;
   }
 }
 
@@ -210,5 +225,17 @@
 
   .testimonial-img img {
     height: 180px;
+  }
+}
+
+@media (max-width: 460px) {
+  .testimonial-line {
+    top: 17%;
+  }
+}
+
+@media (max-width: 360px) {
+  .testimonial-line {
+    top: 14%;
   }
 }

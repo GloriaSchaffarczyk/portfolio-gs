@@ -1,19 +1,15 @@
 @import "../../styles/variables.scss";
 
 .contact-section {
-  height: 70vh;
+  position: relative; /* Bezugspunkt für absolute Elemente */
+  height: 100%;
   margin-top: 100px;
-  margin-bottom: 100px;
   box-sizing: border-box;
-  // border: 1px solid grey;
-  position: relative;
-}
-
-h1 {
-  padding-left: 100px;
-  text-align: center;
-  font-size: 5.6rem;
-  margin-block-end: 0.5em;
+  overflow: visible; /* Verhindert Abschneiden */
+  background-image: url('../../assets/red_shade_02.png');
+  background-size: cover; /* Alternativ: cover, contain */
+  background-repeat: no-repeat;
+  background-position: -400px 300px;
 }
 
 .contact-form-section {
@@ -22,6 +18,14 @@ h1 {
   padding: 10px 100px;
   gap: 100px;
   box-sizing: border-box;
+  margin-bottom: 100px;
+}
+
+h1 {
+  padding-left: 100px;
+  text-align: center;
+  font-size: 5.6rem;
+  margin-block-end: 0.5em;
 }
 
 .contact-form-left {
@@ -287,10 +291,18 @@ textarea::placeholder {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .contact-section {
+    background-position: -430px 500px;
+  }
 }
 
 @media (max-width: 320px) {
   .contact-line {
     width: 15%;
+  }
+
+  .contact-section {
+    background-position: -470px 500px;
   }
 }
