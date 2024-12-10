@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
 })
 export class TestimonialsComponent {
   testimonials = [
-    { author: 'Johann', quote: "Gloria designed and implemented the level layout for our Jump 'n' Run game using Unity during a Game Development Workshop. Her technical skills and eagerness to learn were evident from the start, and working with her was a pleasure.", imageSrc: 'assets/testimonial-author04.png' },
-    { author: 'Nicole', quote: "Gloria and I began our training as frontend developers at the Developer Akademie (DA) at the same time. She’s incredibly persistent, and we constantly exchanged ideas to tackle challenges effectively.", imageSrc: 'assets/testimonial-author05.png' },
-    { author: 'David', quote: "I’ve worked with Gloria for nine years, during which she has handled tasks such as managing our CMS platforms WordPress and Redaxo. She is knowledgeable, dependable, and adapts her skills seamlessly to various digital environments.", imageSrc: 'assets/testimonial-author06.png' },
+    { author: 'Johann - Frontend Developer', quote: "Together we tackled a development project that required immediate, effective problem-solving and her ability to understand new tools and implement technical solutions stood out. Gloria's work contributed greatly to the project's success.", imageSrc: 'assets/testimonial-author04.png' },
+    { author: 'Nicole - Frontend Developer', quote: "During the frontend training at the Developer Akademie (DA), Gloria's readiness to exchange strategies, suggest solutions, and provide encouragement  enhanced the collective learning experience — a quality that would serve any team well.", imageSrc: 'assets/testimonial-author05.png' },
+    { author: 'David - Colleague', quote: "Over nine years of working together, Gloria demonstrated a strong command of diverse technical environments, adapting seamlessly to evolving requirements. Her reliability, versatility, and results-oriented mindset made a positive impact.", imageSrc: 'assets/testimonial-author06.png' },
   ];
 
   currentTestimonial = 0;

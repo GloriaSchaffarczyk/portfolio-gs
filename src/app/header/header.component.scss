@@ -75,7 +75,6 @@ header {
     }
   }
 
-  // Desktop-Navigation
   .desktop-nav {
     display: flex;
     gap: 12px;
@@ -84,6 +83,9 @@ header {
       color: white;
       text-decoration: none;
       font-size: 1.4rem;
+      &:hover {
+        color: #00bf89;
+      }
     }
 
     @media (max-width: 1200px) {

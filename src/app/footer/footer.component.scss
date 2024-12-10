@@ -39,10 +39,23 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .footer-social-media-links img {
     padding-right: 24px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.2); 
+      }
+    
+      &:active {
+        transform: scale(0.95);
+      }
 }
 
 @media (max-width: 768px) {
