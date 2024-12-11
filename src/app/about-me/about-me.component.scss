@@ -8,11 +8,11 @@
   flex-direction: row;
   margin-top: 150px;
   font-size: 1rem;
-  overflow-x: hidden;
   background-image: url('../../assets/red_shade_01.png');
   background-size: 620px 620px; 
   background-repeat: no-repeat;
   background-position: 1650px -30px;
+  scroll-margin-top: $anchor-padding;
 }
 
 .about-me-left {

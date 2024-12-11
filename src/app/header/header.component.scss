@@ -18,9 +18,13 @@ header {
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  width: 100vw;
+  height: 110px;
+  box-sizing: border-box;
   padding: 37px 100px;
-  position: relative;
+  position: fixed;
+  background-color: $color-dark;
+  z-index: 20;
 
   .icon.nav-icon-4 {
     display: none;

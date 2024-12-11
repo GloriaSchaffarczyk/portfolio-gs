@@ -10,8 +10,9 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   overflow: visible;
+  scroll-margin-top: $anchor-padding;
 
   /* Zwei Bilder als Hintergrund */
   background-image: url('../../assets/red_shade_02.png'), url('../../assets/green_shade_01.png');

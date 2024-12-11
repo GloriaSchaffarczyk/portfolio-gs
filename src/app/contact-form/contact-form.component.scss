@@ -10,6 +10,7 @@
   background-size: cover; /* Alternativ: cover, contain */
   background-repeat: no-repeat;
   background-position: -400px 300px;
+  scroll-margin-top: $anchor-padding;
 }
 
 .contact-form-section {

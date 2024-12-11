@@ -16,7 +16,10 @@ a {
   margin-top: 150px;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+}
+
+.anchor-padding {
+  scroll-margin-top: $anchor-padding;
 }
 
 .skills-left {
