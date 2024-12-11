@@ -1,11 +1,5 @@
 <app-header (menuToggle)="onMenuToggle($event)"></app-header>
 <main class="content-wrapper">
-  <app-intro></app-intro>
-  <app-about-me></app-about-me>
-  <app-skills></app-skills>
-  <app-portfolio></app-portfolio>
-  <app-testimonials></app-testimonials>
-  <app-contact-form></app-contact-form>
+  <router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>
-<router-outlet></router-outlet>

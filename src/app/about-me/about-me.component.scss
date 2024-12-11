@@ -1,30 +1,23 @@
 @import "../../styles/variables.scss";
 
 .about-me-section {
-  position: relative; /* Referenz für absolute Positionierung */
+  z-index: 4;
+  position: relative;
+  // border: 1px solid red;
   display: flex;
   flex-direction: row;
   margin-top: 100px;
   font-size: 1rem;
-  overflow-x: visible;
-  z-index: 4; /* Sicherstellen, dass Inhalte korrekt gestapelt sind */
-}
-
-/* Schattenbild */
-.red-shadow {
-  position: absolute;
-  top: -200px; /* Vertikale Position */
-  left: 90%; /* Zentriere das Bild horizontal */
-  transform: translateX(-50%); /* Zentrieren */
-  width: 620px; /* Breite des Schattenbilds */
-  height: auto; /* Automatische Höhe (proportional) */
-  opacity: 0.6; /* Transparenz */
-  pointer-events: none; /* Keine Interaktionen blockieren */
-  z-index: -1; /* Hinter den Inhalten platzieren */
+  overflow-x: hidden;
+  background-image: url('../../assets/red_shade_01.png');
+  background-size: 620px 620px; 
+  background-repeat: no-repeat;
+  background-position: 1650px -30px;
 }
 
 .about-me-left {
   width: 50%;
+  // border: 1px solid rgb(162, 0, 255);
   padding-left: $padding-large;
   padding-right: 50px;
   display: flex;
