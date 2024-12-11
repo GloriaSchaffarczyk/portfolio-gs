@@ -34,10 +34,10 @@
   box-sizing: border-box;
 
   .intro-element1 svg {
-    width: 100%; /* Passe die Breite an den Container an */
-    height: auto; /* Behalte das Seitenverhältnis basierend auf der Breite */
-    max-width: 742px; /* Begrenze die maximale Breite */
-    aspect-ratio: 742 / 162; /* Stellt das Seitenverhältnis sicher */
+    width: 100%; 
+    height: auto; 
+    max-width: 742px;
+    aspect-ratio: 742 / 162;
     padding-bottom: 12px;
   }
 }
@@ -150,11 +150,11 @@
 .button-link {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #00bf89;
-  color: #fff;
+  background-color: $primary-color;
+  color: $color-light;
   text-align: center;
   text-decoration: none;
-  font-family: Poppins, sans-serif;
+  font-family: $font-primary;
   font-size: $font-size-base;
   font-weight: bold;
   border-radius: 10px;
@@ -163,7 +163,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #ff3f79;
+    background-color: $secondary-color;
     transform: scale(1.1);
   }
 
@@ -262,7 +262,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $breakpoint-lg) {
   .intro-section {
     grid-template-areas:
       "element4"
@@ -277,7 +277,7 @@
     width: 100%;
     max-width: 100%;
     padding-top: 40px;
-    padding: 0 100px 25px 100px;
+    padding: 0 $padding-large 25px $padding-large;
     box-sizing: border-box;
     margin: 0;
 
@@ -354,7 +354,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   .intro-element1 {
     padding: 0 $padding-medium 25px $padding-medium;
   }
@@ -394,7 +394,7 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: $breakpoint-sm) {
   .intro-element1 {
     padding: 0 $padding-small 25px $padding-small;
   }
@@ -451,9 +451,9 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: $breakpoint-xs) {
   .intro-element1 {
-    padding: 0 10px 25px 10px;
+    padding: 0 10px $padding-small 10px;
   }
 
   .intro-element2 {

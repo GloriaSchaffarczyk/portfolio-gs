@@ -2,11 +2,11 @@
 
 .privacy-policy-section {
     margin: 0 auto;
-    font-family: Poppins, sans-serif;
-    color: #FFFFFF;
+    font-family: $font-primary;
+    color: $color-light;
   
     h1 {
-      font-size: 5.6rem;
+      font-size: $font-size-xxl;
       margin-block-start: 0.1em;
       margin-block-end: 0.1em;
     }
@@ -21,7 +21,7 @@
   
     a {
       text-decoration: none;
-      color: #00bf89;
+      color: $primary-color;
   
       &:hover {
         text-decoration: underline;
@@ -29,13 +29,13 @@
     }
   
     h3 a {
-      color: #00bf89;
+      color: $primary-color;
       font-size: 1.2rem;
     }
   }
   
   .privacy-policy-wrapper {
-    padding: 100px 100px;
+    padding: 100px $padding-large;
   }
   
   @media (max-width: $breakpoint-md) {

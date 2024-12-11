@@ -26,16 +26,13 @@ a {
   width: 50%;
   box-sizing: border-box;
   padding: 0 0 0 120px;
-  // border: 1px solid rgb(105, 225, 13);
 }
 
 .skills-right {
   width: 50%;
-  // border: 1px solid rgb(130, 13, 225);
 }
 
 .skills-left .skills-symbols {
-  // border: 1px solid blue;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -68,7 +65,6 @@ a {
 .skills-right .skills-text-and-button {
   height: 100%;
   box-sizing: border-box;
-  // border: 1px solid rgb(255, 248, 47);
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -79,7 +75,7 @@ a {
 }
 
 .skills-right .skills-text-and-button > h1 {
-  font-size: 5.6rem;
+  font-size: $font-size-xxl;
   margin-block-start: 0.1em;
   margin-block-end: 0.1em;
 }
@@ -108,9 +104,9 @@ a {
   padding: 15px 30px;
   border-radius: 10px;
   border: none;
-  background: #00bf89;
-  color: #fff;
-  font-family: Poppins;
+  background: $primary-color;
+  color: $color-light;
+  font-family: $font-primary;
   font-size: 23px;
 }
 
@@ -123,7 +119,7 @@ a {
   right: 0;
   top: 100px;
   border: 0;
-  border-top: 4px solid #00bf89;
+  border-top: 4px solid $primary-color;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   width: 100px;
@@ -134,7 +130,7 @@ a {
   right: 0;
   top: 65px;
   border: 0;
-  border-top: 4px solid #00bf89;
+  border-top: 4px solid $primary-color;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   width: 80px;
@@ -148,9 +144,9 @@ a {
   align-items: center;
   border-radius: 10px;
   border: none;
-  background: #00bf89;
-  color: #fff;
-  font-family: Poppins;
+  background: $primary-color;
+  color: $color-light;
+  font-family: $font-primary;
   font-size: 23px;
 }
 
@@ -168,13 +164,13 @@ a {
 }
 
 .skills-icon-and-name.highlight p {
-  color: #ff3f79;
+  color: $secondary-color;
   transition: color 0.2s ease;
   text-align: center;
 }
 
 .skills-icon-and-name.highlight:hover p {
-  color: #ffffff;
+  color: $color-light;
 }
 
 .hide-on-hover {
@@ -194,13 +190,13 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: #ff3f79; // Hover Hintergrund
-    transform: scale(1.1); // Vergrößern
+    background-color: $secondary-color; 
+    transform: scale(1.1);
     cursor: pointer;
   }
 
   &:active {
-    transform: scale(0.95); // Verkleinern
+    transform: scale(0.95);
   }
 }
 
@@ -336,7 +332,7 @@ a {
   }
 
   .skills-left {
-    padding: 0 50px;
+    padding: 0 $padding-medium;
   }
 
   .skills-left .skills-line {
@@ -366,7 +362,7 @@ a {
 
 @media (max-width: 560px) {
   .skills-left {
-    padding: 0 25px;
+    padding: 0 $padding-small;
   }
 
   .skills-left .skills-symbols {
@@ -387,7 +383,7 @@ a {
 
 @media (max-width: 480px) {
   .skills-left {
-    font-size: 0.9rem;
+    font-size: $font-size-sm;
   }
 
   .skills-left .skills-symbols {
@@ -396,7 +392,7 @@ a {
   }
 
   .skills-left > h1 {
-    font-size: 2.2rem;
+    font-size: $font-size-xl;
   }
 
   .skills-left h2 {
@@ -426,7 +422,7 @@ a {
 
 @media (max-width: 320px) {
   .skills-left {
-    font-size: 0.8rem;
+    font-size: $font-size-xs;
   }
 
   .skills-left > span {

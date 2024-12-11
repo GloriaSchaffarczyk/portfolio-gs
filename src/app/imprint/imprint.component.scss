@@ -2,23 +2,22 @@
 
 .imprint-section {
   margin: 0 auto;
-  font-family: Arial, sans-serif;
-  color: #ffffff;
-  font-family: Poppins, sans-serif;
+  color: $color-light;
+  font-family: $font-primary;
 
   h1 {
-    font-size: 5.6rem;
+    font-size: $font-size-xxl;
     margin-block-start: 0.1em;
     margin-block-end: 0.1em;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: $font-size-m;
     margin-top: 20px;
   }
 
   h3 a {
-    color: #00bf89;
+    color: $primary-color;
   }
 
   p {
@@ -28,7 +27,7 @@
   a {
     text-decoration: none;
     cursor: pointer;
-    color: white;
+    color: $color-light;
   }
 }
 

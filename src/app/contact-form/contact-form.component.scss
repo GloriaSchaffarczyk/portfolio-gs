@@ -198,7 +198,7 @@ textarea::placeholder {
 
 .popup-banner {
   position: fixed;
-  bottom: 500px;
+  bottom: 50%;
   left: 50%;
   transform: translateX(-50%);
   background-color: $primary-color;
@@ -217,22 +217,22 @@ textarea::placeholder {
 
 @keyframes slide-in {
   from {
-    bottom: -500px;
+    bottom: -50%;
     opacity: 0;
   }
   to {
-    bottom: 500px;
+    bottom: 50%;
     opacity: 1;
   }
 }
 
 @keyframes slide-out {
   from {
-    bottom: 500px;
+    bottom: 50%;
     opacity: 1;
   }
   to {
-    bottom: -500px;
+    bottom: -50%;
     opacity: 0;
   }
 }
