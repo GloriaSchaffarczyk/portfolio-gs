@@ -6,12 +6,19 @@
   gap: 40px;
   max-width: 100vw;
   width: 100%;
-  // border: 1px solid #ff00f2;
   margin-top: 50px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  overflow: visible;
+
+  /* Zwei Bilder als Hintergrund */
+  background-image: url('../../assets/red_shade_02.png'), url('../../assets/green_shade_01.png');
+  background-size: 900px 800px, 500px 500px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: -550px 550px, -200px 4px;
+  z-index: -1;
 }
 
 .portfolio-head {
@@ -143,7 +150,9 @@ h2 {
 @media (max-width: 1200px) {
   .portfolio-section {
     text-align: center;
-  }
+    background-size: 900px 800px, 500px 500px; 
+    background-position: -600px 700px, -200px 200px; /* Individuelle Positionen für beide Bilder */
+    }
 
   .portfolio-line {
     top: 53%;
@@ -218,6 +227,7 @@ h2 {
 @media (max-width: 480px) {
   .portfolio-section {
     font-size: 0.9rem;
+    background-position: -650px 600px, -350px 200px; /* Individuelle Positionen für beide Bilder */
   }
 
   .portfolio-line {

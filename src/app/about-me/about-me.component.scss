@@ -1,19 +1,30 @@
 @import "../../styles/variables.scss";
 
 .about-me-section {
-  z-index: 4;
-  position: relative;
-  // border: 1px solid red;
+  position: relative; /* Referenz für absolute Positionierung */
   display: flex;
   flex-direction: row;
   margin-top: 100px;
   font-size: 1rem;
-  overflow-x: hidden;
+  overflow-x: visible;
+  z-index: 4; /* Sicherstellen, dass Inhalte korrekt gestapelt sind */
+}
+
+/* Schattenbild */
+.red-shadow {
+  position: absolute;
+  top: -200px; /* Vertikale Position */
+  left: 90%; /* Zentriere das Bild horizontal */
+  transform: translateX(-50%); /* Zentrieren */
+  width: 620px; /* Breite des Schattenbilds */
+  height: auto; /* Automatische Höhe (proportional) */
+  opacity: 0.6; /* Transparenz */
+  pointer-events: none; /* Keine Interaktionen blockieren */
+  z-index: -1; /* Hinter den Inhalten platzieren */
 }
 
 .about-me-left {
   width: 50%;
-  // border: 1px solid rgb(162, 0, 255);
   padding-left: $padding-large;
   padding-right: 50px;
   display: flex;
@@ -71,6 +82,24 @@
   right: 0;
 }
 
+@media (max-width: 1700px) {
+  .about-me-section {
+    background-position: 1450px -30px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .about-me-section {
+    background-position: 1250px -30px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .about-me-section {
+    background-position: 1150px -30px;
+  }
+}
+
 // Media Queries
 @media (max-width: 1300px) {
   .about-me-left h1 {
@@ -79,6 +108,12 @@
 }
 
 @media (max-width: 1200px) {
+
+  .about-me-section {
+    background-size: 1500px 480px; 
+    background-position: 650px 0px;
+  }
+
   .about-me-right {
     display: none;
     width: 0;
@@ -96,6 +131,7 @@
   .about-me-section {
     padding: 0 50px 0 50px;
     margin-top: 100px;
+    background-position: 150px 0px;
     > .about-me-left {
       padding: 0;
     }
@@ -133,6 +169,7 @@
 @media (max-width: 450px) {
   .about-me-section {
     font-size: 0.9rem;
+    background-position: 50px 0px;
   }
 
   .about-me-left h1 {
