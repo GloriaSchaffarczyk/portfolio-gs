@@ -8,5 +8,5 @@ import { RouterModule } from '@angular/router';
   templateUrl: './imprint.component.html',
   styleUrls: ['./imprint.component.scss']
 })
-export class ImprintComponent {}
+export class ImprintComponent { }
 

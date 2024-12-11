@@ -10,8 +10,8 @@ describe('IntroComponent', () => {
     await TestBed.configureTestingModule({
       imports: [IntroComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(IntroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

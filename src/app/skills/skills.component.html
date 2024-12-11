@@ -2,26 +2,24 @@
   <div class="skills-left">
     <div class="skills-line d-none"></div>
     <h1 class="d-none">My skills</h1>
-    <span class="d-none">I have gained experience in building projects with different frontend technologies and concepts.</span>
+    <span class="d-none">I have gained experience in building projects with different frontend technologies and
+      concepts.</span>
     <div class="skills-symbols">
       @for (skill of skills; track skill.name) {
-        <div class="skills-icon-and-name" 
-             [ngClass]="{'highlight': skill.isHighlight || false}" 
-             (mouseenter)="onHover(skill, $index)" 
-             (mouseleave)="onLeave(skill, $index)">
-          <img 
-            [src]="skill.imgSrc" 
-            alt="{{skill.name}}">
-          <p>{{ skill.name }}</p>
-          @if (skill.isHighlight) {
-            <img src="assets/skills-icon-learning-interest.png" alt="React and Vue Tooltip" class="tooltip-image hide-on-hover" [ngClass]="{ 'hide-on-hover': !showTooltip }">
-          }
-        </div>
+      <div class="skills-icon-and-name" [ngClass]="{'highlight': skill.isHighlight || false}"
+        (mouseenter)="onHover(skill, $index)" (mouseleave)="onLeave(skill, $index)">
+        <img [src]="skill.imgSrc" alt="{{skill.name}}">
+        <p>{{ skill.name }}</p>
+        @if (skill.isHighlight) {
+        <img src="assets/skills-icon-learning-interest.png" alt="React and Vue Tooltip"
+          class="tooltip-image hide-on-hover" [ngClass]="{ 'hide-on-hover': !showTooltip }">
+        }
+      </div>
       }
     </div>
     <h2 class="d-none">Looking for <strong style="color: #ff3f79">another skill</strong>?</h2>
     <span class="d-none">Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
-    <a href="#contact"><button class="d-none">Get in touch</button></a> 
+    <a href="#contact"><button class="d-none">Get in touch</button></a>
   </div>
   <div class="skills-right">
     <div class="skills-line"></div>

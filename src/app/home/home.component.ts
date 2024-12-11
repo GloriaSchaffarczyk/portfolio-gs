@@ -27,5 +27,5 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
   `,
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {}
+export class HomeComponent { }
 

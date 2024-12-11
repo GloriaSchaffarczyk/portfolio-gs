@@ -50,12 +50,13 @@
             <label>
               <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel" required />
               <span class="checkbox-icon"></span>
-              I've read the <a routerLink="/privacy" class="privacy-link">privacy policy</a> and agree to the processing of my data.
+              I've read the <a routerLink="/privacy" class="privacy-link">privacy policy</a> and agree to the processing
+              of my data.
             </label>
           </div>
           @if (!privacy.valid && privacy.touched) {
-            <small class="error">Please accept the privacy policy.</small>
-          }          
+          <small class="error">Please accept the privacy policy.</small>
+          }
 
           <!-- Submit Button -->
           <button type="submit" [disabled]="contactForm.invalid" [class.valid]="contactForm.valid">
@@ -67,7 +68,8 @@
   </div>
   <div class="arrow-wrapper">
     <a href="#intro">
-      <img [src]="arrowSrc" alt="picture of an arrow pointing upwards for navigating back up" class="arrow" (mouseover)="swapArrow(true)" (mouseout)="swapArrow(false)" />
+      <img [src]="arrowSrc" alt="picture of an arrow pointing upwards for navigating back up" class="arrow"
+        (mouseover)="swapArrow(true)" (mouseout)="swapArrow(false)" />
     </a>
   </div>
   <div class="popup-banner" *ngIf="showPopup" [style.backgroundColor]="popupColor">{{ popupMessage }}</div>

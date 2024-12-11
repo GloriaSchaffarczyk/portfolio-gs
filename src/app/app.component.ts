@@ -14,7 +14,7 @@ import { FooterComponent } from "./footer/footer.component";
 export class AppComponent {
   title = 'portfolio-gs';
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2) { }
 
   onMenuToggle(isMenuOpen: boolean): void {
     if (isMenuOpen) {

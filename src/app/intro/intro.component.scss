@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 // Layout und Grid-Struktur
 .intro-section {
@@ -40,7 +40,6 @@
     aspect-ratio: 742 / 162; /* Stellt das Seitenverhältnis sicher */
     padding-bottom: 12px;
   }
-  
 }
 
 .intro-element2 {
@@ -127,9 +126,9 @@
 
   img {
     &:hover {
-      transform: scale(1.2); 
+      transform: scale(1.2);
     }
-  
+
     &:active {
       transform: scale(0.95);
     }

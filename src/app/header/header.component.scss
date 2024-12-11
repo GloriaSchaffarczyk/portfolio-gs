@@ -140,21 +140,21 @@ header {
   }
 }
 
-  @media (max-width: 768px) {
-    header {
-      padding: 37px 50px;
-    }
+@media (max-width: 768px) {
+  header {
+    padding: 37px 50px;
   }
+}
 
-  @media (max-width: 560px) {
-    header {
-      padding: 37px 25px;
-    }
+@media (max-width: 560px) {
+  header {
+    padding: 37px 25px;
   }
+}
 
-  @media (max-width: 360px) {
-    img {
-        width: 160px;
-        height: auto;
-    }
+@media (max-width: 360px) {
+  img {
+    width: 160px;
+    height: auto;
+  }
 }

@@ -11,8 +11,8 @@
   padding: 12px 100px;
   box-sizing: border-box;
   overflow: visible;
-  background-image: url('../../assets/green_shade_02.png');
-  background-size: 1500px 400px; 
+  background-image: url("../../assets/green_shade_02.png");
+  background-size: 1500px 400px;
   background-repeat: no-repeat;
   background-position: 1600px 10px;
   // border: 1px solid yellow;
@@ -61,10 +61,10 @@
 }
 
 .quote-line {
-  flex-grow: 1; 
-  height: 3px; 
-  background-color: #ff3f79; 
-  border-radius: 20px; 
+  flex-grow: 1;
+  height: 3px;
+  background-color: #ff3f79;
+  border-radius: 20px;
 }
 
 .quote,
@@ -166,18 +166,17 @@
   .testimonial-container {
     background-position: 1340px 10px;
   }
-  }
+}
 
 @media (max-width: 1440px) {
-.testimonial-container {
-  background-position: 1100px 10px;
-}
+  .testimonial-container {
+    background-position: 1100px 10px;
+  }
 }
 
 @media (max-width: 1200px) {
-
   .testimonial-container {
-    background-size: 1000px 500px; 
+    background-size: 1000px 500px;
     background-position: 700px 10px;
   }
 
@@ -204,7 +203,7 @@
   .testimonial-container {
     padding: 12px 50px;
     background-position: 400px 10px;
-    }
+  }
 
   .quote-container {
     padding: 24px 48px;

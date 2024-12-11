@@ -8,8 +8,8 @@
   flex-direction: row;
   margin-top: 150px;
   font-size: 1rem;
-  background-image: url('../../assets/red_shade_01.png');
-  background-size: 620px 620px; 
+  background-image: url("../../assets/red_shade_01.png");
+  background-size: 620px 620px;
   background-repeat: no-repeat;
   background-position: 1650px -30px;
   scroll-margin-top: $anchor-padding;
@@ -49,7 +49,7 @@
     align-items: center;
     gap: 24px;
     &:hover img {
-      transform: scale(1.1); 
+      transform: scale(1.1);
     }
 
     > p {
@@ -101,9 +101,8 @@
 }
 
 @media (max-width: 1200px) {
-
   .about-me-section {
-    background-size: 1500px 480px; 
+    background-size: 1500px 480px;
     background-position: 650px 0px;
   }
 

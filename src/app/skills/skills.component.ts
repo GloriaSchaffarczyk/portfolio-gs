@@ -23,9 +23,9 @@ export class SkillsComponent {
     { imgSrc: 'assets/skills-icon-wordpress.png', name: 'WordPress' },
     { imgSrc: 'assets/skills-icon-continually-learning-red.png', name: 'Continually learning', isHighlight: true }
   ];
-  
+
   showTooltip = false;
-  
+
   onHover(skill: any, index: number) {
     if (index === 11) {
       skill.imgSrc = 'assets/skills-icon-continually-learning-white.png';

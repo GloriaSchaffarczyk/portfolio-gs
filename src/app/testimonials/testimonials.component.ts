@@ -25,7 +25,7 @@ export class TestimonialsComponent {
     }
     this.triggerAnimation();
   }
-  
+
   slideRight() {
     this.resetAnimation();
     if (this.currentTestimonial < this.testimonials.length - 1) {
@@ -35,14 +35,14 @@ export class TestimonialsComponent {
     }
     this.triggerAnimation();
   }
-  
+
   resetAnimation() {
     const testimonialLine = document.querySelector('.testimonial-line') as HTMLElement;
     if (testimonialLine) {
       testimonialLine.classList.remove('animate');
     }
   }
-  
+
   triggerAnimation() {
     const testimonialLine = document.querySelector('.testimonial-line') as HTMLElement;
     if (testimonialLine) {
@@ -51,5 +51,5 @@ export class TestimonialsComponent {
       }, 10);
     }
   }
-  
+
 }  

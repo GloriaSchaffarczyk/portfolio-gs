@@ -1,7 +1,8 @@
 <div class="testimonial-container">
     <div class="single-testimonial">
         <div class="quote-container">
-            <img src="../../assets/testimonial-quotation-mark.png" alt="quotation-mark-image" class="quotation-mark-image">
+            <img src="../../assets/testimonial-quotation-mark.png" alt="quotation-mark-image"
+                class="quotation-mark-image">
             <p class="quote">{{ testimonials[currentTestimonial].quote }}</p>
             <div class="line-and-author">
                 <div class="quote-line"></div>
@@ -16,14 +17,14 @@
 
     <div class="testimonial-navigation">
         <button class="arrowLeft" (click)="slideLeft()">←</button>
-        
+
         <!-- Dots Navigation using @for -->
         <div class="dots">
-          @for (testimonial of testimonials; track $index) {
+            @for (testimonial of testimonials; track $index) {
             <span [class.active-dot]="currentTestimonial === $index"
-                  [class.inactive-dot]="currentTestimonial !== $index">
+                [class.inactive-dot]="currentTestimonial !== $index">
             </span>
-          }
+            }
         </div>
 
         <button class="arrowRight" (click)="slideRight()">→</button>

@@ -6,7 +6,7 @@
   margin-top: 150px;
   box-sizing: border-box;
   overflow: visible; /* Verhindert Abschneiden */
-  background-image: url('../../assets/red_shade_02.png');
+  background-image: url("../../assets/red_shade_02.png");
   background-size: cover; /* Alternativ: cover, contain */
   background-repeat: no-repeat;
   background-position: -400px 300px;
@@ -112,7 +112,6 @@ button {
   }
 }
 
-
 input::placeholder {
   color: white;
 }
@@ -146,7 +145,7 @@ textarea::placeholder {
     cursor: pointer;
 
     &:after {
-      content: '';
+      content: "";
       width: 10px;
       height: 5px;
       border-left: 2px solid white;
@@ -271,7 +270,7 @@ textarea::placeholder {
     width: 100%;
     height: unset;
   }
-  
+
   .contact-form-right {
     width: 100%;
   }

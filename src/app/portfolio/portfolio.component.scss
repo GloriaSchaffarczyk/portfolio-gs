@@ -15,7 +15,8 @@
   scroll-margin-top: $anchor-padding;
 
   /* Zwei Bilder als Hintergrund */
-  background-image: url('../../assets/red_shade_02.png'), url('../../assets/green_shade_01.png');
+  background-image: url("../../assets/red_shade_02.png"),
+    url("../../assets/green_shade_01.png");
   background-size: 900px 800px, 500px 500px;
   background-repeat: no-repeat, no-repeat;
   background-position: -550px 550px, -200px 4px;
@@ -128,7 +129,7 @@ h2 {
   &:hover {
     background-color: #00bf89;
     border: 2px solid #00bf89;
-   }
+  }
 }
 
 .btn-github {
@@ -139,7 +140,7 @@ h2 {
   cursor: pointer;
   &:hover {
     background-color: #00bf89;
-   }
+  }
 }
 
 @media (max-width: 1300px) {
@@ -151,9 +152,9 @@ h2 {
 @media (max-width: 1200px) {
   .portfolio-section {
     text-align: center;
-    background-size: 900px 800px, 500px 500px; 
+    background-size: 900px 800px, 500px 500px;
     background-position: -600px 700px, -200px 200px; /* Individuelle Positionen für beide Bilder */
-    }
+  }
 
   .portfolio-line {
     top: 53%;
@@ -207,7 +208,7 @@ h2 {
 
 @media (max-width: 683px) {
   .portfolio-line {
-    top: 40%
+    top: 40%;
   }
 }
 

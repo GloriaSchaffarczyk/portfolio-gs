@@ -4,21 +4,20 @@
     <div class="portfolio-line"></div>
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
   </div>
-    @for (project of projects; track project.title) {
-      <div class="project-container" [ngClass]="{ 'reverse-layout': project.reverseLayout }">
-        <div class="project-image">
-          <img [src]="project.imageSrc" [alt]="project.title">
-        </div>
-        <div class="project-details">
-          <h2>{{ project.title }}</h2>
-          <p class="portfolio-technologies">{{ project.technologies.join(' | ') }}</p>
-          <p>{{ project.description }}</p>
-          <div class="project-links">
-            <a [href]="project.liveTestLink" target="_blank" class="btn-live-test">Live test</a>
-            <a [href]="project.githubLink" target="_blank" class="btn-github">Github</a>
-          </div>
-        </div>
+  @for (project of projects; track project.title) {
+  <div class="project-container" [ngClass]="{ 'reverse-layout': project.reverseLayout }">
+    <div class="project-image">
+      <img [src]="project.imageSrc" [alt]="project.title">
+    </div>
+    <div class="project-details">
+      <h2>{{ project.title }}</h2>
+      <p class="portfolio-technologies">{{ project.technologies.join(' | ') }}</p>
+      <p>{{ project.description }}</p>
+      <div class="project-links">
+        <a [href]="project.liveTestLink" target="_blank" class="btn-live-test">Live test</a>
+        <a [href]="project.githubLink" target="_blank" class="btn-github">Github</a>
       </div>
-    }
+    </div>
   </div>
-  
+  }
+</div>
