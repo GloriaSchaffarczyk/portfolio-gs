@@ -181,6 +181,47 @@ textarea::placeholder {
   box-sizing: border-box;
 }
 
+.popup-banner {
+  position: fixed;
+  bottom: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00bf89;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  z-index: 1000;
+  animation: slide-in 0.5s ease-out, slide-out 0.5s ease-in 2.7s forwards;
+
+  &.error {
+    background-color: #ff3f79;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    bottom: 20px;
+    opacity: 1;
+  }
+  to {
+    bottom: -50px;
+    opacity: 0;
+  }
+}
+
 // Media Queries //
 @media (max-width: 1500px) {
   .contact-line {
