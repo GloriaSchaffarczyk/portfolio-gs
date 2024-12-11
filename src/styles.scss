@@ -32,3 +32,31 @@ body {
   height: 100%;
 }
 
+/* Globale Anpassung der Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Breite der Scrollbar */
+  height: 8px; /* Für horizontale Scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: $color-dark; /* Hintergrund passend zum Design */
+  border-radius: 10px; /* Abgerundete Kanten */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color; /* Hauptfarbe für die Scroll-Leiste */
+  border-radius: 10px; /* Runde Scroll-Leiste */
+  border: 2px solid $color-dark; /* Lücke zwischen Track und Thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $secondary-color; /* Farbe beim Hover */
+}
+
+/* Für Firefox */
+* {
+  scrollbar-width: thin; /* Dünne Scroll-Leiste */
+  scrollbar-color: $primary-color $color-dark; /* Thumb und Track */
+}
+
+

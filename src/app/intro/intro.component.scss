@@ -33,12 +33,14 @@
   padding: 0 $padding-large 0 0;
   box-sizing: border-box;
 
-  svg {
-    width: 100%;
-    max-width: 742px;
-    height: auto;
+  .intro-element1 svg {
+    width: 100%; /* Passe die Breite an den Container an */
+    height: auto; /* Behalte das Seitenverhältnis basierend auf der Breite */
+    max-width: 742px; /* Begrenze die maximale Breite */
+    aspect-ratio: 742 / 162; /* Stellt das Seitenverhältnis sicher */
     padding-bottom: 12px;
   }
+  
 }
 
 .intro-element2 {
@@ -94,12 +96,6 @@
     max-width: 700px;
     height: auto;
   }
-}
-
-.full-name svg {
-  width: 100%;
-  max-width: 742px;
-  height: auto;
 }
 
 .social-media-and-contact {
