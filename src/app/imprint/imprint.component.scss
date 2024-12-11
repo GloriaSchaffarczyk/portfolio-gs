@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .imprint-section {
   margin: 0 auto;
   font-family: Arial, sans-serif;
@@ -31,5 +33,25 @@
 }
 
 .imprint-wrapper {
-  padding: 100px 100px;
+  padding: $padding-large $padding-large;
 }
+
+@media (max-width: $breakpoint-md) {
+  .imprint-wrapper {
+    padding: 100px $padding-medium;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .imprint-wrapper {
+    padding: 100px $padding-small;
+    h1 {
+      font-size: $font-size-xl;
+    }
+  }
+}
+
+

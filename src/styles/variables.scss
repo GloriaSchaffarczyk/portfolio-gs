@@ -1,33 +1,76 @@
 // Fonts
-$font-primary: "poppins", "sans-serif";
+$font-primary: "Poppins", "sans-serif";
 $text-color: #fff;
-$font-size: 1.4rem;
 
-//  Colors
+// Colors
 $color-dark: #141d2f;
 $color-light: #ffffff;
 $primary-color: #00bf89;
 $secondary-color: #ff3f79;
+$highlight-color: #b6b6b6;
 
-// Sizes
-$size-xxs: 0.5rem;
-$size-xs: 0.75rem;
-$size-sm: 0.875rem;
-$size-base: 1rem;
-$size-lg: 1.125rem;
-$size-xl: 1.25rem;
-$size-2xl: 1.5rem;
-$size-3xl: 1.875rem;
-$size-4xl: 2.25rem;
-$size-5xl: 3rem;
-$size-6xl: 3.75rem;
-$size-7xl: 4.5rem;
-$size-8xl: 6rem;
-$size-9xl: 8rem;
-$size-10xl: 10rem;
+// Font-Sizes
+$font-size-xs: 0.8rem;
+$font-size-sm: 0.9rem;
+$font-size-base: 1rem;
+$font-size-m: 1.4rem;
+$font-size-lg: 1.8rem;
+$font-size-xl: 2.2rem;
+$font-size-xxl: 5.6rem;
 
-// Paddings
-$padding-large: 100px;
-$padding-medium: 50px;
+// Paddings links und rechts
+$padding-xsmall: 12px;
 $padding-small: 25px;
+$padding-medium: 50px;
+$padding-large: 100px;
 $anchor-padding: 150px;
+
+// Borders
+$border-radius-small: 5px;
+$border-radius-medium: 10px;
+$border-radius-large: 20px;
+
+// Gaps
+$gap-small: 10px;
+$gap-medium: 24px;
+$gap-large: 40px;
+$gap-xlarge: 64px;
+
+// Media Queries
+$breakpoint-xs: 360px;
+$breakpoint-sm: 560px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1200px;
+
+// Common Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($property, $duration: 0.3s, $easing: ease) {
+  transition: $property $duration $easing;
+}
+
+// Shared Styles
+$line-height: 1.6;
+$z-index-default: 10;
+$z-index-overlay: 1000;
+
+// Default Animations
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

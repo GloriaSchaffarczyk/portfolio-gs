@@ -1,13 +1,13 @@
 @import "../../styles/variables.scss";
 
 .contact-section {
-  position: relative; /* Bezugspunkt für absolute Elemente */
+  position: relative;
   height: 100%;
   margin-top: 150px;
   box-sizing: border-box;
-  overflow: visible; /* Verhindert Abschneiden */
+  overflow: visible;
   background-image: url("../../assets/red_shade_02.png");
-  background-size: cover; /* Alternativ: cover, contain */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: -400px 300px;
   scroll-margin-top: $anchor-padding;
@@ -16,16 +16,16 @@
 .contact-form-section {
   height: 100%;
   display: flex;
-  padding: 10px 100px;
+  padding: 10px $padding-large;
   gap: 100px;
   box-sizing: border-box;
   margin-bottom: 100px;
 }
 
 h1 {
-  padding-left: 100px;
+  padding-left: $padding-large;
   text-align: center;
-  font-size: 5.6rem;
+  font-size: $font-size-xxl;
   margin-block-end: 0.5em;
 }
 
@@ -45,7 +45,7 @@ h1 {
   top: 10%;
   transform: translateY(-50%);
   border: 0;
-  border-top: 4px solid #ff3f79;
+  border-top: 4px solid $secondary-color;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   width: 40%;
@@ -54,33 +54,33 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
-  font-family: "Poppins", sans-serif;
+  font-family: $font-primary;
 }
 
 input {
-  border: 2px solid #ff3f79;
-  border-radius: 5px;
+  border: 2px solid $secondary-color;
+  border-radius: $border-radius-small;
   padding: 12px;
   margin-bottom: 24px;
-  background-color: #141d2f;
-  color: white;
+  background-color: $color-dark;
+  color: $color-light;
 }
 
 input:-webkit-autofill {
-  background-color: #141d2f !important;
-  border: 2px solid #00bf89 !important;
-  box-shadow: 0 0 0px 1000px #141d2f inset !important; /* Overlay für den Hintergrund */
-  -webkit-text-fill-color: white !important; /* Textfarbe ändern */
+  background-color: $color-dark !important;
+  border: 2px solid $primary-color !important;
+  box-shadow: 0 0 0px 1000px $color-dark inset !important; 
+  -webkit-text-fill-color: $color-light !important;
 }
 
 textarea {
-  border: 2px solid #ff3f79;
-  border-radius: 5px;
+  border: 2px solid $secondary-color;
+  border-radius: $border-radius-small;
   padding: 12px;
   margin-bottom: 24px;
-  background-color: #141d2f;
-  color: white;
-  font-family: "Poppins", sans-serif;
+  background-color: $color-dark;
+  color: $color-light;
+  font-family: $font-primary;
 }
 
 .visually-hidden {
@@ -95,49 +95,49 @@ textarea {
 }
 
 button {
-  background-color: #b6b6b6; // Grau (ungültig)
-  color: white;
+  background-color: $highlight-color;
+  color: $color-light;
   padding: 10px 30px;
   margin-top: 24px;
-  border: 2px solid #b6b6b6;
-  border-radius: 5px;
+  border: 2px solid $highlight-color;
+  border-radius: $border-radius-small;
   cursor: not-allowed;
   transition: background-color 0.3s ease, border 0.3s ease;
-  font-family: "Poppins", sans-serif;
+  font-family: $font-primary;
 
   &.valid {
-    background-color: #00bf89; // Grün (gültig)
-    border: 2px solid #00bf89;
+    background-color: $primary-color;
+    border: 2px solid $primary-color;
     cursor: pointer;
   }
 }
 
 input::placeholder {
-  color: white;
+  color: $color-light;
 }
 
 textarea::placeholder {
-  color: white;
+  color: $color-light;
 }
 
 .custom-checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: "Poppins", sans-serif;
-  color: white;
+  font-family: $font-primary;
+  color: $color-light;
 
   input[type="checkbox"] {
-    display: none; /* Versteckt die Standard-Checkbox */
+    display: none;
   }
 
   .checkbox-icon {
     margin-bottom: 8px;
     width: 20px;
     height: 20px;
-    border: 2px solid #00bf89;
+    border: 2px solid $primary-color;
     border-radius: 3px;
-    background-color: #141d2f;
+    background-color: $color-dark;
     position: relative;
     display: flex;
     justify-content: center;
@@ -148,26 +148,25 @@ textarea::placeholder {
       content: "";
       width: 10px;
       height: 5px;
-      border-left: 2px solid white;
-      border-bottom: 2px solid white;
+      border-left: 2px solid $color-light;
+      border-bottom: 2px solid $color-light;
       transform: rotate(-45deg) scale(0);
       transform-origin: center;
       transition: transform 0.2s ease-in-out;
     }
   }
 
-  /* Wenn die Checkbox ausgewählt ist */
   input[type="checkbox"]:checked + .checkbox-icon {
-    background-color: #00bf89; /* Grüner Hintergrund */
-    border-color: #00bf89;
+    background-color: $primary-color;
+    border-color: $primary-color;
   }
 
   input[type="checkbox"]:checked + .checkbox-icon:after {
-    transform: rotate(-45deg) scale(1); /* Haken sichtbar machen */
+    transform: rotate(-45deg) scale(1);
   }
 
   a {
-    color: #ff3f79;
+    color: $secondary-color;
     text-decoration: none;
 
     &:hover {
@@ -177,10 +176,10 @@ textarea::placeholder {
 }
 
 .error {
-  color: #ff3f79;
+  color: $secondary-color;
   margin-top: -20px;
   margin-bottom: 16px;
-  font-size: 0.9rem;
+  font-size: $font-size-sm;
 }
 
 .arrow {
@@ -193,7 +192,7 @@ textarea::placeholder {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 50px 100px;
+  padding: $padding-medium $padding-large;
   box-sizing: border-box;
 }
 
@@ -202,17 +201,17 @@ textarea::placeholder {
   bottom: 500px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #00bf89;
-  color: white;
+  background-color: $primary-color;
+  color: $color-light;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: $border-radius-small;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1.2rem;
   z-index: 1000;
   animation: slide-in 0.7s ease-out, slide-out 0.7s ease-in 2.7s forwards;
 
   &.error {
-    background-color: #ff3f79;
+    background-color: $secondary-color;
   }
 }
 
@@ -285,12 +284,12 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   .contact-form-section {
-    padding: 0px 50px;
+    padding: 0px $padding-medium;
   }
 
   h1 {
     font-size: 3rem;
-    padding: 0px 50px;
+    padding: 0px $padding-medium;
   }
 
   .contact-line {
@@ -301,12 +300,12 @@ textarea::placeholder {
 
 @media (max-width: 560px) {
   .contact-form-section {
-    padding: 0px 25px;
+    padding: 0px $padding-small;
   }
 
   h1 {
     font-size: 3rem;
-    padding: 0px 25px;
+    padding: 0px $padding-small;
   }
 
   .contact-line {
@@ -317,11 +316,11 @@ textarea::placeholder {
 
 @media (max-width: 480px) {
   .contact-form-left p {
-    font-size: 0.9rem;
+    font-size: $font-size-sm;
   }
 
   form[_ngcontent-ng-c1513643726] {
-    font-size: 0.9rem;
+    font-size: $font-size-sm;
   }
 
   .contact-line {
@@ -332,7 +331,7 @@ textarea::placeholder {
 
 @media (max-width: 450px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: $font-size-xl;
     padding: 0px;
   }
 
