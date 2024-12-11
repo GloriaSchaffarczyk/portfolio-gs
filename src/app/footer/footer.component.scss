@@ -39,11 +39,30 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    
     a {
-        text-decoration: none;
-        color: white;
+      text-decoration: none;
+      color: white;
+      position: relative;
+      overflow: visible;
+  
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #00bf89;
+        transition: width 0.3s ease-in-out;
+        z-index: 51; 
+      }
+  
+      &:hover:after {
+        width: 100%;
+      }
     }
-}
+  }   
 
 .footer-social-media-links img {
     padding-right: 24px;

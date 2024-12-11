@@ -66,6 +66,13 @@ input {
   color: white;
 }
 
+input:-webkit-autofill {
+  background-color: #141d2f !important;
+  border: 2px solid #00bf89 !important;
+  box-shadow: 0 0 0px 1000px #141d2f inset !important; /* Overlay für den Hintergrund */
+  -webkit-text-fill-color: white !important; /* Textfarbe ändern */
+}
+
 textarea {
   border: 2px solid #ff3f79;
   border-radius: 5px;
@@ -96,6 +103,7 @@ button {
   border-radius: 5px;
   cursor: not-allowed;
   transition: background-color 0.3s ease, border 0.3s ease;
+  font-family: "Poppins", sans-serif;
 
   &.valid {
     background-color: #00bf89; // Grün (gültig)
@@ -120,11 +128,12 @@ textarea::placeholder {
   font-family: "Poppins", sans-serif;
   color: white;
 
-  input[type="checkbox"] { // es fehlen noch input type text und input type email
-    display: none;
+  input[type="checkbox"] {
+    display: none; /* Versteckt die Standard-Checkbox */
   }
 
   .checkbox-icon {
+    margin-bottom: 8px;
     width: 20px;
     height: 20px;
     border: 2px solid #00bf89;
@@ -138,17 +147,24 @@ textarea::placeholder {
 
     &:after {
       content: '';
-      width: 12px;
-      height: 12px;
-      background-color: #ff3f79;
-      border-radius: 2px;
-      transform: scale(0);
+      width: 10px;
+      height: 5px;
+      border-left: 2px solid white;
+      border-bottom: 2px solid white;
+      transform: rotate(-45deg) scale(0);
+      transform-origin: center;
       transition: transform 0.2s ease-in-out;
     }
   }
 
+  /* Wenn die Checkbox ausgewählt ist */
+  input[type="checkbox"]:checked + .checkbox-icon {
+    background-color: #00bf89; /* Grüner Hintergrund */
+    border-color: #00bf89;
+  }
+
   input[type="checkbox"]:checked + .checkbox-icon:after {
-    transform: scale(1);
+    transform: rotate(-45deg) scale(1); /* Haken sichtbar machen */
   }
 
   a {
@@ -163,7 +179,8 @@ textarea::placeholder {
 
 .error {
   color: #ff3f79;
-  margin-top: 8px;
+  margin-top: -20px;
+  margin-bottom: 16px;
   font-size: 0.9rem;
 }
 
@@ -193,7 +210,7 @@ textarea::placeholder {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1.2rem;
   z-index: 1000;
-  animation: slide-in 0.5s ease-out, slide-out 0.5s ease-in 2.7s forwards;
+  animation: slide-in 0.7s ease-out, slide-out 0.7s ease-in 2.7s forwards;
 
   &.error {
     background-color: #ff3f79;
@@ -202,22 +219,22 @@ textarea::placeholder {
 
 @keyframes slide-in {
   from {
-    bottom: -50px;
+    bottom: -500px;
     opacity: 0;
   }
   to {
-    bottom: 20px;
+    bottom: 500px;
     opacity: 1;
   }
 }
 
 @keyframes slide-out {
   from {
-    bottom: 20px;
+    bottom: 500px;
     opacity: 1;
   }
   to {
-    bottom: -50px;
+    bottom: -500px;
     opacity: 0;
   }
 }

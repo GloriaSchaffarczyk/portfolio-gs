@@ -46,14 +46,16 @@
           }
 
           <!-- Privacy Checkbox -->
-          <label class="custom-checkbox">
-            <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel" required />
-            <span class="checkbox-icon"></span>
-            I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
-          </label>
+          <div class="custom-checkbox">
+            <label>
+              <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel" required />
+              <span class="checkbox-icon"></span>
+              I've read the <a routerLink="/privacy" class="privacy-link">privacy policy</a> and agree to the processing of my data.
+            </label>
+          </div>
           @if (!privacy.valid && privacy.touched) {
-          <small class="error">Please accept the privacy policy.</small>
-          }
+            <small class="error">Please accept the privacy policy.</small>
+          }          
 
           <!-- Submit Button -->
           <button type="submit" [disabled]="contactForm.invalid" [class.valid]="contactForm.valid">
