@@ -7,18 +7,16 @@
     "element4 element1"
     "element2 element2";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 70% 30%;
-  height: 100vh;
+  grid-template-rows: 68% 32%;
+  height: calc(100vh + 123px); // Gesamthöhe: 100vh + Header-Höhe
   max-width: 100vw;
-  margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 123px; // Header-Höhe berücksichtigen
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
   justify-items: stretch;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden; // Verhindert, dass Elemente aus der intro-section herausragen
 }
 
 // Hauptkomponenten und Layout-Details
@@ -50,7 +48,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -630px;
+  top: -225%;
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
@@ -105,7 +103,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  margin-top: -260px;
+  margin-top: -10%;
 }
 
 .intro-contact-symbols {
@@ -214,23 +212,23 @@
 
 // Media Queries
 
-@media (max-width: 1800px) {
-  .intro-element2 {
-    top: -590px;
-  }
-}
+// @media (max-width: 1800px) {
+//   .intro-element2 {
+//     top: -590px;
+//   }
+// }
 
-@media (max-width: 1700px) {
-  .intro-element2 {
-    top: -560px;
-  }
-}
+// @media (max-width: 1700px) {
+//   .intro-element2 {
+//     top: -560px;
+//   }
+// }
 
-@media (max-width: 1600px) {
-  .intro-element2 {
-    top: -530px;
-  }
-}
+// @media (max-width: 1600px) {
+//   .intro-element2 {
+//     top: -530px;
+//   }
+// }
 
 @media (max-width: 1500px) {
   .scroll-indicator {
