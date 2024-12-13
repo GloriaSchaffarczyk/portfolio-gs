@@ -7,16 +7,18 @@
     "element4 element1"
     "element2 element2";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 68% 32%;
-  height: calc(100vh + 123px); // Gesamthöhe: 100vh + Header-Höhe
+  grid-template-rows: 70% 30%;
+  height: 100vh;
   max-width: 100vw;
-  padding-top: 123px; // Header-Höhe berücksichtigen
+  margin: 0 auto;
+  padding-top: 24px;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
   justify-items: stretch;
   position: relative;
-  overflow: hidden; // Verhindert, dass Elemente aus der intro-section herausragen
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 // Hauptkomponenten und Layout-Details
@@ -30,10 +32,12 @@
   z-index: 3;
   padding: 0 $padding-large 0 0;
   box-sizing: border-box;
+  height: 100%;
+  gap: 24px;
 
   .intro-element1 svg {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
     max-width: 742px;
     aspect-ratio: 742 / 162;
     padding-bottom: 12px;
@@ -48,7 +52,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -225%;
+  top: -630px;
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
@@ -103,7 +107,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  margin-top: -10%;
+  margin-top: -260px;
 }
 
 .intro-contact-symbols {
@@ -153,7 +157,7 @@
   text-align: center;
   text-decoration: none;
   font-family: $font-primary;
-  font-size: $font-size-base;
+  font-size: 23px;
   font-weight: bold;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -212,23 +216,23 @@
 
 // Media Queries
 
-// @media (max-width: 1800px) {
-//   .intro-element2 {
-//     top: -590px;
-//   }
-// }
+@media (max-width: 1800px) {
+  .intro-element2 {
+    top: -590px;
+  }
+}
 
-// @media (max-width: 1700px) {
-//   .intro-element2 {
-//     top: -560px;
-//   }
-// }
+@media (max-width: 1700px) {
+  .intro-element2 {
+    top: -560px;
+  }
+}
 
-// @media (max-width: 1600px) {
-//   .intro-element2 {
-//     top: -530px;
-//   }
-// }
+@media (max-width: 1600px) {
+  .intro-element2 {
+    top: -530px;
+  }
+}
 
 @media (max-width: 1500px) {
   .scroll-indicator {
@@ -296,11 +300,11 @@
   }
 
   .intro-element2 {
-    top: -555px;
+    top: -580px;
   }
 
   .social-media-and-contact {
-    margin-top: 110px;
+    margin-top: 90px;
   }
 
   .scroll-indicator {
@@ -310,7 +314,7 @@
 
 @media (max-width: 1100px) {
   .intro-element2 {
-    top: -535px;
+    top: -550px;
   }
 }
 
@@ -320,23 +324,17 @@
   }
 
   .intro-element2 {
-    top: -505px;
-  }
-}
-
-@media (max-width: 940px) {
-  .intro-element2 {
-    top: -490px;
+    top: -525px;
   }
 }
 
 @media (max-width: 890px) {
-  .intro-element2 {
-    top: -515px;
-  }
-
   .scroll-indicator {
     display: none;
+  }
+
+  .social-media-and-contact {
+    margin-top: 50px;
   }
 }
 
@@ -348,17 +346,13 @@
 
 @media (max-width: 790px) {
   .intro-element2 {
-    top: -440px;
+    top: -460px;
   }
 }
 
 @media (max-width: $breakpoint-md) {
   .intro-element1 {
     padding: 0 $padding-medium 25px $padding-medium;
-  }
-
-  .intro-element2 {
-    top: -445px;
   }
 
   .intro-element3 {
@@ -376,29 +370,29 @@
 
 @media (max-width: 710px) {
   .intro-element2 {
-    top: -410px;
+    top: -420px;
   }
 }
 
 @media (max-width: 660px) {
   .intro-element2 {
-    top: -380px;
+    top: -400px;
   }
 }
 
 @media (max-width: 610px) {
   .intro-element2 {
-    top: -355px;
+    top: -375px;
   }
 }
 
 @media (max-width: $breakpoint-sm) {
   .intro-element1 {
-    padding: 0 $padding-small 25px $padding-small;
+    padding: 0 $padding-small 0 $padding-small;
   }
 
   .intro-element2 {
-    top: -345px;
+    top: -350px;
   }
 
   .intro-element3 {
@@ -413,7 +407,13 @@
 
 @media (max-width: 500px) {
   .intro-element2 {
-    top: -320px;
+    top: -345px;
+  }
+}
+
+@media (max-width: $breakpoint-s) {
+  .button-link {
+    font-size: 1rem;
   }
 }
 
@@ -426,7 +426,7 @@
   }
 
   .intro-element2 {
-    top: -290px;
+    top: -320px;
   }
 
   .intro-line {
@@ -455,7 +455,7 @@
   }
 
   .intro-element2 {
-    top: -255px;
+    top: -285px;
   }
 
   .intro-element3 {
@@ -473,16 +473,20 @@
   .intro-contact-symbols {
     gap: 5px;
   }
+
+  .social-media-and-contact {
+    margin-top: 25px;
+  }
 }
 
 @media (max-width: 310px) {
   .intro-element2 {
-    top: -235px;
+    top: -255px;
   }
 }
 
 @media (max-width: 270px) {
   .intro-element2 {
-    top: -215px;
+    top: -235px;
   }
 }

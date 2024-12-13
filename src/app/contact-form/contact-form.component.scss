@@ -250,7 +250,7 @@ textarea::placeholder {
   }
 
   .contact-line {
-    top: 8%;
+    top: 6%;
   }
 }
 
@@ -278,7 +278,6 @@ textarea::placeholder {
 @media (max-width: 1000px) {
   .contact-line {
     width: 30%;
-    top: 8%;
   }
 }
 
@@ -294,7 +293,7 @@ textarea::placeholder {
 
   .contact-line {
     width: 30%;
-    top: 5%;
+    top: 4%;
   }
 }
 
@@ -310,22 +309,22 @@ textarea::placeholder {
 
   .contact-line {
     width: 26%;
-    top: 5%;
+    top: 4%;
   }
 }
 
 @media (max-width: 480px) {
-  .contact-form-left p {
-    font-size: $font-size-sm;
-  }
-
-  form[_ngcontent-ng-c1513643726] {
+   form[_ngcontent-ng-c1513643726],  .contact-form-left p {
     font-size: $font-size-sm;
   }
 
   .contact-line {
     width: 24%;
-    top: 5%;
+    top: 3%;
+  }
+
+  h1 {
+    font-size: $font-size-xl;
   }
 }
 
@@ -337,7 +336,6 @@ textarea::placeholder {
 
   .contact-line {
     width: 22%;
-    top: 4%;
   }
 
   .custom-checkbox {
@@ -361,5 +359,9 @@ textarea::placeholder {
 
   .contact-section {
     background-position: -470px 500px;
+  }
+
+  form[_ngcontent-ng-c1513643726], .contact-form-left p, .custom-checkbox {
+    font-size: $font-size-xs;
   }
 }

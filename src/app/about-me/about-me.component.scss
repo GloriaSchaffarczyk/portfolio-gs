@@ -5,7 +5,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  margin-top: $padding-large;
+  margin-top: 150px;
   font-size: $font-size-base;
   background-image: url("../../assets/red_shade_01.png");
   background-size: 620px 620px;
@@ -94,7 +94,7 @@
 
 @media (max-width: $breakpoint-lg) {
   .about-me-left h1 {
-    font-size: $font-size-xl;
+    font-size: 4.5rem;
   }
 }
 
@@ -120,7 +120,7 @@
 @media (max-width: $breakpoint-md) {
   .about-me-section {
     padding: 0 $padding-medium 0 $padding-medium;
-    margin-top: $padding-medium;
+    margin-top: $padding-large;
     background-position: 150px 0px;
 
     > .about-me-left {
@@ -128,14 +128,14 @@
     }
   }
   .about-me-left h1 {
-    font-size: $font-size-lg;
+    font-size: 3rem;
   }
 }
 
 @media (max-width: $breakpoint-sm) {
   .about-me-section {
     padding: 0 $padding-small 0 $padding-small;
-    margin-top: $padding-small;
+    margin-top: $padding-medium;
 
     > .about-me-left {
       padding: 0;
@@ -156,22 +156,23 @@
     margin-block-start: 0.9em;
     margin-block-end: 0.9em;
   }
-}
-
-@media (max-width: $breakpoint-xs) {
-  .about-me-section {
-    font-size: $font-size-sm;
-    background-position: 50px 0px;
-  }
 
   .about-me-left h1 {
     font-size: $font-size-xl;
   }
 }
 
-@media (max-width: $breakpoint-xs) {
+@media (max-width: $breakpoint-s) {
   .about-me-section {
-    padding: 0 $padding-small;
+    font-size: $font-size-sm;
+  }
+}
+
+@media (max-width: $breakpoint-min) {
+  .about-me-section {
     font-size: $font-size-xs;
+    background-position: 50px 0px;
+    margin-top: $padding-small;
+    padding: 0 $padding-small;
   }
 }

@@ -18,6 +18,11 @@
 
   h3 a {
     color: $primary-color;
+    font-size: 1.2rem;
+  
+    &:hover {
+      color: $color-light;
+    }
   }
 
   p {
@@ -28,16 +33,17 @@
     text-decoration: none;
     cursor: pointer;
     color: $color-light;
+    word-break: break-all;
   }
 }
 
 .imprint-wrapper {
-  padding: $padding-large $padding-large;
+  padding: 0 $padding-large 100px $padding-large;
 }
 
 @media (max-width: $breakpoint-md) {
   .imprint-wrapper {
-    padding: 100px $padding-medium;
+    padding: 0 $padding-medium 100px $padding-medium;
     h1 {
       font-size: 3rem;
     }
@@ -46,7 +52,7 @@
 
 @media (max-width: $breakpoint-sm) {
   .imprint-wrapper {
-    padding: 100px $padding-small;
+    padding: 0 $padding-small 100px $padding-small;
     h1 {
       font-size: $font-size-xl;
     }

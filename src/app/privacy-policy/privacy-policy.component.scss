@@ -4,6 +4,7 @@
     margin: 0 auto;
     font-family: $font-primary;
     color: $color-light;
+
   
     h1 {
       font-size: $font-size-xxl;
@@ -22,25 +23,31 @@
     a {
       text-decoration: none;
       color: $primary-color;
+      word-break: break-all;
   
       &:hover {
         text-decoration: underline;
       }
     }
-  
+
     h3 a {
       color: $primary-color;
       font-size: 1.2rem;
+      text-decoration: none;
+    
+      &:hover {
+        color: $color-light;
+      }
     }
   }
   
   .privacy-policy-wrapper {
-    padding: 100px $padding-large;
+    padding: 0 $padding-large 100px $padding-large;
   }
   
   @media (max-width: $breakpoint-md) {
     .privacy-policy-wrapper {
-      padding: 100px $padding-medium;
+      padding: 0 $padding-medium 100px $padding-medium;
       h1 {
         font-size: 3rem;
       }
@@ -49,7 +56,7 @@
   
   @media (max-width: $breakpoint-sm) {
     .privacy-policy-wrapper {
-      padding: 100px $padding-small;
+      padding: 0 $padding-small 100px $padding-small;
       h1 {
         font-size: $font-size-xl;
       }

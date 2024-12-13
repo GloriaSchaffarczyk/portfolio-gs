@@ -246,3 +246,9 @@
     top: 14%;
   }
 }
+
+@media (max-width: $breakpoint-min) {
+  .testimonial-container {
+    font-size: $font-size-xs;
+  }
+}

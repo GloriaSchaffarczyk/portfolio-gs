@@ -12,18 +12,19 @@ a {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 20;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  box-sizing: border-box;
-  padding: 37px $padding-large;
-  position: fixed;
+  align-content: center;
+  flex-wrap: wrap;
   background-color: $color-dark;
-  z-index: 20;
+  padding: 37px $padding-large;
+  box-sizing: border-box;
 
   .icon.nav-icon-4 {
     display: none;
@@ -139,6 +140,11 @@ header {
   }
 }
 
+.placeholder {
+  height: 124px; /* Standardhöhe für Desktop */
+  width: 100%;
+}
+
   @media (max-width: $breakpoint-md) {
     header {
       padding: 37px $padding-medium;
@@ -155,5 +161,9 @@ header {
     img {
         width: 160px;
         height: auto;
+    }
+
+    .placeholder {
+      height: 115px;
     }
 }
