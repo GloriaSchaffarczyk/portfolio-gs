@@ -17,8 +17,8 @@ export class PortfolioComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       imageSrc: 'assets/Portfolio_Join_Laptop Mockup_01.gif',
-      liveTestLink: 'https://join.com',
-      githubLink: 'https://github.com/join',
+      liveTestLink: 'http://join.gloriacodes.de/',
+      githubLink: 'https://github.com/GloriaSchaffarczyk/Join',
       reverseLayout: false,
     },
     {
@@ -26,8 +26,8 @@ export class PortfolioComponent {
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Fight scary zombies and evil monsters with bombs while collecting Halloween candy.',
       technologies: ['JavaScript', 'OOP', 'HTML', 'CSS'],
       imageSrc: 'assets/Portfolio_MMM_Laptop Mockup_01.gif',
-      liveTestLink: 'https://sharkie.com',
-      githubLink: 'https://github.com/sharkie',
+      liveTestLink: 'http://monstermunchingmadness.gloriacodes.de/',
+      githubLink: 'https://github.com/GloriaSchaffarczyk/El-Pollo-Loco',
       reverseLayout: true,
     },
     {
@@ -35,8 +35,8 @@ export class PortfolioComponent {
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       technologies: ['JavaScript', 'RESTful API', 'HTML', 'CSS'],
       imageSrc: 'assets/Portfolio_Pokedex_Laptop Mockup_01.gif',
-      liveTestLink: 'https://join.com',
-      githubLink: 'https://github.com/join',
+      liveTestLink: 'http://pokedex.gloriacodes.de/',
+      githubLink: 'https://github.com/GloriaSchaffarczyk/Pokedex',
       reverseLayout: false,
     },
   ];
