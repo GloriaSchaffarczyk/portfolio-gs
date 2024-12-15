@@ -1,17 +1,23 @@
 <div class="testimonial-container">
     <div class="single-testimonial">
         <div class="quote-container">
-            <img src="../../assets/testimonial-quotation-mark.png" alt="quotation-mark-image"
-                class="quotation-mark-image">
-            <p class="quote">{{ testimonials[currentTestimonial].quote }}</p>
+            <img src="../../assets/testimonial-quotation-mark.png" 
+                 alt="quotation-mark-image"
+                 class="quotation-mark-image">
+            <p class="quote">
+                {{ testimonials[currentTestimonial].quote }}
+            </p>
             <div class="line-and-author">
                 <div class="quote-line"></div>
-                <p class="quote-author">{{ testimonials[currentTestimonial].author }}</p>
+                <p class="quote-author">
+                    {{ testimonials[currentTestimonial].author }}
+                </p>
             </div>
         </div>
         <div class="testimonial-line" [class.animate]="true"></div>
         <div class="testimonial-img">
-            <img [src]="testimonials[currentTestimonial].imageSrc" [alt]="testimonials[currentTestimonial].author">
+            <img [src]="testimonials[currentTestimonial].imageSrc" 
+                 [alt]="testimonials[currentTestimonial].author">
         </div>
     </div>
 
@@ -22,7 +28,7 @@
         <div class="dots">
             @for (testimonial of testimonials; track $index) {
             <span [class.active-dot]="currentTestimonial === $index"
-                [class.inactive-dot]="currentTestimonial !== $index">
+                  [class.inactive-dot]="currentTestimonial !== $index">
             </span>
             }
         </div>

@@ -4,6 +4,12 @@
     <img src="../../assets/Logo_gs_02.png" alt="Website logo: Gloria Schaffarczyk" id="logo" />
   </a>
 
+  <!-- Language Selector -->
+  <select (change)="setLanguage($event)" [value]="translationService.currentLanguage">
+    <option value="en">{{ translationService.translate('HEADER.LANGUAGE.ENGLISH') }}</option>
+    <option value="de">{{ translationService.translate('HEADER.LANGUAGE.GERMAN') }}</option>
+  </select>
+
   <!-- Hamburger Icon for mobile menu -->
   <div class="icon nav-icon-4" (click)="toggleMenu()" [class.open]="isMenuOpen">
     <span aria-hidden="true"></span>
@@ -13,17 +19,17 @@
 
   <!-- Desktop Navigation Links -->
   <nav class="desktop-nav">
-    <a href="#about-me">About me</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
+    <a href="#about-me">{{ translationService.translate('HEADER.ABOUT_ME') }}</a>
+    <a href="#skills">{{ translationService.translate('HEADER.SKILLS') }}</a>
+    <a href="#portfolio">{{ translationService.translate('HEADER.PORTFOLIO') }}</a>
   </nav>
 
   <!-- Mobile Navigation Links -->
   <nav class="mobile-menu" [class.open]="isMenuOpen">
-    <a href="#about-me" (click)="closeMenu()">About me</a>
-    <a href="#skills" (click)="closeMenu()">Skills</a>
-    <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
-    <a href="#contact" (click)="closeMenu()">Contact</a>
+    <a href="#about-me" (click)="closeMenu()">{{ translationService.translate('HEADER.ABOUT_ME') }}</a>
+    <a href="#skills" (click)="closeMenu()">{{ translationService.translate('HEADER.SKILLS') }}</a>
+    <a href="#portfolio" (click)="closeMenu()">{{ translationService.translate('HEADER.PORTFOLIO') }}</a>
+    <a href="#contact" (click)="closeMenu()">{{ translationService.translate('HEADER.CONTACT') }}</a>
   </nav>
 </header>
 

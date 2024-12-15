@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output, HostListener } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,8 @@ export class HeaderComponent {
   @Output() menuToggle = new EventEmitter<boolean>(); // Ereignis für das Menü-Status
 
   isMenuOpen = false;
+
+  constructor(public translationService: TranslationService) {}
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -29,4 +32,11 @@ export class HeaderComponent {
       this.closeMenu(); // Menü schließen und Elternkomponente informieren
     }
   }
+
+  setLanguage(event: Event): void {
+    const target = event.target as HTMLSelectElement;
+    const lang = target.value;
+    this.translationService.setLanguage(lang);
+  }
+  
 }

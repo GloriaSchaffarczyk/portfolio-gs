@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-skills',
@@ -9,6 +10,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
+  constructor(public translationService: TranslationService) {}
+
   skills = [
     { imgSrc: 'assets/skills-icon-angular.png', name: 'Angular' },
     { imgSrc: 'assets/skills-icon-typescript.png', name: 'TypeScript' },

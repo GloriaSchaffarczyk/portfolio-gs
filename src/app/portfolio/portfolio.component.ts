@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 // buttons stylen 
 
@@ -11,10 +12,12 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+  constructor(public translationService: TranslationService) {}
+
   projects = [
     {
-      title: 'Join',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      titleKey: 'PROJECT.JOIN.TITLE',
+      descriptionKey: 'PROJECT.JOIN.DESCRIPTION',
       technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       imageSrc: 'assets/Portfolio_Join_Laptop Mockup_01.gif',
       liveTestLink: 'http://join.gloriacodes.de/',
@@ -22,8 +25,8 @@ export class PortfolioComponent {
       reverseLayout: false,
     },
     {
-      title: 'Monster munching madness',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Fight scary zombies and evil monsters with bombs while collecting Halloween candy.',
+      titleKey: 'PROJECT.MONSTER.TITLE',
+      descriptionKey: 'PROJECT.MONSTER.DESCRIPTION',
       technologies: ['JavaScript', 'OOP', 'HTML', 'CSS'],
       imageSrc: 'assets/Portfolio_MMM_Laptop Mockup_01.gif',
       liveTestLink: 'http://monstermunchingmadness.gloriacodes.de/',
@@ -31,8 +34,8 @@ export class PortfolioComponent {
       reverseLayout: true,
     },
     {
-      title: 'Pokédex',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      titleKey: 'PROJECT.POKEDEX.TITLE',
+      descriptionKey: 'PROJECT.POKEDEX.DESCRIPTION',
       technologies: ['JavaScript', 'RESTful API', 'HTML', 'CSS'],
       imageSrc: 'assets/Portfolio_Pokedex_Laptop Mockup_01.gif',
       liveTestLink: 'http://pokedex.gloriacodes.de/',

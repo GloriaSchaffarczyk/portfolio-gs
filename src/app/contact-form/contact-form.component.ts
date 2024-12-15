@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { TranslationService } from '../translation.service';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -12,6 +13,8 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent {
+  constructor(public translationService: TranslationService) {}
+
   http = inject(HttpClient);
   arrowSrc = '../../assets/home-arrow-white.png';
 
@@ -30,13 +33,18 @@ export class ContactFormComponent {
     if (contactForm.valid) {
       this.http.post('https://gloriacodes.de/sendMail.php', this.contactData).subscribe({
         next: () => {
-          this.showPopupMessage('Your message has been sent successfully!', '#00bf89');
+          this.showPopupMessage(
+            this.translationService.translate('CONTACT.SUCCESS_MESSAGE'),
+            '#00bf89'
+          );
           contactForm.resetForm();
           this.contactData = { name: '', email: '', message: '', privacy: false };
         },
-        error: (error) => {
-          console.error('Error sending email:', error);
-          this.showPopupMessage('Failed to send your message. Try again later.', '#ff3f79');
+        error: () => {
+          this.showPopupMessage(
+            this.translationService.translate('CONTACT.ERROR_MESSAGE'),
+            '#ff3f79'
+          );
         },
       });
     }

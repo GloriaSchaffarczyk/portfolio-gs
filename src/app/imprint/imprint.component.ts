@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-imprint',
@@ -8,5 +9,6 @@ import { RouterModule } from '@angular/router';
   templateUrl: './imprint.component.html',
   styleUrls: ['./imprint.component.scss']
 })
-export class ImprintComponent { }
-
+export class ImprintComponent {
+  constructor(public translationService: TranslationService) {}
+}

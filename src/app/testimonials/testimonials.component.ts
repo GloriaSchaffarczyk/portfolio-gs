@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-testimonials',
@@ -8,10 +9,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./testimonials.component.scss']
 })
 export class TestimonialsComponent {
+  constructor(public translationService: TranslationService) {}
+
   testimonials = [
-    { author: 'Johann - Frontend Developer', quote: "Together we tackled a development project that required immediate, effective problem-solving and her ability to understand new tools and implement technical solutions stood out. Gloria's work contributed greatly to the project's success.", imageSrc: 'assets/testimonial-author04.png' },
-    { author: 'Nicole - Frontend Developer', quote: "During the frontend training at the Developer Akademie (DA), Gloria's readiness to exchange strategies, suggest solutions, and provide encouragement  enhanced the collective learning experience — a quality that would serve any team well.", imageSrc: 'assets/testimonial-author05.png' },
-    { author: 'David - Colleague', quote: "Over nine years of working together, Gloria demonstrated a strong command of diverse technical environments, adapting seamlessly to evolving requirements. Her reliability, versatility, and results-oriented mindset made a positive impact.", imageSrc: 'assets/testimonial-author06.png' },
+    { 
+      author: this.translationService.translate('TESTIMONIALS.AUTHOR1'), 
+      quote: this.translationService.translate('TESTIMONIALS.QUOTE1'), 
+      imageSrc: 'assets/testimonial-author04.png' 
+    },
+    { 
+      author: this.translationService.translate('TESTIMONIALS.AUTHOR2'), 
+      quote: this.translationService.translate('TESTIMONIALS.QUOTE2'), 
+      imageSrc: 'assets/testimonial-author05.png' 
+    },
+    { 
+      author: this.translationService.translate('TESTIMONIALS.AUTHOR3'), 
+      quote: this.translationService.translate('TESTIMONIALS.QUOTE3'), 
+      imageSrc: 'assets/testimonial-author06.png' 
+    }
   ];
 
   currentTestimonial = 0;
@@ -51,5 +66,4 @@ export class TestimonialsComponent {
       }, 10);
     }
   }
-
-}  
+}

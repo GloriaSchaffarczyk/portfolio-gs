@@ -1,36 +1,32 @@
 <div class="about-me-section" id="about-me">
     <div class="about-me-left">
-        <h1>About me</h1>
-        <p>Hey there! I'm Gloria, a frontend developer fueled by a
-            passion for crafting user-friendly digital experiences.
-            With a talent for problem-solving and an eye for detail,
-            I specialize in translating complex ideas into elegant designs.
+        <h1>{{ translationService.translate('ABOUT_ME.TITLE') }}</h1>
+        <p>
+            {{ translationService.translate('ABOUT_ME.INTRO') }}
         </p>
-        <p>Let's connect and create something amazing together!</p>
+        <p>
+            {{ translationService.translate('ABOUT_ME.CONNECT') }}
+        </p>
         <div class="about-me-bullet-points">
-            <div class="about-me-bullet-point"><img src="../../assets/about-me-icon-location.png"
-                    alt="Location icon representing flexibility in working environments">
-                <p>Flexible in terms of working environments, I can work effectively both on-site in Kempten and
-                    remotely.</p>
+            <div class="about-me-bullet-point">
+                <img src="../../assets/about-me-icon-location.png" 
+                     [alt]="translationService.translate('ABOUT_ME.BULLET.LOCATION_ICON_ALT')">
+                <p>{{ translationService.translate('ABOUT_ME.BULLET.LOCATION') }}</p>
             </div>
-            <div class="about-me-bullet-point"><img src="../../assets/about-me-icon-lightbulb.png"
-                    alt="Lightbulb icon representing creativity and open-mindedness">
-                <p>I am open-minded and always looking for personal challenges to constantly improve my knowledge and
-                    skills.</p>
+            <div class="about-me-bullet-point">
+                <img src="../../assets/about-me-icon-lightbulb.png" 
+                     [alt]="translationService.translate('ABOUT_ME.BULLET.CREATIVITY_ICON_ALT')">
+                <p>{{ translationService.translate('ABOUT_ME.BULLET.CREATIVITY') }}</p>
             </div>
-            <div class="about-me-bullet-point"><img src="../../assets/about-me-icon-puzzle.png"
-                    alt="Puzzle piece icon symbolizing problem-solving skills">
-                <p>In my profession, programming isn't just about writing code; it's a creative form of problem-solving.
-                    I take pride in my ability to distill complex technical challenges into simple, user-friendly
-                    solutions.
-                    This way, I help you achieve your goals and bring your visions to life.
-                </p>
+            <div class="about-me-bullet-point">
+                <img src="../../assets/about-me-icon-puzzle.png" 
+                     [alt]="translationService.translate('ABOUT_ME.BULLET.PROBLEM_ICON_ALT')">
+                <p>{{ translationService.translate('ABOUT_ME.BULLET.PROBLEM_SOLVING') }}</p>
             </div>
         </div>
-
     </div>
     <div class="about-me-right">
-        <img src="../../assets/about-me_01.png" class="about-me-group"
-            alt="A portrait of Gloria, a frontend developer, smiling and ready to create user-friendly digital experiences">
+        <img src="../../assets/about-me_01.png" class="about-me-group" 
+             [alt]="translationService.translate('ABOUT_ME.PORTRAIT_ALT')">
     </div>
 </div>

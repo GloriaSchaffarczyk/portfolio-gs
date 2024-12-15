@@ -1,34 +1,45 @@
 <div class="skills-section anchor-padding" id="skills">
   <div class="skills-left">
     <div class="skills-line d-none"></div>
-    <h1 class="d-none">My skills</h1>
-    <span class="d-none">I have gained experience in building projects with different frontend technologies and
-      concepts.</span>
+    <h1 class="d-none">{{ translationService.translate('SKILLS.TITLE') }}</h1>
+    <span class="d-none">{{ translationService.translate('SKILLS.DESCRIPTION') }}</span>
     <div class="skills-symbols">
       @for (skill of skills; track skill.name) {
       <div class="skills-icon-and-name" [ngClass]="{'highlight': skill.isHighlight || false}"
         (mouseenter)="onHover(skill, $index)" (mouseleave)="onLeave(skill, $index)">
-        <img [src]="skill.imgSrc" alt="{{skill.name}}">
+        <img [src]="skill.imgSrc" alt="{{ skill.name }}">
         <p>{{ skill.name }}</p>
         @if (skill.isHighlight) {
-        <img src="assets/skills-icon-learning-interest.png" alt="React and Vue Tooltip"
+        <img src="assets/skills-icon-learning-interest.png"
+          alt="{{ translationService.translate('SKILLS.TOOLTIP_ALT') }}"
           class="tooltip-image hide-on-hover" [ngClass]="{ 'hide-on-hover': !showTooltip }">
         }
       </div>
       }
     </div>
-    <h2 class="d-none">Looking for <strong style="color: #ff3f79">another skill</strong>?</h2>
-    <span class="d-none">Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
-    <a href="#contact"><button class="d-none">Get in touch</button></a>
+    <h2 class="d-none">
+      {{ translationService.translate('SKILLS.LOOKING') }}
+      <strong style="color: #ff3f79">{{ translationService.translate('SKILLS.CONTACT_ME') }}</strong>?
+    </h2>
+    <span class="d-none">{{ translationService.translate('SKILLS.CONTACT_TEXT') }}</span>
+    <a href="#contact">
+      <button class="d-none">{{ translationService.translate('SKILLS.CONTACT_ME_BUTTON') }}</button>
+    </a>
   </div>
+
   <div class="skills-right">
     <div class="skills-line"></div>
     <div class="skills-text-and-button">
-      <h1>My skills</h1>
-      <span>I have gained experience in building projects with different frontend technologies and concepts.</span>
-      <h2>Looking for <strong style="color: #ff3f79">another skill</strong>?</h2>
-      <span>Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
-      <a href="#contact"><button>Get in touch</button></a>
+      <h1>{{ translationService.translate('SKILLS.TITLE') }}</h1>
+      <span>{{ translationService.translate('SKILLS.DESCRIPTION') }}</span>
+      <h2>
+        {{ translationService.translate('SKILLS.LOOKING') }}
+        <strong style="color: #ff3f79">{{ translationService.translate('SKILLS.CONTACT_ME') }}</strong>?
+      </h2>
+      <span>{{ translationService.translate('SKILLS.CONTACT_TEXT') }}</span>
+      <a href="#contact">
+        <button>{{ translationService.translate('SKILLS.CONTACT_ME_BUTTON') }}</button>
+      </a>
     </div>
   </div>
 </div>

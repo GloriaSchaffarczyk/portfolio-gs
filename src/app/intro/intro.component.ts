@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [],
   templateUrl: './intro.component.html',
-  styleUrl: './intro.component.scss'
+  styleUrls: ['./intro.component.scss'],
 })
-
 export class IntroComponent {
+  constructor(public translationService: TranslationService) {}
 }
+
