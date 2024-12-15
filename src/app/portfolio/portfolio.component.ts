@@ -15,7 +15,7 @@ export class PortfolioComponent {
     {
       title: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+      technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       imageSrc: 'assets/Portfolio_Join_Laptop Mockup_01.gif',
       liveTestLink: 'http://join.gloriacodes.de/',
       githubLink: 'https://github.com/GloriaSchaffarczyk/Join',
