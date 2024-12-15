@@ -36,7 +36,10 @@ export class ContactFormComponent {
 
       this.http.post('https://gloriacodes.de/sendMail.php', this.contactData).subscribe({
         next: () => this.showPopupMessage('Your message has been sent successfully!', '#00bf89'),
-        error: () => this.showPopupMessage('Failed to send your message. Try again later.', '#ff3f79'),
+        error: (error) => {
+          console.error('Error sending email:', error); // Logge die Fehlermeldung
+          this.showPopupMessage('Failed to send your message. Try again later.', '#ff3f79');
+        },
       });
     }
   }
