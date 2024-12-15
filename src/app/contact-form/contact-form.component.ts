@@ -28,16 +28,14 @@ export class ContactFormComponent {
 
   onSubmit(contactForm: any) {
     if (contactForm.valid) {
-      // Simulate success response
-      // setTimeout(() => {
-      //   this.showPopupMessage('Your message has been sent successfully!', '#00bf89');
-      //   contactForm.resetForm();
-      // }, 500);
-
       this.http.post('https://gloriacodes.de/sendMail.php', this.contactData).subscribe({
-        next: () => this.showPopupMessage('Your message has been sent successfully!', '#00bf89'),
+        next: () => {
+          this.showPopupMessage('Your message has been sent successfully!', '#00bf89');
+          contactForm.resetForm();
+          this.contactData = { name: '', email: '', message: '', privacy: false };
+        },
         error: (error) => {
-          console.error('Error sending email:', error); // Logge die Fehlermeldung
+          console.error('Error sending email:', error);
           this.showPopupMessage('Failed to send your message. Try again later.', '#ff3f79');
         },
       });
