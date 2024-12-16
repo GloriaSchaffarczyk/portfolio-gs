@@ -15,6 +15,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100vw;
   z-index: 20;
   display: flex;
@@ -25,6 +26,8 @@ header {
   background-color: $color-dark;
   padding: 37px $padding-large;
   box-sizing: border-box;
+  max-width: 1920px;
+  margin: 0 auto;
 
   .icon.nav-icon-4 {
     display: none;

@@ -53,7 +53,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -640px;
+  top: -658px;
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
@@ -489,5 +489,27 @@
 @media (max-width: 270px) {
   .intro-element2 {
     top: -245px;
+  }
+}
+
+/* Für Ultrawide - 3440x1440 */
+@media (min-width: 3440px) and (min-height: 1400px) {
+  .intro-element2 {
+    top: -760px;
+  }
+
+  .scroll-indicator {
+    right: 950px;
+  }
+}
+
+/* Für Desktop - 2560x1600 */
+@media (min-width: 2560px) and (min-height: 1500px) {
+  .intro-element2 {
+    top: -810px;
+  }
+
+  .scroll-indicator {
+    right: 500px;
   }
 }
