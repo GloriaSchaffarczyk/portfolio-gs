@@ -58,3 +58,29 @@ body {
   scrollbar-width: thin; /* Dünne Scroll-Leiste */
   scrollbar-color: $primary-color $color-dark; /* Thumb und Track */
 }
+
+/* Stile für Links */
+.imprint-section a,
+.privacy-policy-section a {
+  color: #ffffff; 
+  text-decoration: none;
+}
+
+.imprint-section a:hover,
+.privacy-policy-section a:hover {
+  text-decoration: underline; 
+  color: #ffffff; 
+}
+
+/* Stile für Text */
+.imprint-section p,
+.privacy-policy-section p {
+  margin: 0 0 1em;
+  line-height: 1.5;
+}
+
+.imprint-section strong,
+.privacy-policy-section strong {
+  font-weight: bold;
+}
+
