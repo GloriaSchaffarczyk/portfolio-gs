@@ -5,19 +5,19 @@
                  alt="quotation-mark-image"
                  class="quotation-mark-image">
             <p class="quote">
-                {{ testimonials[currentTestimonial].quote }}
+                {{ translationService.translate(testimonials[currentTestimonial].quoteKey) }}
             </p>
             <div class="line-and-author">
                 <div class="quote-line"></div>
                 <p class="quote-author">
-                    {{ testimonials[currentTestimonial].author }}
+                    {{ translationService.translate(testimonials[currentTestimonial].authorKey) }}
                 </p>
             </div>
         </div>
         <div class="testimonial-line" [class.animate]="true"></div>
         <div class="testimonial-img">
             <img [src]="testimonials[currentTestimonial].imageSrc" 
-                 [alt]="testimonials[currentTestimonial].author">
+                 [alt]="translationService.translate(testimonials[currentTestimonial].authorKey)">
         </div>
     </div>
 

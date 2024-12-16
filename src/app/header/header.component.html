@@ -1,15 +1,25 @@
 <header id="header">
+  <div class="header-left">
   <!-- Logo -->
   <a href="#header">
     <img src="../../assets/Logo_gs_02.png" alt="Website logo: Gloria Schaffarczyk" id="logo" />
   </a>
-
+  </div>
+<div class="header-center">
   <!-- Language Selector -->
-  <select (change)="setLanguage($event)" [value]="translationService.currentLanguage">
-    <option value="en">{{ translationService.translate('HEADER.LANGUAGE.ENGLISH') }}</option>
-    <option value="de">{{ translationService.translate('HEADER.LANGUAGE.GERMAN') }}</option>
-  </select>
-
+  <div class="switch" (click)="toggleLanguage()">
+    <input 
+      id="language-toggle" 
+      class="check-toggle check-toggle-round-flat" 
+      type="checkbox"
+      [attr.checked]="translationService.currentLanguage === 'de' ? true : null"
+      (change)="toggleLanguage()">
+    <label for="language-toggle"></label>
+    <span class="on">DE</span>
+    <span class="off">EN</span>
+  </div> 
+</div>
+<div class="header-right">
   <!-- Hamburger Icon for mobile menu -->
   <div class="icon nav-icon-4" (click)="toggleMenu()" [class.open]="isMenuOpen">
     <span aria-hidden="true"></span>
@@ -31,6 +41,7 @@
     <a href="#portfolio" (click)="closeMenu()">{{ translationService.translate('HEADER.PORTFOLIO') }}</a>
     <a href="#contact" (click)="closeMenu()">{{ translationService.translate('HEADER.CONTACT') }}</a>
   </nav>
+</div>
 </header>
 
 <!-- Dummy-Platzhalter -->

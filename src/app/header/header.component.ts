@@ -8,7 +8,7 @@ import { TranslationService } from '../translation.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Output() menuToggle = new EventEmitter<boolean>(); // Ereignis für das Menü-Status
+  @Output() menuToggle = new EventEmitter<boolean>();
 
   isMenuOpen = false;
 
@@ -16,12 +16,12 @@ export class HeaderComponent {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
-    this.menuToggle.emit(this.isMenuOpen); // Menü-Status an die Elternkomponente senden
+    this.menuToggle.emit(this.isMenuOpen);
   }
 
   closeMenu(): void {
     this.isMenuOpen = false;
-    this.menuToggle.emit(false); // Menü wird geschlossen
+    this.menuToggle.emit(false);
   }
 
   @HostListener('window:resize', ['$event'])
@@ -29,14 +29,13 @@ export class HeaderComponent {
     const windowWidth = (event.target as Window).innerWidth;
 
     if (windowWidth > 1200 && this.isMenuOpen) {
-      this.closeMenu(); // Menü schließen und Elternkomponente informieren
+      this.closeMenu();
     }
   }
 
-  setLanguage(event: Event): void {
-    const target = event.target as HTMLSelectElement;
-    const lang = target.value;
-    this.translationService.setLanguage(lang);
+  toggleLanguage(): void {
+    const newLanguage = this.translationService.currentLanguage === 'en' ? 'de' : 'en';
+    this.translationService.setLanguage(newLanguage);
   }
   
 }

@@ -19,7 +19,7 @@
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
-  scroll-margin-top: $anchor-padding;
+  scroll-margin-top: 150px;
 }
 
 // Hauptkomponenten und Layout-Details
@@ -53,7 +53,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -630px;
+  top: -640px;
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
@@ -219,19 +219,19 @@
 
 @media (max-width: 1800px) {
   .intro-element2 {
-    top: -590px;
+    top: -600px;
   }
 }
 
 @media (max-width: 1700px) {
   .intro-element2 {
-    top: -560px;
+    top: -570px;
   }
 }
 
 @media (max-width: 1600px) {
   .intro-element2 {
-    top: -530px;
+    top: -540px;
   }
 }
 
@@ -301,7 +301,7 @@
   }
 
   .intro-element2 {
-    top: -580px;
+    top: -590px;
   }
 
   .social-media-and-contact {
@@ -315,7 +315,7 @@
 
 @media (max-width: 1100px) {
   .intro-element2 {
-    top: -550px;
+    top: -560px;
   }
 }
 
@@ -325,7 +325,7 @@
   }
 
   .intro-element2 {
-    top: -525px;
+    top: -535px;
   }
 }
 
@@ -341,13 +341,13 @@
 
 @media (max-width: 840px) {
   .intro-element2 {
-    top: -470px;
+    top: -480px;
   }
 }
 
 @media (max-width: 790px) {
   .intro-element2 {
-    top: -460px;
+    top: -470px;
   }
 }
 
@@ -371,19 +371,19 @@
 
 @media (max-width: 710px) {
   .intro-element2 {
-    top: -420px;
+    top: -430px;
   }
 }
 
 @media (max-width: 660px) {
   .intro-element2 {
-    top: -400px;
+    top: -410px;
   }
 }
 
 @media (max-width: 610px) {
   .intro-element2 {
-    top: -375px;
+    top: -385px;
   }
 }
 
@@ -393,7 +393,7 @@
   }
 
   .intro-element2 {
-    top: -350px;
+    top: -360px;
   }
 
   .intro-element3 {
@@ -408,7 +408,7 @@
 
 @media (max-width: 500px) {
   .intro-element2 {
-    top: -345px;
+    top: -355px;
   }
 }
 
@@ -427,7 +427,7 @@
   }
 
   .intro-element2 {
-    top: -320px;
+    top: -330px;
   }
 
   .intro-line {
@@ -442,7 +442,7 @@
   }
 
   .intro-element2 {
-    top: -270px;
+    top: -280px;
   }
 
   .intro-line {
@@ -456,7 +456,7 @@
   }
 
   .intro-element2 {
-    top: -285px;
+    top: -295px;
   }
 
   .intro-element3 {
@@ -482,12 +482,12 @@
 
 @media (max-width: 310px) {
   .intro-element2 {
-    top: -255px;
+    top: -265px;
   }
 }
 
 @media (max-width: 270px) {
   .intro-element2 {
-    top: -235px;
+    top: -245px;
   }
 }

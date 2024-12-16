@@ -5,9 +5,9 @@ p {
 }
 
 a {
+  display: flex;
   color: $color-light;
   text-decoration: none;
-  padding-right: 12px;
   font-size: $font-size-m;
 }
 
@@ -82,6 +82,8 @@ header {
   .desktop-nav {
     display: flex;
     gap: 12px;
+    min-width: 400px;
+    justify-content: flex-end;
 
     a {
       color: $color-light;
@@ -140,30 +142,188 @@ header {
   }
 }
 
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-center {
+  justify-content: center;
+  flex: 1; /* Nimmt den freien Platz ein */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch > span {
+  position: absolute;
+  top: 11px;
+  pointer-events: none;
+  font-family: $font-primary;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  width: 50%;
+  text-align: center;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  color: $color-light;
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+  color: $color-dark;
+}
+
+.switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: $color-light;
+}
+
+.switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: $color-dark;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 97px;
+  height: 35px;
+  background-color: $color-light;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+
+input.check-toggle-round-flat + label:before,
+input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: $color-light;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+
+input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 48px;
+  background-color: $color-dark;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 44px;
+}
+
 .placeholder {
-  height: 124px; /* Standardhöhe für Desktop */
+  height: 124px;
   width: 100%;
 }
 
-  @media (max-width: $breakpoint-md) {
-    header {
-      padding: 37px $padding-medium;
-    }
+@media (max-width: $breakpoint-md) {
+  header {
+    padding: 37px $padding-medium;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  header {
+    padding: 37px $padding-small;
   }
 
-  @media (max-width: $breakpoint-sm) {
-    header {
-      padding: 37px $padding-small;
-    }
+  img {
+    width: 140px;
+    height: auto;
+  }
+}
+
+@media (max-width: $breakpoint-xs) {
+  img {
+    width: 120px;
+    height: auto;
   }
 
-  @media (max-width: $breakpoint-xs) {
-    img {
-        width: 160px;
-        height: auto;
-    }
+  .placeholder {
+    height: 115px;
+  }
+}
 
-    .placeholder {
-      height: 115px;
-    }
+@media (max-width: $breakpoint-min) {
+  header {
+    padding: 37px $padding-xsmall;
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  input.check-toggle-round-flat + label {
+    width: 80px;
+    height: 35px;
+  }
+
+  input.check-toggle-round-flat + label:after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 36px;
+  }
+
+  input.check-toggle-round-flat:checked + label:after {
+    margin-left: 38px;
+  }
+  .placeholder {
+    height: 115px;
+  }
 }
