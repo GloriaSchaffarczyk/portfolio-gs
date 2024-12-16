@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, HostListener } from '@angular/core';
+import { Component, EventEmitter, Output, HostListener, OnInit } from '@angular/core';
 import { TranslationService } from '../translation.service';
 
 @Component({
@@ -7,10 +7,10 @@ import { TranslationService } from '../translation.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   @Output() menuToggle = new EventEmitter<boolean>();
-
   isMenuOpen = false;
+  isChecked: boolean = false;
 
   constructor(public translationService: TranslationService) {}
 
@@ -33,9 +33,18 @@ export class HeaderComponent {
     }
   }
 
+  ngOnInit(): void {
+    this.syncToggleWithLanguage();
+  }
+
   toggleLanguage(): void {
     const newLanguage = this.translationService.currentLanguage === 'en' ? 'de' : 'en';
     this.translationService.setLanguage(newLanguage);
+    this.syncToggleWithLanguage();
+  }
+
+  private syncToggleWithLanguage(): void {
+    this.isChecked = this.translationService.currentLanguage === 'de';
   }
   
 }

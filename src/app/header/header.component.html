@@ -9,14 +9,14 @@
   <!-- Language Selector -->
   <div class="switch" (click)="toggleLanguage()">
     <input 
-      id="language-toggle" 
-      class="check-toggle check-toggle-round-flat" 
-      type="checkbox"
-      [attr.checked]="translationService.currentLanguage === 'de' ? true : null"
-      (change)="toggleLanguage()">
+    id="language-toggle" 
+    class="check-toggle check-toggle-round-flat" 
+    type="checkbox"
+    [checked]="isChecked"
+    (change)="toggleLanguage()">
     <label for="language-toggle"></label>
-    <span class="on">DE</span>
-    <span class="off">EN</span>
+    <span class="on">EN</span>
+    <span class="off">DE</span>
   </div> 
 </div>
 <div class="header-right">
