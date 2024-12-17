@@ -34,6 +34,7 @@
   padding: 0 $padding-large 0 0;
   box-sizing: border-box;
   height: 100%;
+  width: 100%;
   gap: 24px;
 
   .intro-element1 svg {
@@ -45,26 +46,24 @@
   }
 }
 
-.intro-element2-wrapper {
-  grid-area: element2; // Nimmt den gesamten Platz der unteren Reihe ein
+.intro-element2 {
+  grid-area: element2;
+  z-index: 2;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: -658px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+  width: 100%; 
 
-  .intro-element2 {
+  img {
     width: 100%;
-    max-width: 1920px; // Begrenzung der Breite innerhalb des Wrappers
-    position: absolute;
-    top: -658px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+    height: auto;
+    object-fit: cover;
   }
 }
 
@@ -495,39 +494,97 @@
   }
 }
 
-/* Für Ultrawide - 3440x1440 */
-@media (min-width: 3440px) and (min-height: 1400px) {
+
+/* Baseline ab 1921px ohne obere Begrenzung */
+@media (min-width: 1921px) {
+  .intro-section {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      "element4 element1"
+      "element2 element2";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 30%;
+    height: 100vh;
+    position: relative;
+    overflow: visible;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .intro-element4,
+  .intro-element1 {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .intro-element2 {
-    top: -760px;
+    grid-area: element2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    top: -850px;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 
   .scroll-indicator {
-    right: 950px;
+    bottom: 100px;
+    right: 350px;
+  }
+
+  .intro-line {
+    width: 260px;
+  }
+
+  .intro-contact-symbols {
+    padding-left: 300px;
   }
 }
 
-/* Für Desktop - 2560x1600 */
-@media (min-width: 2560px) and (min-height: 1500px) {
+/* Ab 2560px - Nur Änderungen gegenüber der Baseline */
+@media (min-width: 2560px) {
   .intro-element2 {
-    top: -810px;
+    top: -1020px;
   }
 
   .scroll-indicator {
     right: 500px;
   }
+
+  .intro-line {
+    width: 340px;
+  }
+
+  .intro-contact-symbols {
+    padding-left: 400px;
+  }
 }
 
-/* Für Desktop - 2300x1280 */
-@media (min-width: 2300px) and (min-height: 1280px) {
+/* Ab 3440px - Nur Änderungen gegenüber der vorigen Stufe */
+@media (min-width: 3440px) {
   .intro-element2 {
-    top: -810px; // Beispielwert für das Layout
+    top: -1200px;
   }
 
   .scroll-indicator {
-    right: 400px; // Beispielwert für die Positionierung
+    right: 1000px;
   }
 
-  .social-media-and-contact {
-    margin-top: -250px; // Anpassung für das Layout
+  .intro-line {
+    width: 850px;
+  }
+
+  .intro-contact-symbols {
+    padding-left: 900px;
   }
 }
+
+

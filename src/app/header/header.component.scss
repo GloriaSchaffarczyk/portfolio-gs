@@ -18,12 +18,8 @@ header {
   right: 0;
   width: 100%;
   z-index: 20;
-
   background-color: $color-dark;
   box-sizing: border-box;
-
-  // Innenabstand zum Header-Wrapper verschieben
-  padding: 0;
 
   .header-wrapper {
     max-width: 1920px;
@@ -164,7 +160,7 @@ header {
   justify-content: flex-start;
 
   img {
-    max-height: 50px; 
+    max-height: 50px;
   }
 }
 
@@ -295,13 +291,17 @@ input.check-toggle-round-flat:checked + label:after {
 
 @media (max-width: $breakpoint-md) {
   header {
-    padding: 37px $padding-medium;
+    .header-wrapper {
+      padding: 37px $padding-medium;
+    }
   }
 }
 
 @media (max-width: $breakpoint-sm) {
   header {
-    padding: 37px $padding-small;
+    .header-wrapper {
+      padding: 37px $padding-small;
+    }
   }
 
   img {
@@ -323,7 +323,9 @@ input.check-toggle-round-flat:checked + label:after {
 
 @media (max-width: $breakpoint-min) {
   header {
-    padding: 37px $padding-xsmall;
+    .header-wrapper {
+      padding: 37px $padding-xsmall;
+    }
   }
 
   img {
