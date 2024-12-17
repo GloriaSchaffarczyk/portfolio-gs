@@ -16,19 +16,26 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  background-color: $color-dark;
-  padding: 37px $padding-large;
-  box-sizing: border-box;
-  max-width: 1920px;
-  margin: 0 auto;
 
+  background-color: $color-dark;
+  box-sizing: border-box;
+
+  // Innenabstand zum Header-Wrapper verschieben
+  padding: 0;
+
+  .header-wrapper {
+    max-width: 1920px;
+    margin: 0 auto; // Zentriert die Inhalte
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 37px $padding-large;
+    box-sizing: border-box;
+  }
+
+  // Hamburger Icon für Mobile-Menü
   .icon.nav-icon-4 {
     display: none;
     width: 35px;
@@ -82,6 +89,7 @@ header {
     }
   }
 
+  // Desktop Navigation
   .desktop-nav {
     display: flex;
     gap: 12px;
@@ -92,6 +100,7 @@ header {
       color: $color-light;
       text-decoration: none;
       font-size: $font-size-m;
+
       &:hover {
         color: $primary-color;
       }
@@ -115,7 +124,6 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    padding: 0;
 
     a {
       color: $color-light;
@@ -127,7 +135,6 @@ header {
     &.open {
       display: flex;
       flex-direction: column;
-      flex-wrap: nowrap;
       align-content: center;
       justify-content: center;
       align-items: center;
@@ -138,6 +145,7 @@ header {
     }
   }
 
+  // Mobile-Icon anzeigen bei kleineren Bildschirmen
   @media (max-width: $breakpoint-lg) {
     .icon.nav-icon-4 {
       display: block;
@@ -152,9 +160,21 @@ header {
   align-items: center;
 }
 
+.header-left {
+  justify-content: flex-start;
+
+  img {
+    max-height: 50px; 
+  }
+}
+
 .header-center {
   justify-content: center;
-  flex: 1; /* Nimmt den freien Platz ein */
+  flex: 1;
+}
+
+.header-right {
+  justify-content: flex-end;
 }
 
 .switch {

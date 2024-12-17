@@ -45,23 +45,26 @@
   }
 }
 
-.intro-element2 {
-  grid-area: element2;
-  z-index: 2;
-  width: 100%;
+.intro-element2-wrapper {
+  grid-area: element2; // Nimmt den gesamten Platz der unteren Reihe ein
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: -658px;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: visible;
 
-  img {
+  .intro-element2 {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    max-width: 1920px; // Begrenzung der Breite innerhalb des Wrappers
+    position: absolute;
+    top: -658px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 }
 
@@ -511,5 +514,20 @@
 
   .scroll-indicator {
     right: 500px;
+  }
+}
+
+/* Für Desktop - 2300x1280 */
+@media (min-width: 2300px) and (min-height: 1280px) {
+  .intro-element2 {
+    top: -810px; // Beispielwert für das Layout
+  }
+
+  .scroll-indicator {
+    right: 400px; // Beispielwert für die Positionierung
+  }
+
+  .social-media-and-contact {
+    margin-top: -250px; // Anpassung für das Layout
   }
 }
