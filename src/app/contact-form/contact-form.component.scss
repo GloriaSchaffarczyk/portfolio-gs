@@ -68,7 +68,7 @@ input {
 
 input:-webkit-autofill {
   background-color: $color-dark !important;
-  border: 2px solid $primary-color !important;
+  border: 2px solid $secondary-color !important;
   box-shadow: 0 0 0px 1000px $color-dark inset !important; 
   -webkit-text-fill-color: $color-light !important;
 }
