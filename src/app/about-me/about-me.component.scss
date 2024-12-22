@@ -8,6 +8,12 @@
   margin-top: 100px;
   font-size: $font-size-base;
   scroll-margin-top: $anchor-padding;
+  max-width: 1920px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .background-image {
@@ -17,7 +23,9 @@
   width: 472px;
   height: auto;
   z-index: 2;
-  opacity: 0.9;
+  opacity: 0.7;
+  overflow-x: hidden;
+  pointer-events: none;
 }
 
 .about-me-left {
@@ -80,6 +88,15 @@
 }
 
 // Media Queries
+
+@media (min-width: 1921px) {
+  .about-me-left {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+  }
+}
+
 @media (max-width: $breakpoint-lg) {
   .about-me-left h1 {
     font-size: 4.5rem;
@@ -106,10 +123,10 @@
 
 @media (max-width: $breakpoint-md) {
   .about-me-section {
-    padding: 0 $padding-medium 0 $padding-medium;
+    padding: 0 $padding-medium;
 
     > .about-me-left {
-      padding: 0;
+      padding: 0 $padding-medium;
     }
   }
   .about-me-left h1 {
@@ -155,7 +172,6 @@
 @media (max-width: $breakpoint-min) {
   .about-me-section {
     font-size: $font-size-xs;
-    background-position: 50px 0px;
     padding: 0 $padding-small;
   }
 }

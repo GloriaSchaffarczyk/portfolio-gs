@@ -352,3 +352,9 @@ input.check-toggle-round-flat:checked + label:after {
     height: 115px;
   }
 }
+
+@media (min-width: 1921px) {
+  header .header-wrapper {
+    padding: 37px 0;
+  }
+}

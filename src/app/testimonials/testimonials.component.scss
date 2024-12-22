@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 1920px;
   margin-top: 100px;
   align-items: center;
   justify-content: flex-start;
@@ -11,10 +12,18 @@
   padding: 12px $padding-large;
   box-sizing: border-box;
   overflow: visible;
-  background-image: url("../../assets/green_shade_02.png");
-  background-size: 1500px 400px;
-  background-repeat: no-repeat;
-  background-position: 1600px 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.background-image {
+  position: absolute;
+  top: 4000px;
+  right: -1280px;
+  width: 1600px;
+  height: auto;
+  z-index: -1;
+  opacity: 0.7;
 }
 
 .testimonial-wrapper {
@@ -157,6 +166,7 @@
   background-color: $secondary-color;
 }
 
+// Media Queries
 @media (max-width: 1700px) {
   .testimonial-container {
     background-position: 1340px 10px;
@@ -222,11 +232,12 @@
 
   .quote-container {
     padding: 12px 24px;
+    width: 55vw;
   }
 
   .quotation-mark-image {
-    height: 40px;
-    left: -40px;
+    height: 26px;
+    left: -13px;
     top: -12px;
   }
 
@@ -250,5 +261,23 @@
 @media (max-width: $breakpoint-min) {
   .testimonial-container {
     font-size: $font-size-xs;
+  }
+}
+
+@media (min-width: 1921px) {
+  .testimonial-container {
+    padding: 0 100px 0 0;
+  }
+}
+
+@media (min-width: 2299px) {
+  .quote-container {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 3420px) {
+  .quote-container {
+    width: 31vw;
   }
 }

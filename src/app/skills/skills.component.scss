@@ -9,7 +9,6 @@ a {
 }
 
 .skills-section {
-  width: 100%;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -17,6 +16,20 @@ a {
   justify-content: center;
   align-items: center;
   z-index: 4;
+  max-width: 1920px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.background-image {
+  position: absolute;
+  top: 2150px;
+  left: -550px;
+  width: 460px;
+  height: auto;
+  z-index: 2;
+  opacity: 0.7;
 }
 
 .anchor-padding {
@@ -196,7 +209,7 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: $secondary-color; 
+    background-color: $secondary-color;
     transform: scale(1.1);
     cursor: pointer;
   }
@@ -322,6 +335,12 @@ a {
 @media (max-width: 768px) {
   .skills-section {
     margin-top: 60px;
+  }
+
+  .background-image {
+    top: 1700px;
+    left: -650px;
+    width: 260px;
   }
 
   .skills-left .skills-symbols {
@@ -451,5 +470,12 @@ a {
   .tooltip-image {
     transform: translateX(30px) translateY(-80px);
     width: 100px !important;
+  }
+}
+
+@media (min-width: 1921px) {
+  .skills-left {
+    padding: 0;
+    justify-items: flex-start;
   }
 }
