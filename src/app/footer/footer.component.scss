@@ -1,6 +1,5 @@
 @import "../../styles/variables.scss";
 
-// Footer Section Styles
 .footer-section {
   height: 300px;
   position: relative;
@@ -14,7 +13,6 @@
   justify-content: center;
   align-items: center;
 
-  // Footer Line
   .footer-line {
     position: absolute;
     left: 0;
@@ -26,7 +24,6 @@
     width: 100%;
   }
 
-  // Logo and Social Media Section
   .footer-logo-and-social {
     width: 100%;
     display: flex;
@@ -41,7 +38,6 @@
     }
   }
 
-  // Imprint Section
   .footer-imprint {
     display: flex;
     flex-direction: row;
@@ -73,7 +69,6 @@
     }
   }
 
-  // Social Media Icons
   .footer-social-media-links img {
     padding-right: 24px;
     transition: all 0.3s ease;

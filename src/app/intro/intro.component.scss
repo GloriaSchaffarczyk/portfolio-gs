@@ -20,6 +20,21 @@
   overflow-x: hidden;
   overflow-y: hidden;
   scroll-margin-top: 150px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 // Hauptkomponenten und Layout-Details
@@ -58,7 +73,7 @@
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
-  width: 100%; 
+  width: 100%;
 
   img {
     width: 100%;
@@ -112,26 +127,26 @@
   position: absolute;
   bottom: 50px;
   left: 50%;
-  transform: translateX(-50%); 
-  margin: 0 auto; 
+  transform: translateX(-50%);
+  margin: 0 auto;
   box-sizing: border-box;
   z-index: 4;
 }
 
 .social-media-and-contact {
   position: relative;
-  z-index: 4; 
+  z-index: 4;
   display: flex;
   flex-direction: row;
-  align-items: center; 
-  justify-content: flex-start; 
+  align-items: center;
+  justify-content: flex-start;
   gap: 20px;
 }
 
 .intro-line {
   position: absolute;
   left: 0;
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
   border: 0;
   border-top: 4px solid $secondary-color;
@@ -141,13 +156,13 @@
 }
 
 .intro-contact-symbols {
-  z-index: 4; 
+  z-index: 4;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; 
-  gap: 40px; 
-  padding-left: 200px; 
+  justify-content: center;
+  gap: 40px;
+  padding-left: 200px;
   transition: all 0.3s ease;
   cursor: pointer;
 
@@ -167,7 +182,6 @@
     }
   }
 }
-
 
 .button-link {
   display: inline-block;
@@ -196,12 +210,12 @@
 
 // Scroll-Indikator und Animation
 .scroll-indicator {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   z-index: 4;
-  position: relative; 
+  position: relative;
   padding: 0 100px 0 0;
 
   span {
@@ -292,9 +306,9 @@
     top: -590px;
   }
 
-.intro-bottom-elements {
-  bottom: -100px;
-}
+  .intro-bottom-elements {
+    bottom: -100px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -375,7 +389,7 @@
 
   .intro-bottom-elements {
     bottom: -50px;
-}
+  }
 }
 
 @media (max-width: 610px) {
@@ -385,7 +399,7 @@
 
   .intro-bottom-elements {
     bottom: 15px;
-}
+  }
 }
 
 @media (max-width: $breakpoint-sm) {
@@ -408,7 +422,7 @@
 
   .intro-bottom-elements {
     bottom: 25px;
-}
+  }
 }
 
 @media (max-width: 500px) {
@@ -418,7 +432,7 @@
 
   .intro-bottom-elements {
     bottom: 90px;
-}
+  }
 }
 
 @media (max-width: $breakpoint-s) {
@@ -428,10 +442,10 @@
 }
 
 @media (max-width: 460px) {
-.intro-bottom-elements {
-  bottom: 160px;
-  justify-content: center;
-}
+  .intro-bottom-elements {
+    bottom: 160px;
+    justify-content: center;
+  }
 
   .intro-contact-symbols {
     width: 100%;
@@ -510,7 +524,6 @@
   }
 }
 
-
 /* Baseline ab 1921px ohne obere Begrenzung */
 @media (min-width: 1921px) {
   .intro-section {
@@ -531,7 +544,7 @@
 
   .intro-element4,
   .intro-element1 {
-    width: 100%; 
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -569,5 +582,3 @@
     top: -1200px;
   }
 }
-
-
