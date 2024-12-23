@@ -14,8 +14,8 @@
         </p>
       </div>
       <div class="contact-form-right">
-        <div class="contact-form-wrapper">
-          <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+        <div class="contact-form-wrapper"> 
+          <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" [class.valid]="contactForm.valid" novalidate>
             <!-- Name Field -->
             <label for="name" class="visually-hidden">
               {{ translationService.translate('CONTACT.NAME_LABEL') }}

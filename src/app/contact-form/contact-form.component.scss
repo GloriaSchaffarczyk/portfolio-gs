@@ -86,13 +86,6 @@ input {
   color: $color-light;
 }
 
-input:-webkit-autofill {
-  background-color: $color-dark !important;
-  border: 2px solid $secondary-color !important;
-  box-shadow: 0 0 0px 1000px $color-dark inset !important; 
-  -webkit-text-fill-color: $color-light !important;
-}
-
 textarea {
   border: 2px solid $secondary-color;
   border-radius: $border-radius-small;
@@ -101,6 +94,25 @@ textarea {
   background-color: $color-dark;
   color: $color-light;
   font-family: $font-primary;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  border: 2px solid $primary-color !important; 
+  box-shadow: 0 0 0px 1000px $color-dark inset !important;
+  -webkit-text-fill-color: $color-light !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched {
+  border: 2px solid $primary-color;
+  transition: border-color 0.3s ease;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 2px solid $secondary-color;
 }
 
 .visually-hidden {
@@ -132,10 +144,7 @@ button {
   }
 }
 
-input::placeholder {
-  color: $color-light;
-}
-
+input::placeholder,
 textarea::placeholder {
   color: $color-light;
 }
@@ -203,7 +212,7 @@ textarea::placeholder {
 }
 
 .arrow {
-  pointer-events: auto; /* Standardwert */
+  pointer-events: auto;
   position: relative;
   z-index: 10;
 }
