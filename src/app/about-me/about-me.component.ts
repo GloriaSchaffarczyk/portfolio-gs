@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslationService } from '../translation.service';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,7 +10,14 @@ import { TranslationService } from '../translation.service';
   styleUrls: ['./about-me.component.scss'],
 })
 export class AboutMeComponent {
-  constructor(public translationService: TranslationService) {}
+  constructor(
+    private navigationService: NavigationService, 
+    public translationService: TranslationService
+  ) {}
+
+  navigateToSection(id: string): void {
+    this.navigationService.navigateToSection(id);
+  }
 
   switchLanguage(lang: string): void {
     this.translationService.setLanguage(lang);

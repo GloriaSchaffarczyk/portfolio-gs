@@ -37,7 +37,7 @@
         <strong style="color: #ff3f79">{{ translationService.translate('SKILLS.CONTACT_ME') }}</strong>?
       </h3>
       <span>{{ translationService.translate('SKILLS.CONTACT_TEXT') }}</span>
-      <a href="#contact">
+      <a (click)="navigateToSection('contact')">
         <button>{{ translationService.translate('SKILLS.CONTACT_ME_BUTTON') }}</button>
       </a>
     </div>

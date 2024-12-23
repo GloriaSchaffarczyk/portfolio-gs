@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output, HostListener, OnInit } from '@angular/core';
 import { TranslationService } from '../translation.service';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,10 @@ export class HeaderComponent implements OnInit {
   isMenuOpen = false;
   isChecked: boolean = false;
 
-  constructor(public translationService: TranslationService) {}
+  constructor(
+    public translationService: TranslationService,
+    private navigationService: NavigationService
+  ) {}
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -27,7 +31,6 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: UIEvent): void {
     const windowWidth = (event.target as Window).innerWidth;
-
     if (windowWidth > 1200 && this.isMenuOpen) {
       this.closeMenu();
     }
@@ -43,8 +46,11 @@ export class HeaderComponent implements OnInit {
     this.syncToggleWithLanguage();
   }
 
+  navigateToSection(id: string): void {
+    this.navigationService.navigateToSection(id);
+  }
+
   private syncToggleWithLanguage(): void {
     this.isChecked = this.translationService.currentLanguage === 'de';
   }
-  
 }

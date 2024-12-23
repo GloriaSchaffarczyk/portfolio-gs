@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationService } from '../navigation.service';
 import { TranslationService } from '../translation.service';
 
 @Component({
@@ -8,6 +9,13 @@ import { TranslationService } from '../translation.service';
   styleUrls: ['./intro.component.scss'],
 })
 export class IntroComponent {
-  constructor(public translationService: TranslationService) {}
+  constructor(
+    private navigationService: NavigationService, 
+    public translationService: TranslationService
+  ) {}
+
+  navigateToSection(id: string): void {
+    this.navigationService.navigateToSection(id);
+  }
 }
 

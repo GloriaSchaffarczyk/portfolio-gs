@@ -30,17 +30,17 @@
     
       <!-- Desktop Navigation Links -->
       <nav class="desktop-nav">
-        <a href="#about-me">{{ translationService.translate('HEADER.ABOUT_ME') }}</a>
-        <a href="#skills">{{ translationService.translate('HEADER.SKILLS') }}</a>
-        <a href="#portfolio">{{ translationService.translate('HEADER.PORTFOLIO') }}</a>
+        <a (click)="navigateToSection('about-me')">{{ translationService.translate('HEADER.ABOUT_ME') }}</a>
+        <a (click)="navigateToSection('skills')">{{ translationService.translate('HEADER.SKILLS') }}</a>
+        <a (click)="navigateToSection('portfolio')">{{ translationService.translate('HEADER.PORTFOLIO') }}</a>
       </nav>
     
       <!-- Mobile Navigation Links -->
       <nav class="mobile-menu" [class.open]="isMenuOpen">
-        <a href="#about-me" (click)="closeMenu()">{{ translationService.translate('HEADER.ABOUT_ME') }}</a>
-        <a href="#skills" (click)="closeMenu()">{{ translationService.translate('HEADER.SKILLS') }}</a>
-        <a href="#portfolio" (click)="closeMenu()">{{ translationService.translate('HEADER.PORTFOLIO') }}</a>
-        <a href="#contact" (click)="closeMenu()">{{ translationService.translate('HEADER.CONTACT') }}</a>
+        <a (click)="navigateToSection('about-me'); closeMenu()">{{ translationService.translate('HEADER.ABOUT_ME') }}</a>
+        <a (click)="navigateToSection('skills'); closeMenu()">{{ translationService.translate('HEADER.SKILLS') }}</a>
+        <a (click)="navigateToSection('portfolio'); closeMenu()">{{ translationService.translate('HEADER.PORTFOLIO') }}</a>
+        <a (click)="navigateToSection('contact'); closeMenu()">{{ translationService.translate('HEADER.CONTACT') }}</a>
       </nav>
     </div>
   </div>

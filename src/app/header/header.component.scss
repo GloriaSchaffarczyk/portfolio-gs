@@ -9,6 +9,7 @@ a {
   color: $color-light;
   text-decoration: none;
   font-size: $font-size-m;
+  cursor: pointer;
 }
 
 header {
@@ -23,7 +24,7 @@ header {
 
   .header-wrapper {
     max-width: 1920px;
-    margin: 0 auto; // Zentriert die Inhalte
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;

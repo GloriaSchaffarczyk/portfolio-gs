@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslationService } from '../translation.service';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-skills',
@@ -10,7 +11,10 @@ import { TranslationService } from '../translation.service';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-  constructor(public translationService: TranslationService) {}
+  constructor(
+    public translationService: TranslationService,
+    private navigationService: NavigationService
+  ) {}
 
   skills = [
     { imgSrc: 'assets/skills-icon-angular.png', name: 'Angular' },
@@ -29,17 +33,21 @@ export class SkillsComponent {
 
   showTooltip = false;
 
-  onHover(skill: any, index: number) {
+  onHover(skill: any, index: number): void {
     if (index === 11) {
       skill.imgSrc = 'assets/skills-icon-continually-learning-white.png';
       this.showTooltip = true;
     }
   }
 
-  onLeave(skill: any, index: number) {
+  onLeave(skill: any, index: number): void {
     if (index === 11) {
       skill.imgSrc = 'assets/skills-icon-continually-learning-red.png';
       this.showTooltip = false;
     }
+  }
+
+  navigateToSection(id: string): void {
+    this.navigationService.navigateToSection(id);
   }
 }
