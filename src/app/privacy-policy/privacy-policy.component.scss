@@ -6,7 +6,7 @@
     color: $color-light;
 
   
-    h1 {
+    h2 {
       font-size: $font-size-xxl;
       margin-block-start: 0.1em;
       margin-block-end: 0.1em;
@@ -48,7 +48,7 @@
   @media (max-width: $breakpoint-md) {
     .privacy-policy-wrapper {
       padding: 0 $padding-medium 100px $padding-medium;
-      h1 {
+      h2 {
         font-size: 3rem;
       }
     }
@@ -57,7 +57,7 @@
   @media (max-width: $breakpoint-sm) {
     .privacy-policy-wrapper {
       padding: 0 $padding-small 100px $padding-small;
-      h1 {
+      h2 {
         font-size: $font-size-xl;
       }
     }

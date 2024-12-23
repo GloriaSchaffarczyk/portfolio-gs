@@ -1,7 +1,7 @@
 <div class="skills-section anchor-padding" id="skills">
   <div class="skills-left">
     <div class="skills-line d-none"></div>
-    <h1 class="d-none">{{ translationService.translate('SKILLS.TITLE') }}</h1>
+    <h2 class="d-none">{{ translationService.translate('SKILLS.TITLE') }}</h2>
     <span class="d-none">{{ translationService.translate('SKILLS.DESCRIPTION') }}</span>
     <div class="skills-symbols">
       @for (skill of skills; track skill.name) {
@@ -17,10 +17,10 @@
       </div>
       }
     </div>
-    <h2 class="d-none">
+    <h3 class="d-none">
       {{ translationService.translate('SKILLS.LOOKING') }}
       <strong style="color: #ff3f79">{{ translationService.translate('SKILLS.CONTACT_ME') }}</strong>?
-    </h2>
+    </h3>
     <span class="d-none">{{ translationService.translate('SKILLS.CONTACT_TEXT') }}</span>
     <a href="#contact">
       <button class="d-none">{{ translationService.translate('SKILLS.CONTACT_ME_BUTTON') }}</button>
@@ -30,12 +30,12 @@
   <div class="skills-right">
     <div class="skills-line"></div>
     <div class="skills-text-and-button">
-      <h1>{{ translationService.translate('SKILLS.TITLE') }}</h1>
+      <h2>{{ translationService.translate('SKILLS.TITLE') }}</h2>
       <span>{{ translationService.translate('SKILLS.DESCRIPTION') }}</span>
-      <h2>
+      <h3>
         {{ translationService.translate('SKILLS.LOOKING') }}
         <strong style="color: #ff3f79">{{ translationService.translate('SKILLS.CONTACT_ME') }}</strong>?
-      </h2>
+      </h3>
       <span>{{ translationService.translate('SKILLS.CONTACT_TEXT') }}</span>
       <a href="#contact">
         <button>{{ translationService.translate('SKILLS.CONTACT_ME_BUTTON') }}</button>

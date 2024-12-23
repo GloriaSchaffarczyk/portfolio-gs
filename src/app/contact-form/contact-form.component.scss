@@ -42,7 +42,7 @@
   margin-bottom: 100px;
 }
 
-h1 {
+h2 {
   padding-left: $padding-large;
   text-align: center;
   font-size: $font-size-xxl;
@@ -274,7 +274,7 @@ textarea::placeholder {
 }
 
 @media (max-width: 1300px) {
-  h1 {
+  h2 {
     font-size: 4.5rem;
   }
 
@@ -290,7 +290,7 @@ textarea::placeholder {
     margin-bottom: 150px;
   }
 
-  h1 {
+  h2 {
     margin-block-end: 0.1em;
   }
 
@@ -315,7 +315,7 @@ textarea::placeholder {
     padding: 0px $padding-medium;
   }
 
-  h1 {
+  h2 {
     font-size: 3rem;
     padding: 0px $padding-medium;
   }
@@ -331,7 +331,7 @@ textarea::placeholder {
     padding: 0px $padding-small;
   }
 
-  h1 {
+  h2 {
     font-size: 3rem;
     padding: 0px $padding-small;
   }
@@ -352,13 +352,13 @@ textarea::placeholder {
     top: 3%;
   }
 
-  h1 {
+  h2 {
     font-size: $font-size-xl;
   }
 }
 
 @media (max-width: 450px) {
-  h1 {
+  h2 {
     font-size: $font-size-xl;
     padding: 0px;
   }

@@ -1,6 +1,6 @@
 <div class="portfolio-section" id="portfolio">
   <div class="portfolio-head">
-    <h1>{{ translationService.translate('PORTFOLIO.TITLE') }}</h1>
+    <h2>{{ translationService.translate('PORTFOLIO.TITLE') }}</h2>
     <div class="portfolio-line"></div>
     <p>{{ translationService.translate('PORTFOLIO.DESCRIPTION') }}</p>
   </div>
@@ -10,7 +10,7 @@
       <img [src]="project.imageSrc" [alt]="translationService.translate(project.titleKey)">
     </div>
     <div class="project-details">
-      <h2>{{ translationService.translate(project.titleKey) }}</h2>
+      <h3>{{ translationService.translate(project.titleKey) }}</h3>
       <p class="portfolio-technologies">{{ project.technologies.join(' | ') }}</p>
       <p>{{ translationService.translate(project.descriptionKey) }}</p>
       <div class="project-links">
