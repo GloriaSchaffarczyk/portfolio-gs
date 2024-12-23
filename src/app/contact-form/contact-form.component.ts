@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,7 +14,10 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent {
-  constructor(public translationService: TranslationService) {}
+  constructor(
+    public translationService: TranslationService,
+    private navigationService: NavigationService
+  ) {}
 
   http = inject(HttpClient);
   arrowSrc = '../../assets/home-arrow-white.png';
@@ -64,5 +68,9 @@ export class ContactFormComponent {
     this.arrowSrc = isHovered
       ? '../../assets/home-arrow-green.png'
       : '../../assets/home-arrow-white.png';
+  }
+
+  navigateToSection(id: string): void {
+    this.navigationService.navigateToSection(id);
   }
 }

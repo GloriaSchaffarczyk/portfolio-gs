@@ -54,6 +54,14 @@
   }
 }
 
+h3 {
+  font-size: $font-size-lg;
+  margin-block-start: 0;
+  margin-block-end: 0.2em;
+  color: $secondary-color;
+  margin-block-start: 0;
+}
+
 .portfolio-line {
   z-index: 4;
   position: absolute;
@@ -194,6 +202,10 @@ h3 {
     font-size: 3rem;
   }
 
+  h3 {
+    font-size: $font-size-m;
+  }
+
   .portfolio-line {
     top: 45%;
   }
@@ -238,16 +250,20 @@ h3 {
     font-size: $font-size-sm;
   }
 
+  .portfolio-head > h2 {
+    font-size: $font-size-xl;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
   .portfolio-line {
     top: 43%;
   }
 }
 
 @media (max-width: 450px) {
-  .portfolio-head > h2 {
-    font-size: $font-size-xl;
-  }
-
   .portfolio-line {
     top: 38%;
   }

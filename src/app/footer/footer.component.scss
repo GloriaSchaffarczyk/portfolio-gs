@@ -12,6 +12,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   .footer-line {
     position: absolute;
@@ -100,20 +101,45 @@
 }
 
 // Media Queries
+@media (max-width: $breakpoint-lg) {
+  .footer-section {
+    width: unset;
+  }
+
+  .footer-section .footer-logo-and-social {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    word-break: break-word;
+  }
+}
+
 @media (max-width: $breakpoint-md) {
   .footer-section {
     padding: $padding-medium $padding-medium;
+  }
+
+  .footer-wrapper {
+    padding: 0;
   }
 }
 
 @media (max-width: $breakpoint-sm) {
   .footer-section {
-    padding: $padding-medium $padding-small;
+    padding: $padding-small $padding-small;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer-wrapper {
+    padding: 0;
   }
 }
 

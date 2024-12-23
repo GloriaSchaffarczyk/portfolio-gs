@@ -42,11 +42,20 @@
   margin-bottom: 100px;
 }
 
+a {
+  cursor: pointer;
+}
+
 h2 {
   padding-left: $padding-large;
   text-align: center;
   font-size: $font-size-xxl;
   margin-block-end: 0.5em;
+}
+
+h3 {
+  margin-block-start: 0em;
+  font-size: $font-size-xl;
 }
 
 .contact-form-left {
@@ -310,7 +319,7 @@ textarea::placeholder {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   .contact-form-section {
     padding: 0px $padding-medium;
   }
@@ -318,6 +327,12 @@ textarea::placeholder {
   h2 {
     font-size: 3rem;
     padding: 0px $padding-medium;
+  }
+
+  h3 {
+    font-size: $font-size-lg;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
   }
 
   .contact-line {
@@ -355,11 +370,15 @@ textarea::placeholder {
   h2 {
     font-size: $font-size-xl;
   }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-block-end: 0.5em;
+  }
 }
 
 @media (max-width: 450px) {
   h2 {
-    font-size: $font-size-xl;
     padding: 0px;
   }
 
