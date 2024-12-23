@@ -14,90 +14,64 @@
         </p>
       </div>
       <div class="contact-form-right">
-        <div class="contact-form-wrapper"> 
+        <div class="contact-form-wrapper">
           <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" [class.valid]="contactForm.valid" novalidate>
             <!-- Name Field -->
             <label for="name" class="visually-hidden">
               {{ translationService.translate('CONTACT.NAME_LABEL') }}
             </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              [(ngModel)]="contactData.name"
-              #name="ngModel"
-              [placeholder]="translationService.translate('CONTACT.NAME_PLACEHOLDER')"
-              required
-            />
+            <input type="text" id="name" name="name" [(ngModel)]="contactData.name" #name="ngModel"
+              [placeholder]="translationService.translate('CONTACT.NAME_PLACEHOLDER')" required />
             @if (!name.valid && name.touched) {
-              <small class="error">
-                {{ translationService.translate('CONTACT.NAME_REQUIRED') }}
-              </small>
+            <small class="error">
+              {{ translationService.translate('CONTACT.NAME_REQUIRED') }}
+            </small>
             }
-  
+
             <!-- Email Field -->
             <label for="email" class="visually-hidden">
               {{ translationService.translate('CONTACT.EMAIL_LABEL') }}
             </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              [(ngModel)]="contactData.email"
-              #email="ngModel"
-              [placeholder]="translationService.translate('CONTACT.EMAIL_PLACEHOLDER')"
-              required
-              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-            />
+            <input type="email" id="email" name="email" [(ngModel)]="contactData.email" #email="ngModel"
+              [placeholder]="translationService.translate('CONTACT.EMAIL_PLACEHOLDER')" required
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
             @if (!email.valid && email.touched) {
-              @if (email.errors?.['required']) {
-                <small class="error">
-                  {{ translationService.translate('CONTACT.EMAIL_REQUIRED') }}
-                </small>
-              }
-              @if (email.errors?.['pattern']) {
-                <small class="error">
-                  {{ translationService.translate('CONTACT.EMAIL_INVALID') }}
-                </small>
-              }
+            @if (email.errors?.['required']) {
+            <small class="error">
+              {{ translationService.translate('CONTACT.EMAIL_REQUIRED') }}
+            </small>
             }
-  
+            @if (email.errors?.['pattern']) {
+            <small class="error">
+              {{ translationService.translate('CONTACT.EMAIL_INVALID') }}
+            </small>
+            }
+            }
+
             <!-- Message Field -->
             <label for="message" class="visually-hidden">
               {{ translationService.translate('CONTACT.MESSAGE_LABEL') }}
             </label>
-            <textarea
-              id="message"
-              name="message"
-              [(ngModel)]="contactData.message"
-              #message="ngModel"
-              [placeholder]="translationService.translate('CONTACT.MESSAGE_PLACEHOLDER')"
-              required
-              minlength="10"
-            ></textarea>
+            <textarea id="message" name="message" [(ngModel)]="contactData.message" #message="ngModel"
+              [placeholder]="translationService.translate('CONTACT.MESSAGE_PLACEHOLDER')" required
+              minlength="10"></textarea>
             @if (!message.valid && message.touched) {
-              @if (message.errors?.['required']) {
-                <small class="error">
-                  {{ translationService.translate('CONTACT.MESSAGE_REQUIRED') }}
-                </small>
-              }
-              @if (message.errors?.['minlength']) {
-                <small class="error">
-                  {{ translationService.translate('CONTACT.MESSAGE_MINLENGTH') }}
-                </small>
-              }
+            @if (message.errors?.['required']) {
+            <small class="error">
+              {{ translationService.translate('CONTACT.MESSAGE_REQUIRED') }}
+            </small>
             }
-  
+            @if (message.errors?.['minlength']) {
+            <small class="error">
+              {{ translationService.translate('CONTACT.MESSAGE_MINLENGTH') }}
+            </small>
+            }
+            }
+
             <!-- Privacy Checkbox -->
             <div class="custom-checkbox">
               <label>
-                <input
-                  type="checkbox"
-                  name="privacy"
-                  [(ngModel)]="contactData.privacy"
-                  #privacy="ngModel"
-                  required
-                />
+                <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel" required />
                 <span class="checkbox-icon"></span>
                 {{ translationService.translate('CONTACT.PRIVACY_TEXT') }}
                 <a routerLink="/privacy" class="privacy-link">
@@ -107,17 +81,13 @@
               </label>
             </div>
             @if (!privacy.valid && privacy.touched) {
-              <small class="error">
-                {{ translationService.translate('CONTACT.PRIVACY_REQUIRED') }}
-              </small>
+            <small class="error">
+              {{ translationService.translate('CONTACT.PRIVACY_REQUIRED') }}
+            </small>
             }
-  
+
             <!-- Submit Button -->
-            <button
-              type="submit"
-              [disabled]="contactForm.invalid"
-              [class.valid]="contactForm.valid"
-            >
+            <button type="submit" [disabled]="contactForm.invalid" [class.valid]="contactForm.valid">
               {{ translationService.translate('CONTACT.BUTTON.SUBMIT') }}
             </button>
           </form>
@@ -126,23 +96,14 @@
     </div>
     <div class="arrow-wrapper">
       <a (click)="navigateToSection('intro')">
-        <img
-          [src]="arrowSrc"
-          [alt]="translationService.translate('CONTACT.ARROW_ALT')"
-          class="arrow"
-          (mouseover)="swapArrow(true)"
-          (mouseout)="swapArrow(false)"
-        />
+        <img [src]="arrowSrc" [alt]="translationService.translate('CONTACT.ARROW_ALT')" class="arrow"
+          (mouseover)="swapArrow(true)" (mouseout)="swapArrow(false)" />
       </a>
     </div>
   </div>
 
 
-  <div
-    class="popup-banner"
-    *ngIf="showPopup"
-    [style.backgroundColor]="popupColor"
-  >
+  <div class="popup-banner" *ngIf="showPopup" [style.backgroundColor]="popupColor">
     {{ popupMessage }}
   </div>
 </div>

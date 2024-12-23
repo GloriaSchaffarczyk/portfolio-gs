@@ -2,8 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslationService } from '../translation.service';
 
-// buttons stylen 
-
 @Component({
   selector: 'app-portfolio',
   standalone: true,
@@ -12,7 +10,7 @@ import { TranslationService } from '../translation.service';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-  constructor(public translationService: TranslationService) {}
+  constructor(public translationService: TranslationService) { }
 
   projects = [
     {

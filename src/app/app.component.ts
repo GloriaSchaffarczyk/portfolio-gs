@@ -15,7 +15,7 @@ import { FooterComponent } from "./footer/footer.component";
 export class AppComponent implements OnInit {
   title = 'portfolio-gs';
 
-  constructor(private renderer: Renderer2, private router: Router) {}
+  constructor(private renderer: Renderer2, private router: Router) { }
 
   ngOnInit(): void {
     this.router.events.subscribe(event => {

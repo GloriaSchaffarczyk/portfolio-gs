@@ -11,21 +11,21 @@ import { TranslationService } from '../translation.service';
 })
 export class PrivacyPolicyComponent implements AfterViewInit {
   constructor(
-    public translationService: TranslationService, 
-    private el: ElementRef, 
-    private renderer: Renderer2 
-  ) {}
+    public translationService: TranslationService,
+    private el: ElementRef,
+    private renderer: Renderer2
+  ) { }
 
   ngAfterViewInit(): void {
     const links: NodeListOf<HTMLAnchorElement> = this.el.nativeElement.querySelectorAll('a');
-  
+
     Array.from(links).forEach((link) => {
       const href = link.getAttribute('href');
-  
+
       if (href && !href.startsWith('/') && !link.hasAttribute('routerLink')) {
         this.renderer.setAttribute(link, 'target', '_blank');
         this.renderer.setAttribute(link, 'rel', 'noopener noreferrer');
       }
     });
-  }  
+  }
 }

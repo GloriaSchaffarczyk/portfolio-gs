@@ -35,17 +35,17 @@ body {
 
 /* Globale Anpassung der Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px; 
-  height: 8px; 
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: $color-dark; 
-  border-radius: 10px; 
+  background: $color-dark;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $primary-color; 
+  background-color: $primary-color;
   border-radius: 10px;
   border: 2px solid $color-dark;
 }
@@ -56,24 +56,22 @@ body {
 
 /* Für Firefox */
 * {
-  scrollbar-width: thin; 
-  scrollbar-color: $primary-color $color-dark; 
+  scrollbar-width: thin;
+  scrollbar-color: $primary-color $color-dark;
 }
 
-/* Stile für Links */
 .imprint-section a,
 .privacy-policy-section a {
-  color: #ffffff; 
+  color: #ffffff;
   text-decoration: none;
 }
 
 .imprint-section a:hover,
 .privacy-policy-section a:hover {
-  text-decoration: underline; 
-  color: #ffffff; 
+  text-decoration: underline;
+  color: #ffffff;
 }
 
-/* Stile für Text */
 .imprint-section p,
 .privacy-policy-section p {
   margin: 0 0 1em;
@@ -84,4 +82,3 @@ body {
 .privacy-policy-section strong {
   font-weight: bold;
 }
-

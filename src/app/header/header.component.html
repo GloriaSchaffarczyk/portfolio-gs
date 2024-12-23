@@ -5,20 +5,16 @@
       <a href="">
         <img src="../../assets/Logo_gs_02.png" alt="Website logo: Gloria Schaffarczyk" id="logo" />
       </a>
-      </div>
+    </div>
     <div class="header-center">
       <!-- Language Selector -->
       <div class="switch" (click)="toggleLanguage()">
-        <input 
-        id="language-toggle" 
-        class="check-toggle check-toggle-round-flat" 
-        type="checkbox"
-        [checked]="isChecked"
-        (change)="toggleLanguage()">
+        <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" [checked]="isChecked"
+          (change)="toggleLanguage()">
         <label for="language-toggle"></label>
         <span class="on">EN</span>
         <span class="off">DE</span>
-      </div> 
+      </div>
     </div>
     <div class="header-right">
       <!-- Hamburger Icon for mobile menu -->
@@ -27,20 +23,21 @@
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </div>
-    
+
       <!-- Desktop Navigation Links -->
       <nav class="desktop-nav">
         <a (click)="navigateToSection('about-me')">{{ translationService.translate('HEADER.ABOUT_ME') }}</a>
         <a (click)="navigateToSection('skills')">{{ translationService.translate('HEADER.SKILLS') }}</a>
         <a (click)="navigateToSection('portfolio')">{{ translationService.translate('HEADER.PORTFOLIO') }}</a>
       </nav>
-    
+
       <!-- Mobile Navigation Links -->
       <nav class="mobile-menu" [class.open]="isMenuOpen">
-        <a (click)="navigateToSection('about-me'); closeMenu()">{{ translationService.translate('HEADER.ABOUT_ME') }}</a>
-        <a (click)="navigateToSection('skills'); closeMenu()">{{ translationService.translate('HEADER.SKILLS') }}</a>
-        <a (click)="navigateToSection('portfolio'); closeMenu()">{{ translationService.translate('HEADER.PORTFOLIO') }}</a>
-        <a (click)="navigateToSection('contact'); closeMenu()">{{ translationService.translate('HEADER.CONTACT') }}</a>
+        <a (click)="navigateToSectionAndCloseMenu('about-me')">{{ translationService.translate('HEADER.ABOUT_ME') }}</a>
+        <a (click)="navigateToSectionAndCloseMenu('skills')">{{ translationService.translate('HEADER.SKILLS') }}</a>
+        <a (click)="navigateToSectionAndCloseMenu('portfolio')">{{ translationService.translate('HEADER.PORTFOLIO')
+          }}</a>
+        <a (click)="navigateToSectionAndCloseMenu('contact')">{{ translationService.translate('HEADER.CONTACT') }}</a>
       </nav>
     </div>
   </div>

@@ -107,7 +107,7 @@ textarea {
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-  border: 2px solid $primary-color !important; 
+  border: 2px solid $primary-color !important;
   box-shadow: 0 0 0px 1000px $color-dark inset !important;
   -webkit-text-fill-color: $color-light !important;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -358,7 +358,8 @@ textarea::placeholder {
 }
 
 @media (max-width: 480px) {
-   form[_ngcontent-ng-c1513643726],  .contact-form-left p {
+  form[_ngcontent-ng-c1513643726],
+  .contact-form-left p {
     font-size: $font-size-sm;
   }
 
@@ -409,7 +410,9 @@ textarea::placeholder {
     background-position: -470px 500px;
   }
 
-  form[_ngcontent-ng-c1513643726], .contact-form-left p, .custom-checkbox {
+  form[_ngcontent-ng-c1513643726],
+  .contact-form-left p,
+  .custom-checkbox {
     font-size: $font-size-xs;
   }
 }

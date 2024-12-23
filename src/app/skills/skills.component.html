@@ -11,8 +11,8 @@
         <p>{{ skill.name }}</p>
         @if (skill.isHighlight) {
         <img src="assets/skills-icon-learning-interest.png"
-          alt="{{ translationService.translate('SKILLS.TOOLTIP_ALT') }}"
-          class="tooltip-image hide-on-hover" [ngClass]="{ 'hide-on-hover': !showTooltip }">
+          alt="{{ translationService.translate('SKILLS.TOOLTIP_ALT') }}" class="tooltip-image hide-on-hover"
+          [ngClass]="{ 'hide-on-hover': !showTooltip }">
         }
       </div>
       }

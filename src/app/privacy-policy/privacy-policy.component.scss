@@ -1,64 +1,63 @@
 @import "../../styles/variables.scss";
 
 .privacy-policy-section {
-    margin: 0 auto;
-    font-family: $font-primary;
-    color: $color-light;
+  margin: 0 auto;
+  font-family: $font-primary;
+  color: $color-light;
 
-  
+  h2 {
+    font-size: $font-size-xl;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+    word-break: break-all;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h3 a {
+    color: $primary-color;
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-light;
+    }
+  }
+}
+
+.privacy-policy-wrapper {
+  padding: 0 $padding-large 100px $padding-large;
+}
+
+@media (max-width: $breakpoint-md) {
+  .privacy-policy-wrapper {
+    padding: 0 $padding-medium 100px $padding-medium;
+    h2 {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .privacy-policy-wrapper {
+    padding: 0 $padding-small 100px $padding-small;
     h2 {
       font-size: $font-size-xl;
-      margin-block-start: 0.1em;
-      margin-block-end: 0.1em;
-    }
-  
-    p {
-      line-height: 1.6;
-    }
-  
-    strong {
-      font-weight: bold;
-    }
-  
-    a {
-      text-decoration: none;
-      color: $primary-color;
-      word-break: break-all;
-  
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    h3 a {
-      color: $primary-color;
-      font-size: 1.2rem;
-      text-decoration: none;
-    
-      &:hover {
-        color: $color-light;
-      }
     }
   }
-  
-  .privacy-policy-wrapper {
-    padding: 0 $padding-large 100px $padding-large;
-  }
-  
-  @media (max-width: $breakpoint-md) {
-    .privacy-policy-wrapper {
-      padding: 0 $padding-medium 100px $padding-medium;
-      h2 {
-        font-size: 3rem;
-      }
-    }
-  }
-  
-  @media (max-width: $breakpoint-sm) {
-    .privacy-policy-wrapper {
-      padding: 0 $padding-small 100px $padding-small;
-      h2 {
-        font-size: $font-size-xl;
-      }
-    }
-  }
+}

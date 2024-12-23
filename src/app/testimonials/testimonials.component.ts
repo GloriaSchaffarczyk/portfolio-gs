@@ -9,26 +9,26 @@ import { TranslationService } from '../translation.service';
 })
 export class TestimonialsComponent {
   testimonials = [
-    { 
-      authorKey: 'TESTIMONIALS.AUTHOR1', 
-      quoteKey: 'TESTIMONIALS.QUOTE1', 
-      imageSrc: 'assets/testimonial-author04.png' 
+    {
+      authorKey: 'TESTIMONIALS.AUTHOR1',
+      quoteKey: 'TESTIMONIALS.QUOTE1',
+      imageSrc: 'assets/testimonial-author04.png'
     },
-    { 
-      authorKey: 'TESTIMONIALS.AUTHOR2', 
-      quoteKey: 'TESTIMONIALS.QUOTE2', 
-      imageSrc: 'assets/testimonial-author05.png' 
+    {
+      authorKey: 'TESTIMONIALS.AUTHOR2',
+      quoteKey: 'TESTIMONIALS.QUOTE2',
+      imageSrc: 'assets/testimonial-author05.png'
     },
-    { 
-      authorKey: 'TESTIMONIALS.AUTHOR3', 
-      quoteKey: 'TESTIMONIALS.QUOTE3', 
-      imageSrc: 'assets/testimonial-author06.png' 
+    {
+      authorKey: 'TESTIMONIALS.AUTHOR3',
+      quoteKey: 'TESTIMONIALS.QUOTE3',
+      imageSrc: 'assets/testimonial-author06.png'
     }
   ];
 
   currentTestimonial = 0;
 
-  constructor(public translationService: TranslationService) {}
+  constructor(public translationService: TranslationService) { }
 
   slideLeft() {
     this.resetAnimation();

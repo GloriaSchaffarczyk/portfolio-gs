@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   constructor(
     public translationService: TranslationService,
     private navigationService: NavigationService
-  ) {}
+  ) { }
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -26,6 +26,17 @@ export class HeaderComponent implements OnInit {
   closeMenu(): void {
     this.isMenuOpen = false;
     this.menuToggle.emit(false);
+  }
+
+  navigateToSection(id: string): void {
+    this.navigationService.navigateToSection(id);
+  }
+
+  navigateToSectionAndCloseMenu(id: string): void {
+    this.closeMenu();
+    setTimeout(() => {
+      this.navigationService.navigateToSection(id);
+    }, 200);
   }
 
   @HostListener('window:resize', ['$event'])
@@ -44,10 +55,6 @@ export class HeaderComponent implements OnInit {
     const newLanguage = this.translationService.currentLanguage === 'en' ? 'de' : 'en';
     this.translationService.setLanguage(newLanguage);
     this.syncToggleWithLanguage();
-  }
-
-  navigateToSection(id: string): void {
-    this.navigationService.navigateToSection(id);
   }
 
   private syncToggleWithLanguage(): void {

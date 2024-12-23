@@ -10,9 +10,9 @@ import { TranslationService } from '../translation.service';
 })
 export class IntroComponent {
   constructor(
-    private navigationService: NavigationService, 
+    private navigationService: NavigationService,
     public translationService: TranslationService
-  ) {}
+  ) { }
 
   navigateToSection(id: string): void {
     this.navigationService.navigateToSection(id);

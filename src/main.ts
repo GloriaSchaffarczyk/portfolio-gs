@@ -5,4 +5,3 @@ import 'intersection-observer';
 
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
-  

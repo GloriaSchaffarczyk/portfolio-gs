@@ -17,7 +17,7 @@ export class ContactFormComponent {
   constructor(
     public translationService: TranslationService,
     private navigationService: NavigationService
-  ) {}
+  ) { }
 
   http = inject(HttpClient);
   arrowSrc = '../../assets/home-arrow-white.png';

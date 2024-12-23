@@ -11,9 +11,9 @@ import { NavigationService } from '../navigation.service';
 })
 export class AboutMeComponent {
   constructor(
-    private navigationService: NavigationService, 
+    private navigationService: NavigationService,
     public translationService: TranslationService
-  ) {}
+  ) { }
 
   navigateToSection(id: string): void {
     this.navigationService.navigateToSection(id);

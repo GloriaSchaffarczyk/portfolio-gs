@@ -1,33 +1,30 @@
 <?php
-// Fehleranzeige aktivieren (Debugging)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 switch ($_SERVER['REQUEST_METHOD']) {
-    case "OPTIONS": // Preflighting für CORS
+    case "OPTIONS": 
         header("Access-Control-Allow-Origin: https://gloriacodes.de");
         header("Access-Control-Allow-Origin: https://gloria-schaffarczyk.de");
         header("Access-Control-Allow-Methods: POST, OPTIONS");
         header("Access-Control-Allow-Headers: Content-Type");
         exit;
 
-    case "POST": // E-Mail-Versand
+    case "POST": 
         header("Access-Control-Allow-Origin: https://gloriacodes.de");
         header("Access-Control-Allow-Origin: https://gloria-schaffarczyk.de");
         header("Content-Type: application/json");
 
-        // Eingabedaten abrufen
         $json = file_get_contents('php://input');
         $params = json_decode($json);
 
-        // Eingaben validieren
         $email = filter_var($params->email, FILTER_VALIDATE_EMAIL);
         $name = htmlspecialchars($params->name, ENT_QUOTES, 'UTF-8');
         $message = htmlspecialchars($params->message, ENT_QUOTES, 'UTF-8');
 
         if (!$email || empty($name) || empty($message)) {
-            http_response_code(400); // Bad Request
+            http_response_code(400);
             echo json_encode([
                 "success" => false,
                 "message" => "Invalid input. Please check your data."
@@ -35,13 +32,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
             exit;
         }
 
-        // SMTP-Einstellungen
         $smtpHost = "smtp.strato.de";
-        $smtpPort = 587; // TLS-Port für Strato
+        $smtpPort = 587;
         ini_set("SMTP", $smtpHost);
         ini_set("smtp_port", $smtpPort);
 
-        // E-Mail-Konfiguration
         $recipient = "webmaster@gloriacodes.de";
         $subject = "Contact Form Submission from <$email>";
         $formattedMessage = "
@@ -55,7 +50,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
             </html>
         ";
 
-        // E-Mail-Header
         $headers = [];
         $headers[] = "MIME-Version: 1.0";
         $headers[] = "Content-Type: text/html; charset=utf-8";
@@ -63,14 +57,13 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $headers[] = "Reply-To: $email";
         $headers[] = "X-Mailer: PHP/" . phpversion();
 
-        // E-Mail senden
         if (mail($recipient, $subject, $formattedMessage, implode("\r\n", $headers))) {
             echo json_encode([
                 "success" => true,
                 "message" => "Email sent successfully."
             ]);
         } else {
-            http_response_code(500); // Internal Server Error
+            http_response_code(500);
             echo json_encode([
                 "success" => false,
                 "message" => "Failed to send email. Please check server settings."
@@ -78,7 +71,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         }
         exit;
 
-    default: // Andere Methoden ablehnen
+    default:
         header("Allow: POST", true, 405);
         exit;
 }

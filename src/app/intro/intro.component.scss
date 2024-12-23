@@ -1,6 +1,5 @@
 @import "../../styles/variables.scss";
 
-// Layout und Grid-Struktur
 .intro-section {
   display: grid;
   grid-template-areas:
@@ -37,7 +36,6 @@
   }
 }
 
-// Hauptkomponenten und Layout-Details
 .intro-element1 {
   grid-area: element1;
   display: flex;
@@ -208,7 +206,6 @@
   }
 }
 
-// Scroll-Indikator und Animation
 .scroll-indicator {
   display: flex;
   flex-direction: column;
@@ -248,7 +245,6 @@
 }
 
 // Media Queries
-
 @media (max-width: 1800px) {
   .intro-element2 {
     top: -600px;

@@ -14,7 +14,7 @@ export class SkillsComponent {
   constructor(
     public translationService: TranslationService,
     private navigationService: NavigationService
-  ) {}
+  ) { }
 
   skills = [
     { imgSrc: 'assets/skills-icon-angular.png', name: 'Angular' },
