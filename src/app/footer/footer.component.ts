@@ -10,5 +10,5 @@ import { TranslationService } from '../translation.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  constructor(public translationService: TranslationService) {}
+  constructor(public translationService: TranslationService) { }
 }
