@@ -16,21 +16,11 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 20;
   background-color: $color-dark;
   box-sizing: border-box;
-
-  .header-wrapper {
-    max-width: 1920px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 37px $padding-large;
-    box-sizing: border-box;
-  }
+  overflow-x: hidden;
 
   // Hamburger Icon für Mobile-Menü
   .icon.nav-icon-4 {
@@ -148,6 +138,17 @@ header {
       display: block;
     }
   }
+}
+
+.header-wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 37px $padding-large;
+  box-sizing: border-box;
 }
 
 .header-left,

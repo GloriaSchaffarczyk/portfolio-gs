@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: auto;
   max-width: 1920px;
   margin-top: 100px;
   align-items: center;
@@ -11,14 +12,14 @@
   position: relative;
   padding: 12px $padding-large;
   box-sizing: border-box;
-  overflow: visible;
+  overflow-x: hidden;
   margin-left: auto;
   margin-right: auto;
 }
 
 .background-image {
   position: absolute;
-  top: 4000px;
+  top: 0px;
   right: -1280px;
   width: 1600px;
   height: auto;
@@ -26,18 +27,8 @@
   opacity: 0.7;
 }
 
-.testimonial-wrapper {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-around;
-  align-items: center;
-  box-sizing: border-box;
-}
-
 .single-testimonial {
-  flex: 0 0 100%;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -45,12 +36,13 @@
   gap: 64px;
   padding: 24px;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .testimonial-line {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 48%;
   transform: translateY(-50%);
   border: 0;
   border-top: 4px solid $secondary-color;
@@ -121,6 +113,7 @@
 
 .testimonial-navigation {
   position: absolute;
+  flex-shrink: 0;
   bottom: 0px;
   display: flex;
   width: 100%;
@@ -167,31 +160,10 @@
 }
 
 // Media Queries
-@media (max-width: 1700px) {
-  .testimonial-container {
-    background-position: 1340px 10px;
-  }
-}
-
-@media (max-width: 1440px) {
-  .testimonial-container {
-    background-position: 1100px 10px;
-  }
-}
-
 @media (max-width: $breakpoint-lg) {
-  .testimonial-container {
-    background-size: 1000px 500px;
-    background-position: 700px 10px;
-  }
-
   .single-testimonial {
     flex-direction: column-reverse;
     gap: 32px;
-  }
-
-  .testimonial-navigation {
-    bottom: -25px;
   }
 
   .testimonial-img img {
@@ -199,7 +171,7 @@
   }
 
   .testimonial-line {
-    top: 26%;
+    top: 25%;
     width: 40%;
   }
 }
@@ -207,7 +179,6 @@
 @media (max-width: $breakpoint-md) {
   .testimonial-container {
     padding: 12px $padding-medium;
-    background-position: 400px 10px;
   }
 
   .quote-container {
@@ -225,7 +196,6 @@
 
 @media (max-width: $breakpoint-sm) {
   .testimonial-container {
-    background-position: 150px 10px;
     padding: 12px $padding-small;
     font-size: $font-size-sm;
   }
@@ -254,7 +224,7 @@
 
 @media (max-width: $breakpoint-xs) {
   .testimonial-line {
-    top: 14%;
+    top: 17%;
   }
 }
 
