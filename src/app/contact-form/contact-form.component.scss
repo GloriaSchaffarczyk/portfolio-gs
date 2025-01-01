@@ -39,7 +39,7 @@
   padding: 10px $padding-large;
   gap: 100px;
   box-sizing: border-box;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 }
 
 a {
@@ -230,7 +230,7 @@ textarea::placeholder {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: $padding-medium $padding-large;
+  padding: 12px 100px 50px 100px;
   box-sizing: border-box;
 }
 
@@ -296,7 +296,6 @@ textarea::placeholder {
   .contact-form-section {
     flex-direction: column;
     gap: 12px;
-    margin-bottom: 150px;
   }
 
   h2 {
@@ -338,6 +337,10 @@ textarea::placeholder {
   .contact-line {
     width: 30%;
     top: 4%;
+  }
+
+  .arrow-wrapper {
+    justify-content: center;
   }
 }
 
