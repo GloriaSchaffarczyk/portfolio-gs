@@ -4,15 +4,23 @@
   margin: 0 auto;
   font-family: $font-primary;
   color: $color-light;
+  max-width: 1920px;
 
   h2 {
-    font-size: $font-size-xl;
+    font-size: $font-size-xxl;
     margin-block-start: 0.1em;
     margin-block-end: 0.1em;
   }
 
+  h2.title {
+    font-size: 28px;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+
   p {
     line-height: 1.6;
+    margin-block-end: 0.1em;
   }
 
   strong {
@@ -59,5 +67,11 @@
     h2 {
       font-size: $font-size-xl;
     }
+  }
+}
+
+@media (min-width: 1921px) {
+  .privacy-policy-wrapper {
+    padding: 0 0 100px 0;
   }
 }
