@@ -319,6 +319,10 @@ textarea::placeholder {
 }
 
 @media (max-width: $breakpoint-md) {
+  .contact-section {
+    margin-top: 60px;
+  }
+
   .contact-form-section {
     padding: 0px $padding-medium;
   }
