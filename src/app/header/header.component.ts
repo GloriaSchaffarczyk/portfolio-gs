@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output, HostListener, OnInit } from '@angular/core';
 import { TranslationService } from '../translation.service';
 import { Router } from '@angular/router';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     public translationService: TranslationService,
-    private router: Router
+    private router: Router,
+    private navigationService: NavigationService
   ) {}
 
   toggleMenu(): void {
@@ -30,24 +32,17 @@ export class HeaderComponent implements OnInit {
 
   navigateToSection(sectionId: string): void {
     if (this.router.url === '/') {
-      setTimeout(() => this.scrollToSection(sectionId), 200);
+      setTimeout(() => this.navigationService.navigateToSection(sectionId), 200);
     } else {
       this.router.navigate(['/']).then(() => {
-        setTimeout(() => this.scrollToSection(sectionId), 200);
+        setTimeout(() => this.navigationService.navigateToSection(sectionId), 200);
       });
     }
-  }  
+  }
 
   navigateToSectionAndCloseMenu(sectionId: string): void {
     this.closeMenu();
     this.navigateToSection(sectionId);
-  }
-
-  private scrollToSection(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
   }
 
   @HostListener('window:resize', ['$event'])
