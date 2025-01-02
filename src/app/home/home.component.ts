@@ -47,7 +47,7 @@ export class HomeComponent implements AfterViewInit {
             }
           });
         },
-        { threshold: 0.3 }
+        { threshold: 0.2 }
       );
 
       elements.forEach((el: HTMLElement) => observer.observe(el));

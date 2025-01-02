@@ -20,6 +20,7 @@ a {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  scroll-margin-top: $anchor-padding;
 }
 
 .background-image {
@@ -30,10 +31,6 @@ a {
   height: auto;
   z-index: 2;
   opacity: 0.7;
-}
-
-.anchor-padding {
-  scroll-margin-top: $anchor-padding;
 }
 
 .skills-left {

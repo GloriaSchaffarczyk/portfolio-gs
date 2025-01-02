@@ -9,13 +9,12 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  scroll-margin-top: $anchor-padding;
+  scroll-margin-top: 50px;
   z-index: 4;
   max-width: 1920px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
 }
 
 .background-image {

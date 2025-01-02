@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Output, HostListener, OnInit } from '@angular/core';
 import { TranslationService } from '../translation.service';
-import { NavigationService } from '../navigation.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   @Output() menuToggle = new EventEmitter<boolean>();
@@ -15,8 +15,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     public translationService: TranslationService,
-    private navigationService: NavigationService
-  ) { }
+    private router: Router
+  ) {}
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -28,15 +28,26 @@ export class HeaderComponent implements OnInit {
     this.menuToggle.emit(false);
   }
 
-  navigateToSection(id: string): void {
-    this.navigationService.navigateToSection(id);
+  navigateToSection(sectionId: string): void {
+    if (this.router.url === '/') {
+      setTimeout(() => this.scrollToSection(sectionId), 200);
+    } else {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => this.scrollToSection(sectionId), 200);
+      });
+    }
+  }  
+
+  navigateToSectionAndCloseMenu(sectionId: string): void {
+    this.closeMenu();
+    this.navigateToSection(sectionId);
   }
 
-  navigateToSectionAndCloseMenu(id: string): void {
-    this.closeMenu();
-    setTimeout(() => {
-      this.navigationService.navigateToSection(id);
-    }, 200);
+  private scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   @HostListener('window:resize', ['$event'])
@@ -47,10 +58,6 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    this.syncToggleWithLanguage();
-  }
-
   toggleLanguage(): void {
     const newLanguage = this.translationService.currentLanguage === 'en' ? 'de' : 'en';
     this.translationService.setLanguage(newLanguage);
@@ -59,5 +66,9 @@ export class HeaderComponent implements OnInit {
 
   private syncToggleWithLanguage(): void {
     this.isChecked = this.translationService.currentLanguage === 'de';
+  }
+
+  ngOnInit(): void {
+    this.syncToggleWithLanguage();
   }
 }
