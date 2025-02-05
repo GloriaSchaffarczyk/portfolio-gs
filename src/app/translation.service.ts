@@ -197,7 +197,6 @@ export class TranslationService {
           Gloria Schaffarczyk<br>
         </p>
         <p><strong>Contact:</strong><br>
-          Phone: 0176-86715651<br>
           Email: <a href='mailto:mail@gloria-schaffarczyk.de'>mail(at)gloria-schaffarczyk.de</a><br>
         </p>
         <p><strong>Disclaimer:</strong><br><br>
@@ -226,7 +225,6 @@ export class TranslationService {
       Gloria Schaffarczyk<br>
     </p>
     <p><strong>Kontakt:</strong> <br>
-      Telefon: 0176-86715651<br>
       E-Mail: <a href='mailto:mail@gloria-schaffarczyk.de'>mail(at)gloria-schaffarczyk.de</a><br></p>
     <p><strong>Haftungsausschluss: </strong><br><br>
       <strong>Haftung für Inhalte</strong><br><br>
@@ -345,7 +343,6 @@ export class TranslationService {
 <p>Gloria Schaffarczyk<br />
 Rottachstr. 34<br />
 87439 Kempten</p>
-<p>Phone: 017686715651<br />
 Email: mail@gloria-schaffarczyk.de</p>
 <p>The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of processing personal data (e.g., names, email addresses, etc.).</p>
 <h3>Storage Period</h3>
@@ -429,7 +426,6 @@ Email: mail@gloria-schaffarczyk.de</p>
 <p>Gloria Schaffarczyk<br />
 Rottachstr. 34<br />
 87439 Kempten</p>
-<p>Telefon: 017686715651<br />
 E-Mail: mail@gloria-schaffarczyk.de</p>
 <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
 <h3>Speicherdauer</h3>
