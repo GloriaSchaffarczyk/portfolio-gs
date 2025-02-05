@@ -53,7 +53,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $headers = [];
         $headers[] = "MIME-Version: 1.0";
         $headers[] = "Content-Type: text/html; charset=utf-8";
-        $headers[] = "From: webmaster@gloriacodes.de";
+        $headers[] = "From: mail@gloria-schaffarczyk.de";
         $headers[] = "Reply-To: $email";
         $headers[] = "X-Mailer: PHP/" . phpversion();
 
