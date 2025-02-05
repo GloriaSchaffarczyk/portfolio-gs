@@ -198,7 +198,7 @@ export class TranslationService {
         </p>
         <p><strong>Contact:</strong><br>
           Phone: 0176-86715651<br>
-          Email: <a href='mailto:gloria.schaffarczyk@gmail.com'>gloria.schaffarczyk(at)gmail.com</a><br>
+          Email: <a href='mailto:mail@gloria-schaffarczyk.de'>mail(at)gloria-schaffarczyk.de</a><br>
         </p>
         <p><strong>Disclaimer:</strong><br><br>
           <strong>Liability for content</strong><br><br>
@@ -227,7 +227,7 @@ export class TranslationService {
     </p>
     <p><strong>Kontakt:</strong> <br>
       Telefon: 0176-86715651<br>
-      E-Mail: <a href='mailto:gloria.schaffarczyk@gmail.com'>gloria.schaffarczyk(at)gmail.com</a><br></p>
+      E-Mail: <a href='mailto:mail@gloria-schaffarczyk.de'>mail(at)gloria-schaffarczyk.de</a><br></p>
     <p><strong>Haftungsausschluss: </strong><br><br>
       <strong>Haftung für Inhalte</strong><br><br>
       Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und
@@ -346,7 +346,7 @@ export class TranslationService {
 Rottachstr. 34<br />
 87439 Kempten</p>
 <p>Phone: 017686715651<br />
-Email: gloria@gmail.com</p>
+Email: mail@gloria-schaffarczyk.de</p>
 <p>The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of processing personal data (e.g., names, email addresses, etc.).</p>
 <h3>Storage Period</h3>
 <p>Unless a specific storage period has been stated in this privacy policy, your personal data will remain with us until the purpose for data processing ceases to apply. If you make a legitimate request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g., tax or commercial law retention periods); in the latter case, deletion takes place after these reasons cease to apply.</p>
@@ -430,7 +430,7 @@ Email: gloria@gmail.com</p>
 Rottachstr. 34<br />
 87439 Kempten</p>
 <p>Telefon: 017686715651<br />
-E-Mail: gloria@gmail.com</p>
+E-Mail: mail@gloria-schaffarczyk.de</p>
 <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
 <h3>Speicherdauer</h3>
 <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z.&nbsp;B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
