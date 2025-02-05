@@ -37,7 +37,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         ini_set("SMTP", $smtpHost);
         ini_set("smtp_port", $smtpPort);
 
-        $recipient = "webmaster@gloriacodes.de";
+        $recipient = "mail@gloria-schaffarczyk.de";
         $subject = "Contact Form Submission from <$email>";
         $formattedMessage = "
             <html>
